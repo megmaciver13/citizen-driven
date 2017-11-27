@@ -48,3 +48,185 @@ Migrating to CreateLandmarks (20171127142841)
   [1m[35m (7.0ms)[0m  [1m[35mCOMMIT[0m
   [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(5410015084792356885)[0m
   [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (5.8ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5410015084792356885)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateLandmarks (20171127142841)
+  [1m[35m (6.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (42.1ms)[0m  [1m[35mDROP TABLE "landmarks"[0m
+  [1m[35mSQL (1.4ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20171127142841"]]
+  [1m[35m (4.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(5410015084792356885)[0m
+  [1m[35m (6.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5410015084792356885)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateLandmarks (20171127142841)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (45.6ms)[0m  [1m[35mCREATE TABLE "landmarks" ("id" bigserial primary key, "name" character varying, "photo_url" character varying, "location" character varying, "agency" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (3.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20171127142841"]]
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(5410015084792356885)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (7.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (243.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "projects_development"[0m
+  [1m[35m (197.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS "projects_test"[0m
+  [1m[35m (494.0ms)[0m  [1m[35mCREATE DATABASE "projects_development" ENCODING = 'unicode'[0m
+  [1m[35m (403.0ms)[0m  [1m[35mCREATE DATABASE "projects_test" ENCODING = 'unicode'[0m
+  [1m[35m (15.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5410015084792356885)[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePosts (20171127142825)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (32.1ms)[0m  [1m[35mCREATE TABLE "posts" ("id" bigserial primary key, "author" character varying NOT NULL, "title" character varying NOT NULL, "photo_url" character varying, "content" character varying NOT NULL, "inquiry_type" character varying, "landmark_id" bigint NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_f208665f66"
+FOREIGN KEY ("landmark_id")
+  REFERENCES "landmarks" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(5410015084792356885)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5410015084792356885)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePosts (20171127142825)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (57.3ms)[0m  [1m[35mCREATE TABLE "posts" ("id" bigserial primary key, "author" character varying NOT NULL, "title" character varying NOT NULL, "photo_url" character varying, "content" character varying NOT NULL, "inquiry_type" character varying, "landmark_id" bigint NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_f208665f66"
+FOREIGN KEY ("landmark_id")
+  REFERENCES "landmarks" ("id")
+)[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(5410015084792356885)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (196.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "projects_development"[0m
+  [1m[35m (196.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "projects_test"[0m
+  [1m[35m (469.2ms)[0m  [1m[35mCREATE DATABASE "projects_development" ENCODING = 'unicode'[0m
+  [1m[35m (391.8ms)[0m  [1m[35mCREATE DATABASE "projects_test" ENCODING = 'unicode'[0m
+  [1m[35m (5.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (26.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5410015084792356885)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePosts (20171127142825)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (24.6ms)[0m  [1m[35mCREATE TABLE "posts" ("id" bigserial primary key, "author" character varying NOT NULL, "title" character varying NOT NULL, "photo_url" character varying, "content" character varying NOT NULL, "inquiry_type" character varying, "landmark_id" bigint NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_f208665f66"
+FOREIGN KEY ("landmark_id")
+  REFERENCES "landmarks" ("id")
+)[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(5410015084792356885)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (194.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "projects_development"[0m
+  [1m[35m (192.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "projects_test"[0m
+  [1m[35m (479.7ms)[0m  [1m[35mCREATE DATABASE "projects_development" ENCODING = 'unicode'[0m
+  [1m[35m (393.2ms)[0m  [1m[35mCREATE DATABASE "projects_test" ENCODING = 'unicode'[0m
+  [1m[35m (6.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (25.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5410015084792356885)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePosts (20171127142825)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (28.7ms)[0m  [1m[35mCREATE TABLE "posts" ("id" bigserial primary key, "author" character varying, "title" character varying, "photo_url" character varying, "content" character varying, "inquiry_type" character varying, "landmark_id" bigint NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_f208665f66"
+FOREIGN KEY ("landmark_id")
+  REFERENCES "landmarks" ("id")
+)[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(5410015084792356885)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (194.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "projects_development"[0m
+  [1m[35m (196.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "projects_test"[0m
+  [1m[35m (466.9ms)[0m  [1m[35mCREATE DATABASE "projects_development" ENCODING = 'unicode'[0m
+  [1m[35m (390.8ms)[0m  [1m[35mCREATE DATABASE "projects_test" ENCODING = 'unicode'[0m
+  [1m[35m (8.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (25.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5410015084792356885)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateLandmarks (20171127163651)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (24.0ms)[0m  [1m[35mCREATE TABLE "landmarks" ("id" bigserial primary key, "name" character varying, "photo_url" character varying, "location" character varying, "agency" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20171127163651"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreatePosts (20171127163706)
+  [1m[35m (5.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (26.3ms)[0m  [1m[35mCREATE TABLE "posts" ("id" bigserial primary key, "author" character varying NOT NULL, "title" character varying NOT NULL, "photo_url" character varying, "content" character varying NOT NULL, "inquiry_type" character varying, "landmark_id" bigint NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_f208665f66"
+FOREIGN KEY ("landmark_id")
+  REFERENCES "landmarks" ("id")
+)[0m
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE  INDEX  "index_posts_on_landmark_id" ON "posts"  ("landmark_id")[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20171127163706"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-11-27 16:38:21.007195"], ["updated_at", "2017-11-27 16:38:21.007195"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(5410015084792356885)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mLandmark Load (6.9ms)[0m  [1m[34mSELECT "landmarks".* FROM "landmarks"[0m
+  [1m[36mPost Load (13.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "landmarks" ("name", "photo_url", "location", "agency", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "The Mall"], ["photo_url", "https://media-cdn.tripadvisor.com/media/photo-s/04/0d/57/da/national-mall.jpg"], ["location", "Central DC"], ["agency", "National Park Service"], ["created_at", "2017-11-27 16:38:39.806225"], ["updated_at", "2017-11-27 16:38:39.806225"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "landmarks" ("name", "photo_url", "location", "agency", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Meridian Hill Park"], ["photo_url", "https://d1fii7kpq2y7pu.cloudfront.net/photos/428681534/original/Meridian_Hill_Park_-_fountain.jpg?1486423997"], ["location", "NW"], ["agency", "National Park Service"], ["created_at", "2017-11-27 16:38:39.809616"], ["updated_at", "2017-11-27 16:38:39.809616"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "landmarks" ("name", "photo_url", "location", "agency", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Rock Creek Park"], ["photo_url", "https://npca.s3.amazonaws.com/images/9216/bdb45704-5a6c-413f-96de-00816ddd863c-banner.jpg?1446236516"], ["location", "NW"], ["agency", "National Park Service"], ["created_at", "2017-11-27 16:38:39.812607"], ["updated_at", "2017-11-27 16:38:39.812607"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "landmarks" ("name", "photo_url", "location", "agency", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Theodore Roosevelt Island"], ["photo_url", "https://www.findyourchesapeake.com/public/nps_global/images/places_large/theodorerooseveltisland.jpg"], ["location", "Potomac River"], ["agency", "National Park Service"], ["created_at", "2017-11-27 16:38:39.815000"], ["updated_at", "2017-11-27 16:38:39.815000"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "landmarks" ("name", "photo_url", "location", "agency", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Anacostia Park"], ["photo_url", "https://www.findyourchesapeake.com/public/nps_global/images/places_large/anacostia2.jpg"], ["location", "SE"], ["agency", "National Park Service"], ["created_at", "2017-11-27 16:38:39.817025"], ["updated_at", "2017-11-27 16:38:39.817025"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "landmarks" ("name", "photo_url", "location", "agency", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Kingman Island"], ["photo_url", "https://static1.squarespace.com/static/5666fd6b1c12104ed9dc343d/t/569516fb0e4c11c98e31322a/1468361910316/Kingman+11.6.08+019.jpg"], ["location", "Anacostia River"], ["agency", "Living Classrooms National Capital Region"], ["created_at", "2017-11-27 16:38:39.819052"], ["updated_at", "2017-11-27 16:38:39.819052"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "landmarks" ("name", "photo_url", "location", "agency", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "National Arboretum"], ["photo_url", "http://packedsuitcase.com/wp-content/uploads/2014/04/National-Arboretum-Capitol-Columns-from-afar-2.jpg"], ["location", "NE"], ["agency", "USDA"], ["created_at", "2017-11-27 16:38:39.820935"], ["updated_at", "2017-11-27 16:38:39.820935"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "landmarks" ("name", "photo_url", "location", "agency", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Miscellaneous"], ["photo_url", "https://upload.wikimedia.org/wikipedia/commons/8/8a/Flag_Map_of_Washington_DC.png"], ["location", "Elsewhere in DC"], ["agency", "various"], ["created_at", "2017-11-27 16:38:39.822779"], ["updated_at", "2017-11-27 16:38:39.822779"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLandmark Load (0.3ms)[0m  [1m[34mSELECT  "landmarks".* FROM "landmarks" WHERE "landmarks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (26.6ms)[0m  [1m[32mINSERT INTO "posts" ("author", "title", "content", "inquiry_type", "landmark_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["author", "Meg"], ["title", "Water Fountain Interest"], ["content", "Please include a water fountain"], ["inquiry_type", "public safety"], ["landmark_id", 1], ["created_at", "2017-11-27 16:38:39.848888"], ["updated_at", "2017-11-27 16:38:39.848888"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/" for 127.0.0.1 at 2017-11-27 11:41:54 -0500
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/megmaciver/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/megmaciver/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (3.1ms)
+Completed 200 OK in 20ms (Views: 9.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-27 12:00:21 -0500
+Processing by LandmarksController#index as HTML
+  Rendering landmarks/index.html.erb within layouts/application
+  [1m[36mLandmark Load (1.5ms)[0m  [1m[34mSELECT "landmarks".* FROM "landmarks"[0m
+  Rendered landmarks/index.html.erb within layouts/application (22.7ms)
+Completed 200 OK in 319ms (Views: 295.4ms | ActiveRecord: 9.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-27 12:04:45 -0500
+Processing by LandmarksController#index as HTML
+  Rendering landmarks/index.html.erb within layouts/application
+  [1m[36mLandmark Load (0.4ms)[0m  [1m[34mSELECT "landmarks".* FROM "landmarks"[0m
+  Rendered landmarks/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 25ms (Views: 21.9ms | ActiveRecord: 0.4ms)
+
+

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171127142841) do
+ActiveRecord::Schema.define(version: 20171127163706) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,13 +25,16 @@ ActiveRecord::Schema.define(version: 20171127142841) do
   end
 
   create_table "posts", force: :cascade do |t|
-    t.string "author"
-    t.string "title"
+    t.string "author", null: false
+    t.string "title", null: false
     t.string "photo_url"
-    t.string "content"
+    t.string "content", null: false
     t.string "inquiry_type"
+    t.bigint "landmark_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["landmark_id"], name: "index_posts_on_landmark_id"
   end
 
+  add_foreign_key "posts", "landmarks"
 end

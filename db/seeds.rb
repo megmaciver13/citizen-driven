@@ -10,12 +10,14 @@ Landmark.destroy_all
 Post.destroy_all
 
 Landmark.create([
-  {name: "The Mall", photo_url: "https://media-cdn.tripadvisor.com/media/photo-s/04/0d/57/da/national-mall.jpg", location:"downtown", agency: "Department of Public Works"},
-  {name: "Meridian Hill Park", photo_url: "https://d1fii7kpq2y7pu.cloudfront.net/photos/428681534/original/Meridian_Hill_Park_-_fountain.jpg?1486423997", location: "NW", agency: "Department of Public Works"},
+  {name: "The Mall", photo_url: "https://media-cdn.tripadvisor.com/media/photo-s/04/0d/57/da/national-mall.jpg", location:"Central DC", agency: "National Park Service"},
+  {name: "Meridian Hill Park", photo_url: "https://d1fii7kpq2y7pu.cloudfront.net/photos/428681534/original/Meridian_Hill_Park_-_fountain.jpg?1486423997", location: "NW", agency: "National Park Service"},
   {name: "Rock Creek Park", photo_url: "https://npca.s3.amazonaws.com/images/9216/bdb45704-5a6c-413f-96de-00816ddd863c-banner.jpg?1446236516", location: "NW", agency: "National Park Service"},
   {name: "Theodore Roosevelt Island", photo_url: "https://www.findyourchesapeake.com/public/nps_global/images/places_large/theodorerooseveltisland.jpg", location: "Potomac River", agency: "National Park Service"},
-  {name:, photo_url:, location:, agency: "Department of Public Works"},
-  {name:, photo_url:, location:, agency: "Department of Public Works"},
-  {name:, photo_url:, location:, agency: "Department of Public Works"},
-  {name: "Miscellaneous", photo_url: "https://upload.wikimedia.org/wikipedia/commons/8/8a/Flag_Map_of_Washington_DC.png", location: "Elsewhere in DC", agency: "Department of Public Works"}
+  {name: "Anacostia Park", photo_url: "https://www.findyourchesapeake.com/public/nps_global/images/places_large/anacostia2.jpg", location: "SE", agency: "National Park Service"},
+  {name: "Kingman Island", photo_url: "https://static1.squarespace.com/static/5666fd6b1c12104ed9dc343d/t/569516fb0e4c11c98e31322a/1468361910316/Kingman+11.6.08+019.jpg", location: "Anacostia River", agency: "Living Classrooms National Capital Region"},
+  {name: "National Arboretum", photo_url: "http://packedsuitcase.com/wp-content/uploads/2014/04/National-Arboretum-Capitol-Columns-from-afar-2.jpg", location: "NE", agency: "USDA"},
+  {name: "Miscellaneous", photo_url: "https://upload.wikimedia.org/wikipedia/commons/8/8a/Flag_Map_of_Washington_DC.png", location: "Elsewhere in DC", agency: "various"}
 ])
+
+Post.create(author: "Meg", title: "Water Fountain Interest", content: "Please include a water fountain", inquiry_type: "public safety", landmark_id: 1)
