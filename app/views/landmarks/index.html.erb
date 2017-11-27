@@ -2,6 +2,6 @@
 
 <ul>
   <% @landmarks.each do |landmark| %>
-   <li><%= landmark.name %></li>
+   <li><%= link_to landmark.name, landmark_path(landmark) %></li>
   <% end %>
 </ul>

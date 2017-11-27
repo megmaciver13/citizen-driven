@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Projects</title>
+    <title>Community Improvement App</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,9 +9,14 @@
   </head>
 
   <body>
-    <h1>Community Improvement App</h1>
-    <p>Change starts with YOU.</p>
+    <header>
+      <h1>Community Improvement App</h1>
+      <p class="tagline">Change starts with YOU.</p>
+    </header>
 
     <%= yield %>
+    <br>
+    <br>
+    <p><%= link_to "Return Home", landmarks_path %>  <%= link_to "Learn More", landmarks_path %></p>
   </body>
 </html>

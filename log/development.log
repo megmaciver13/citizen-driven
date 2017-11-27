@@ -230,3 +230,195 @@ Processing by LandmarksController#index as HTML
 Completed 200 OK in 25ms (Views: 21.9ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-11-27 15:38:39 -0500
+Processing by LandmarksController#index as HTML
+  Rendering landmarks/index.html.erb within layouts/application
+  [1m[36mLandmark Load (36.8ms)[0m  [1m[34mSELECT "landmarks".* FROM "landmarks"[0m
+  Rendered landmarks/index.html.erb within layouts/application (132.7ms)
+Completed 200 OK in 199ms (Views: 85.6ms | ActiveRecord: 91.4ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2017-11-27 15:52:16 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/about"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/rails/info" for 127.0.0.1 at 2017-11-27 16:15:45 -0500
+Processing by Rails::InfoController#index as HTML
+Redirected to http://localhost:3000/rails/info/routes
+Completed 302 Found in 11ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes" for 127.0.0.1 at 2017-11-27 16:15:45 -0500
+Processing by Rails::InfoController#routes as HTML
+  Rendering /Users/megmaciver/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/railties-5.1.4/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/megmaciver/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.1.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb [25 times] (29.7ms)
+  Rendered /Users/megmaciver/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.1.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.8ms)
+  Rendered /Users/megmaciver/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/railties-5.1.4/lib/rails/templates/rails/info/routes.html.erb within layouts/application (43.1ms)
+Completed 200 OK in 71ms (Views: 55.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-27 16:17:00 -0500
+Processing by LandmarksController#index as HTML
+  Rendering landmarks/index.html.erb within layouts/application
+  [1m[36mLandmark Load (47.4ms)[0m  [1m[34mSELECT "landmarks".* FROM "landmarks"[0m
+  Rendered landmarks/index.html.erb within layouts/application (136.0ms)
+Completed 200 OK in 182ms (Views: 59.7ms | ActiveRecord: 110.9ms)
+
+
+Started GET "/landmarks/1" for 127.0.0.1 at 2017-11-27 16:17:03 -0500
+Processing by LandmarksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLandmark Load (7.1ms)[0m  [1m[34mSELECT  "landmarks".* FROM "landmarks" WHERE "landmarks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering landmarks/show.html.erb within layouts/application
+  [1m[36mPost Load (8.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."landmark_id" = $1[0m  [["landmark_id", 1]]
+  Rendered landmarks/show.html.erb within layouts/application (86.4ms)
+Completed 200 OK in 296ms (Views: 174.4ms | ActiveRecord: 59.0ms)
+
+
+Started GET "/landmarks/1" for 127.0.0.1 at 2017-11-27 16:19:20 -0500
+Processing by LandmarksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLandmark Load (0.3ms)[0m  [1m[34mSELECT  "landmarks".* FROM "landmarks" WHERE "landmarks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering landmarks/show.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."landmark_id" = $1[0m  [["landmark_id", 1]]
+  Rendered landmarks/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 23ms (Views: 20.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/landmarks" for 127.0.0.1 at 2017-11-27 16:19:25 -0500
+Processing by LandmarksController#index as HTML
+  Rendering landmarks/index.html.erb within layouts/application
+  [1m[36mLandmark Load (24.4ms)[0m  [1m[34mSELECT "landmarks".* FROM "landmarks"[0m
+  Rendered landmarks/index.html.erb within layouts/application (28.2ms)
+Completed 200 OK in 56ms (Views: 30.1ms | ActiveRecord: 24.4ms)
+
+
+Started GET "/landmarks" for 127.0.0.1 at 2017-11-27 16:19:28 -0500
+Processing by LandmarksController#index as HTML
+  Rendering landmarks/index.html.erb within layouts/application
+  [1m[36mLandmark Load (0.3ms)[0m  [1m[34mSELECT "landmarks".* FROM "landmarks"[0m
+  Rendered landmarks/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 20ms (Views: 16.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/landmarks" for 127.0.0.1 at 2017-11-27 16:19:40 -0500
+Processing by LandmarksController#index as HTML
+  Rendering landmarks/index.html.erb within layouts/application
+  [1m[36mLandmark Load (0.7ms)[0m  [1m[34mSELECT "landmarks".* FROM "landmarks"[0m
+  Rendered landmarks/index.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 54ms (Views: 45.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/landmarks" for 127.0.0.1 at 2017-11-27 16:19:44 -0500
+Processing by LandmarksController#index as HTML
+  Rendering landmarks/index.html.erb within layouts/application
+  [1m[36mLandmark Load (1.2ms)[0m  [1m[34mSELECT "landmarks".* FROM "landmarks"[0m
+  Rendered landmarks/index.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 67ms (Views: 56.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/landmarks/2" for 127.0.0.1 at 2017-11-27 16:19:48 -0500
+Processing by LandmarksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mLandmark Load (0.5ms)[0m  [1m[34mSELECT  "landmarks".* FROM "landmarks" WHERE "landmarks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering landmarks/show.html.erb within layouts/application
+  [1m[36mPost Load (4.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."landmark_id" = $1[0m  [["landmark_id", 2]]
+  Rendered landmarks/show.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 54ms (Views: 43.9ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/landmarks/2" for 127.0.0.1 at 2017-11-27 16:23:23 -0500
+Processing by LandmarksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mLandmark Load (1.1ms)[0m  [1m[34mSELECT  "landmarks".* FROM "landmarks" WHERE "landmarks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering landmarks/show.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."landmark_id" = $1[0m  [["landmark_id", 2]]
+  Rendered landmarks/show.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 93ms (Views: 77.0ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/landmarks/2" for 127.0.0.1 at 2017-11-27 16:23:56 -0500
+Processing by LandmarksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mLandmark Load (0.4ms)[0m  [1m[34mSELECT  "landmarks".* FROM "landmarks" WHERE "landmarks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering landmarks/show.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."landmark_id" = $1[0m  [["landmark_id", 2]]
+  Rendered landmarks/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 22ms (Views: 18.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/landmarks/2" for 127.0.0.1 at 2017-11-27 16:23:58 -0500
+Processing by LandmarksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mLandmark Load (1.1ms)[0m  [1m[34mSELECT  "landmarks".* FROM "landmarks" WHERE "landmarks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering landmarks/show.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."landmark_id" = $1[0m  [["landmark_id", 2]]
+  Rendered landmarks/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 35ms (Views: 26.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/landmarks/2" for 127.0.0.1 at 2017-11-27 16:24:10 -0500
+Processing by LandmarksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mLandmark Load (0.2ms)[0m  [1m[34mSELECT  "landmarks".* FROM "landmarks" WHERE "landmarks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering landmarks/show.html.erb within layouts/application
+  [1m[35m (28.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."landmark_id" = $1[0m  [["landmark_id", 2]]
+  Rendered landmarks/show.html.erb within layouts/application (36.8ms)
+Completed 200 OK in 63ms (Views: 30.6ms | ActiveRecord: 28.8ms)
+
+
+Started GET "/landmarks/2" for 127.0.0.1 at 2017-11-27 16:24:28 -0500
+Processing by LandmarksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mLandmark Load (0.4ms)[0m  [1m[34mSELECT  "landmarks".* FROM "landmarks" WHERE "landmarks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering landmarks/show.html.erb within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."landmark_id" = $1[0m  [["landmark_id", 2]]
+  Rendered landmarks/show.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 99ms (Views: 91.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/landmarks/2" for 127.0.0.1 at 2017-11-27 16:29:53 -0500
+Processing by LandmarksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mLandmark Load (1.1ms)[0m  [1m[34mSELECT  "landmarks".* FROM "landmarks" WHERE "landmarks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering landmarks/show.html.erb within layouts/application
+  [1m[35m (3.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."landmark_id" = $1[0m  [["landmark_id", 2]]
+  Rendered landmarks/show.html.erb within layouts/application (22.5ms)
+Completed 200 OK in 142ms (Views: 105.8ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/landmarks" for 127.0.0.1 at 2017-11-27 16:42:18 -0500
+Processing by LandmarksController#index as HTML
+  Rendering landmarks/index.html.erb within layouts/application
+  [1m[36mLandmark Load (1.1ms)[0m  [1m[34mSELECT "landmarks".* FROM "landmarks"[0m
+  Rendered landmarks/index.html.erb within layouts/application (20.5ms)
+Completed 200 OK in 96ms (Views: 75.5ms | ActiveRecord: 1.1ms)
+
+
