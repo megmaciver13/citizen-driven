@@ -10,4 +10,9 @@
   <h4><%= @post.content %></h4>
 </div>
 
-<%= link_to "Edit Post", edit_landmark_post_path(@landmark, @post)%> ||
+<div class="bottom-nav">
+    <%= link_to "Edit Post", edit_landmark_post_path(@landmark, @post)%> ||
+    <%= link_to "Delete Post", landmark_post_path(@landmark, @post), method: :delete %>
+  <br>
+    <%= link_to "Return to #{@landmark.name}", landmark_path(@landmark) %>
+</div>

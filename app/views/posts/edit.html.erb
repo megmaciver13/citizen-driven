@@ -30,3 +30,7 @@
     <%= f.submit %>
   </div>
 <% end %>
+
+<div class="bottom-nav">
+  <%= link_to "Return to #{@landmark.name}", landmark_path(@landmark) %>
+</div>

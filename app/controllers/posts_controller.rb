@@ -24,12 +24,14 @@ class PostsController < ApplicationController
     @landmark = Landmark.find(params[:landmark_id])
     @post = @landmark.posts.find(params[:id])
     @post.update(post_params)
+    redirect_to landmark_post_path(@landmark, @post)
   end
 
   def destroy
     @landmark = Landmark.find(params[:landmark_id])
     @post = @landmark.posts.find(params[:id])
     @post.destroy
+    redirect_to landmark_path(@landmark)
   end
 
   private
