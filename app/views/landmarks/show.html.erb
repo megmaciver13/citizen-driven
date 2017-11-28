@@ -8,6 +8,7 @@
 <br>
 
 <h4>Posts for <%= @landmark.name %></h4>
+<h5><%= link_to "(+) New Post", new_landmark_post_path(@landmark)%></h5>
 
 <% if @landmark.posts.count == 0 %>
   <div class="no-posts">No Posts for <%= @landmark.name %></div>

@@ -1,0 +1,36 @@
+<h3>New Post on <%= @landmark.name %></h3>
+
+<%= form_for [@landmark, @post] do |f| %>
+  <div class="form-elements">
+    <%= f.label :author %>
+    <%= f.text_field :author %>
+  </div>
+
+  <div class="form-elements">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+
+  <div class="form-elements">
+    <%= f.label :photo_url %>
+    <%= f.text_field :photo_url %>
+  </div>
+
+  <div class="form-elements">
+    <%= f.label :content %>
+    <%= f.text_field :content %>
+  </div>
+
+  <div class="form-elements">
+    <%= f.label :inquiry_type %>
+    <%= select_tag :inquiry_type, options_for_select([["public safety", 1], ["public health", 2]]) %>
+  </div>
+
+  <div class="form-elements">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+<br>
+
+<%= link_to "Return to #{@landmark.name}", landmark_path(@landmark) %>
