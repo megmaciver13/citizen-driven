@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
-  def index
-
+  def show
+    @landmark = Landmark.find(params[:landmark_id])
+    @post = @landmark.posts.find(params[:id])
   end
 end
