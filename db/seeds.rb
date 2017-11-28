@@ -9,6 +9,33 @@
 Landmark.destroy_all
 Post.destroy_all
 
+Neighborhood.create([
+  {name: "Adams Morgan", quadrant: "NW", photo_url: ""}
+  {name: "Anacostia", quadrant: "SE", photo_url: ""}
+  {name: "Brookland", quadrant: "NE", photo_url: ""}
+  {name: "Capitol Hill", quadrant: "Central", photo_url: ""}
+  {name: "Navy Yard", quadrant: "SE", photo_url: ""}
+  {name: "Columbia Heights", quadrant: "NW", photo_url: ""}
+  {name: "Downtown", quadrant: "NW", photo_url: ""}
+  {name: "Dupont Circle", quadrant: "NW", photo_url: ""}
+  {name: "Foggy Bottom", quadrant: "NW", photo_url: ""}
+  {name: "Georgetown", quadrant: "NW", photo_url: ""}
+  {name: "H Street", quadrant: "NE", photo_url: ""}
+  {name: "Logan Circle", quadrant: "NW", photo_url: ""}
+  {name: "National Mall", quadrant: "Central", photo_url: ""}
+  {name: "NoMa", quadrant: "NE", photo_url: ""}
+  {name: "Penn Quarter & Chinatown", quadrant: "NW", photo_url: ""}
+  {name: "Petworth", quadrant: "NW", photo_url: ""}
+  {name: "Shaw", quadrant: "NW", photo_url: ""}
+  {name: "SW Waterfront", quadrant: "SW", photo_url: ""}
+  {name: "Upper Northwest", quadrant: "NW", photo_url: ""}
+  {name: "Woodley Park", quadrant: "NW", photo_url: ""}
+  {name: "Other NW", quadrant: "NW", photo_url: ""}
+  {name: "Other SW", quadrant: "SW", photo_url: ""}
+  {name: "Other NE", quadrant: "NE", photo_url: ""}
+  {name: "Other SE", quadrant: "SE", photo_url: ""}
+  ])
+
 Landmark.create([
   {name: "The Mall", photo_url: "https://media-cdn.tripadvisor.com/media/photo-s/04/0d/57/da/national-mall.jpg", location:"Central DC", agency: "National Park Service"},
   {name: "Meridian Hill Park", photo_url: "https://d1fii7kpq2y7pu.cloudfront.net/photos/428681534/original/Meridian_Hill_Park_-_fountain.jpg?1486423997", location: "NW", agency: "National Park Service"},

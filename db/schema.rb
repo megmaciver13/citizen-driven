@@ -10,16 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171127163706) do
+ActiveRecord::Schema.define(version: 20171128213317) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "landmarks", force: :cascade do |t|
-    t.string "name"
+    t.string "name", null: false
     t.string "photo_url"
-    t.string "location"
-    t.string "agency"
+    t.string "location", null: false
+    t.bigint "neighborhood_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["neighborhood_id"], name: "index_landmarks_on_neighborhood_id"
+  end
+
+  create_table "neighborhoods", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "quadrant"
+    t.string "photo_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -36,5 +45,6 @@ ActiveRecord::Schema.define(version: 20171127163706) do
     t.index ["landmark_id"], name: "index_posts_on_landmark_id"
   end
 
+  add_foreign_key "landmarks", "neighborhoods"
   add_foreign_key "posts", "landmarks"
 end
