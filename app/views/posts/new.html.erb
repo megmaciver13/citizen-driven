@@ -1,6 +1,6 @@
-<h3>New Post on <%= @landmark.name %></h3>
+<h3>New Post on <%= @neighborhood.name %></h3>
 
-<%= form_for [@landmark, @post] do |f| %>
+<%= form_for [@neighborhood, @post] do |f| %>
   <div class="form-elements">
     <%= f.label :author %>
     <%= f.text_field :author %>
@@ -9,6 +9,11 @@
   <div class="form-elements">
     <%= f.label :title %>
     <%= f.text_field :title %>
+  </div>
+
+  <div class="form-elements">
+    <%= f.label :location %>
+    <%= f.text_field :location %>
   </div>
 
   <div class="form-elements">
@@ -23,7 +28,7 @@
 
   <div class="form-elements">
     <%= f.label :inquiry_type %>
-    <%= select_tag :inquiry_type, options_for_select([["public safety", 1], ["public health", 2]]) %>
+    <%= select_tag :inquiry_type, options_for_select([ ["accessibility", 1],["aesthetics", 2], ["public health", 3], ["public safety", 4]]) %>
   </div>
 
   <div class="form-elements">
@@ -32,5 +37,5 @@
 <% end %>
 
 <div class="bottom-nav">
-  <%= link_to "Return to #{@landmark.name}", landmark_path(@landmark) %>
+  <%= link_to "Return to #{@neighborhood.name}", neighborhood_path(@neighborhood) %>
 </div>

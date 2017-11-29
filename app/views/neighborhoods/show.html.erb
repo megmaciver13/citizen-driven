@@ -1,0 +1,26 @@
+<h3><%= @neighborhood.name %></h3>
+
+<img src="<%= @neighborhood.photo_url %>" alt="<%= @neighborhood.name%> photo">
+
+<h5>Quadrant: <%= @neighborhood.quadrant %></h5>
+
+<br>
+
+<h4>Posts for <%= @neighborhood.name %></h4>
+<h5><%= link_to "(+) New Post", new_neighborhood_post_path(@neighborhood)%></h5>
+
+<h5>
+  <% if @neighborhood.posts.count == 0 %>
+    <div class="no-posts">No Posts for <%= @neighborhood.name %></div>
+  <% else %>
+    <% @neighborhood.posts.each do |post| %>
+      <div><%= link_to post.title, neighborhood_post_path(@neighborhood, post) %></div>
+    <% end %>
+  <% end %>
+</h5>
+
+<br>
+
+<div class="bottom-nav">
+ <%= link_to "Return to All Neighborhoods", neighborhoods_path %>
+</div>
