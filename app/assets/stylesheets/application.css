@@ -47,6 +47,12 @@ h5 {
 
 }
 
+#map {
+  height: 600px;
+  width: 600px;
+  text-align: center;
+}
+
 .no-posts {
   font-style: italic;
 }

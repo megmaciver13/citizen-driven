@@ -2,6 +2,8 @@
 
 <img src="<%= @neighborhood.photo_url %>" alt="<%= @neighborhood.name%> photo">
 
+<div id="map"></div>
+
 <h5>Quadrant: <%= @neighborhood.quadrant %></h5>
 
 <br>
@@ -24,3 +26,13 @@
 <div class="bottom-nav">
  <%= link_to "Return to All Neighborhoods", neighborhoods_path %>
 </div>
+
+
+<script>
+handler = Gmaps.build('Google');
+handler.buildMap({ provider: {
+  center: {lat: 38.909110, lng: -77.017607},
+  minZoom: 12
+}, internal: {id: 'map'}}, function(){
+});
+</script>

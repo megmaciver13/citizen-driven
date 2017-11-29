@@ -15,7 +15,7 @@ tom = User.create(email: "tom@email.com", password: "tom1234")
 rebecca = User.create(email: "rebecca@email.com", password: "rebecca1234")
 curt = User.create(email: "curt@email.com", password: "curt124")
 
-Neighborhood.create([
+neighborhoods = Neighborhood.create([
   {name: "Adams Morgan", quadrant: "NW", photo_url: "https://washington-org.s3.amazonaws.com/s3fs-public/admo-18th-st-rows-of-stores-credit-ted-eytan_flickr-user-taedc.jpg"},
   {name: "Anacostia", quadrant: "SE", photo_url: "https://hd1n2hd4y-res.cloudinary.com/image/upload/c_scale,w_800/post-148011.png"},
   {name: "Brookland", quadrant: "NE", photo_url: "https://ggwash.org/images/posts/201309-060134.jpg"},
@@ -42,7 +42,7 @@ Neighborhood.create([
   {name: "Other SE", quadrant: "SE", photo_url: ""}
 ])
 
-Post.create(author: "Meg", title: "Community Garden at 13th & Irving", content: "There isi interest from the community to install a community garden in the dilapidated parking lot at 13th & I", inquiry_type: "public health", location: "13th St NW & Irving St NW", neighborhood_id: 6)
-Post.create(author: "Curt", title: "Install Accessible Ramp on Waterfront Walk", content: "The waterfront boardwalk area should really have a ramp to make it accessible to all citizens!", inquiry_type: "accessibility", location: "600 Water St SW", neighborhood_id: 18)
-Post.create(author: "Tom", title: "More Street Lights Needed", content: "The streets are very dark in this area. New streetlights would greatly improve public safety and overall neighborhood satisfaction.", inquiry_type: "public safety", location: "20 M St SE", neighborhood_id: 5)
-Post.create(author: "Rebecca", title: "New Paint on Playground", content: "The playground at Joseph H. Cole Recreation is looking rather dilapidated and could use another coat of paint!", inquiry_type: "aesthetics", location: "1299 Neal Street, NE", neighborhood_id: 11)
+meg.posts.create(author: "Meg", title: "Community Garden at 13th & Irving", content: "There isi interest from the community to install a community garden in the dilapidated parking lot at 13th & I", inquiry_type: "public health", location: "13th St NW & Irving St NW", neighborhood_id: 6)
+Post.create(author: "Curt", title: "Install Accessible Ramp on Waterfront Walk", content: "The waterfront boardwalk area should really have a ramp to make it accessible to all citizens!", inquiry_type: "accessibility", location: "600 Water St SW", neighborhood_id: neighborhoods[17])
+Post.create(author: "Tom", title: "More Street Lights Needed", content: "The streets are very dark in this area. New streetlights would greatly improve public safety and overall neighborhood satisfaction.", inquiry_type: "public safety", location: "20 M St SE", neighborhood_id: neighborhoods[4])
+Post.create(author: "Rebecca", title: "New Paint on Playground", content: "The playground at Joseph H. Cole Recreation is looking rather dilapidated and could use another coat of paint!", inquiry_type: "aesthetics", location: "1299 Neal Street, NE", neighborhood_id: neighborhoods[10])
