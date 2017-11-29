@@ -6,7 +6,8 @@ class CreatePosts < ActiveRecord::Migration[5.1]
       t.string :photo_url
       t.string :content, null: false
       t.string :inquiry_type
-      t.references :landmark, foreign_key: true, null: false
+      t.string :location, null: false
+      t.references :neighborhood, foreign_key: true, null: false
 
       t.timestamps
     end
