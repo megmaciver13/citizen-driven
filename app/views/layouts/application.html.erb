@@ -9,11 +9,6 @@
   </head>
 
   <body>
-    <header>
-      <h1><%= link_to "Community Improvement App", neighborhoods_path %></h1>
-      <p class="tagline">Change starts with YOU.</p>
-    </header>
-
     <nav>
       <% if !current_user %>
         <p><%= link_to "Sign Up", new_user_registration_path %> || <%= link_to "Sign In", new_user_session_path %></p>
@@ -23,6 +18,11 @@
       <p class="notice"><%= notice %></p>
       <p class="alert"><%= alert %></p>
     </nav>
+
+    <header>
+      <h1><%= link_to "Community Improvement App", neighborhoods_path %></h1>
+      <p class="tagline">Change starts with YOU.</p>
+    </header>
 
     <%= yield %>
     <br>

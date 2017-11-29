@@ -28,7 +28,7 @@
 
   <div class="form-elements">
     <%= f.label :inquiry_type %>
-    <%= select_tag :inquiry_type, options_for_select([ ["accessibility", 1],["aesthetics", 2], ["public health", 3], ["public safety", 4]]) %>
+    <%= f.select :inquiry_type, options_for_select(["accessibility", "aesthetics", "public health", "public safety"]) %>
   </div>
 
   <div class="form-elements">

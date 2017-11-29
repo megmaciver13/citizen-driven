@@ -4254,3 +4254,261 @@ Processing by PostsController#show as HTML
 Completed 200 OK in 326ms (Views: 95.7ms | ActiveRecord: 163.4ms)
 
 
+Started GET "/neighborhoods/1/posts/1" for 127.0.0.1 at 2017-11-29 12:39:25 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"neighborhood_id"=>"1", "id"=>"1"}
+  [1m[36mNeighborhood Load (0.9ms)[0m  [1m[34mSELECT  "neighborhoods".* FROM "neighborhoods" WHERE "neighborhoods"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPost Load (1.8ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."neighborhood_id" = $1 AND "posts"."id" = $2 LIMIT $3[0m  [["neighborhood_id", 1], ["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered posts/show.html.erb within layouts/application (18.5ms)
+Completed 200 OK in 118ms (Views: 65.8ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/neighborhoods/1" for 127.0.0.1 at 2017-11-29 12:39:31 -0500
+Processing by NeighborhoodsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mNeighborhood Load (0.5ms)[0m  [1m[34mSELECT  "neighborhoods".* FROM "neighborhoods" WHERE "neighborhoods"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering neighborhoods/show.html.erb within layouts/application
+  [1m[35m (30.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."neighborhood_id" = $1[0m  [["neighborhood_id", 1]]
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."neighborhood_id" = $1[0m  [["neighborhood_id", 1]]
+  Rendered neighborhoods/show.html.erb within layouts/application (39.5ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 102ms (Views: 45.0ms | ActiveRecord: 32.4ms)
+
+
+Started GET "/neighborhoods/1/posts/1" for 127.0.0.1 at 2017-11-29 12:39:33 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"neighborhood_id"=>"1", "id"=>"1"}
+  [1m[36mNeighborhood Load (0.4ms)[0m  [1m[34mSELECT  "neighborhoods".* FROM "neighborhoods" WHERE "neighborhoods"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPost Load (1.8ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."neighborhood_id" = $1 AND "posts"."id" = $2 LIMIT $3[0m  [["neighborhood_id", 1], ["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (18.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered posts/show.html.erb within layouts/application (27.7ms)
+Completed 200 OK in 147ms (Views: 116.2ms | ActiveRecord: 21.1ms)
+
+
+Started GET "/neighborhoods/1/posts/1/edit" for 127.0.0.1 at 2017-11-29 12:39:35 -0500
+Processing by PostsController#edit as HTML
+  Parameters: {"neighborhood_id"=>"1", "id"=>"1"}
+  [1m[36mNeighborhood Load (0.2ms)[0m  [1m[34mSELECT  "neighborhoods".* FROM "neighborhoods" WHERE "neighborhoods"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPost Load (1.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."neighborhood_id" = $1 AND "posts"."id" = $2 LIMIT $3[0m  [["neighborhood_id", 1], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/edit.html.erb within layouts/application (21.4ms)
+Completed 200 OK in 82ms (Views: 56.0ms | ActiveRecord: 5.4ms)
+
+
+Started PATCH "/neighborhoods/1/posts/1" for 127.0.0.1 at 2017-11-29 12:39:38 -0500
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Z9XQcRVZGxlj/Zu/yJMBjZNoPhv8fCkaqTBwljMi25dcu1sDCDf5s1noonJcJJ0+v2dAt9hxZnfWn7Tki2OKrQ==", "post"=>{"author"=>"meg", "title"=>"la la la", "location"=>"nowhere", "photo_url"=>"", "content"=>"nothing is happening!!"}, "inquiry_type"=>"2", "commit"=>"Update Post", "neighborhood_id"=>"1", "id"=>"1"}
+  [1m[36mNeighborhood Load (0.7ms)[0m  [1m[34mSELECT  "neighborhoods".* FROM "neighborhoods" WHERE "neighborhoods"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."neighborhood_id" = $1 AND "posts"."id" = $2 LIMIT $3[0m  [["neighborhood_id", 1], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (23.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/neighborhoods/1/posts/1
+Completed 302 Found in 44ms (ActiveRecord: 26.1ms)
+
+
+Started GET "/neighborhoods/1/posts/1" for 127.0.0.1 at 2017-11-29 12:39:38 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"neighborhood_id"=>"1", "id"=>"1"}
+  [1m[36mNeighborhood Load (0.2ms)[0m  [1m[34mSELECT  "neighborhoods".* FROM "neighborhoods" WHERE "neighborhoods"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."neighborhood_id" = $1 AND "posts"."id" = $2 LIMIT $3[0m  [["neighborhood_id", 1], ["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered posts/show.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 33ms (Views: 26.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/neighborhoods/1" for 127.0.0.1 at 2017-11-29 12:40:26 -0500
+Processing by NeighborhoodsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mNeighborhood Load (0.8ms)[0m  [1m[34mSELECT  "neighborhoods".* FROM "neighborhoods" WHERE "neighborhoods"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering neighborhoods/show.html.erb within layouts/application
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."neighborhood_id" = $1[0m  [["neighborhood_id", 1]]
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."neighborhood_id" = $1[0m  [["neighborhood_id", 1]]
+  Rendered neighborhoods/show.html.erb within layouts/application (33.1ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 98ms (Views: 73.7ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/neighborhoods" for 127.0.0.1 at 2017-11-29 12:40:28 -0500
+Processing by NeighborhoodsController#index as HTML
+  Rendering neighborhoods/index.html.erb within layouts/application
+  [1m[36mNeighborhood Load (35.9ms)[0m  [1m[34mSELECT "neighborhoods".* FROM "neighborhoods"[0m
+  Rendered neighborhoods/index.html.erb within layouts/application (60.3ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 113ms (Views: 70.8ms | ActiveRecord: 36.4ms)
+
+
+Started GET "/neighborhoods/6" for 127.0.0.1 at 2017-11-29 12:40:30 -0500
+Processing by NeighborhoodsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mNeighborhood Load (2.3ms)[0m  [1m[34mSELECT  "neighborhoods".* FROM "neighborhoods" WHERE "neighborhoods"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering neighborhoods/show.html.erb within layouts/application
+  [1m[35m (35.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."neighborhood_id" = $1[0m  [["neighborhood_id", 6]]
+  Rendered neighborhoods/show.html.erb within layouts/application (44.2ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 82ms (Views: 38.0ms | ActiveRecord: 38.7ms)
+
+
+Started GET "/neighborhoods/18" for 127.0.0.1 at 2017-11-29 12:40:36 -0500
+Processing by NeighborhoodsController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mNeighborhood Load (5.5ms)[0m  [1m[34mSELECT  "neighborhoods".* FROM "neighborhoods" WHERE "neighborhoods"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  Rendering neighborhoods/show.html.erb within layouts/application
+  [1m[35m (23.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."neighborhood_id" = $1[0m  [["neighborhood_id", 18]]
+  Rendered neighborhoods/show.html.erb within layouts/application (29.5ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 65ms (Views: 30.8ms | ActiveRecord: 29.7ms)
+
+
+Started GET "/neighborhoods/18/posts/new" for 127.0.0.1 at 2017-11-29 12:41:11 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"neighborhood_id"=>"18"}
+  [1m[36mNeighborhood Load (1.5ms)[0m  [1m[34mSELECT  "neighborhoods".* FROM "neighborhoods" WHERE "neighborhoods"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (17.6ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 121ms (Views: 70.6ms | ActiveRecord: 2.5ms)
+
+
+Started POST "/neighborhoods/18/posts" for 127.0.0.1 at 2017-11-29 12:41:22 -0500
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iCUvCyCWY0fa+4ZK/et8LFRXFn4Ris/wC2FDzb1uzl6/hvXoOso3BcoIMVSW0u3siSXE9BUyXpOABVHrJgwOmw==", "post"=>{"author"=>"meg", "title"=>"hiiii", "location"=>"plz", "photo_url"=>"", "content"=>"plz"}, "inquiry_type"=>"4", "commit"=>"Create Post", "neighborhood_id"=>"18"}
+  [1m[36mNeighborhood Load (0.8ms)[0m  [1m[34mSELECT  "neighborhoods".* FROM "neighborhoods" WHERE "neighborhoods"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (38.6ms)[0m  [1m[32mINSERT INTO "posts" ("author", "title", "photo_url", "content", "location", "neighborhood_id", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["author", "meg"], ["title", "hiiii"], ["photo_url", ""], ["content", "plz"], ["location", "plz"], ["neighborhood_id", 18], ["created_at", "2017-11-29 17:41:22.049782"], ["updated_at", "2017-11-29 17:41:22.049782"], ["user_id", 1]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/neighborhoods/18
+Completed 302 Found in 70ms (ActiveRecord: 41.5ms)
+
+
+Started GET "/neighborhoods/18" for 127.0.0.1 at 2017-11-29 12:41:22 -0500
+Processing by NeighborhoodsController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mNeighborhood Load (0.3ms)[0m  [1m[34mSELECT  "neighborhoods".* FROM "neighborhoods" WHERE "neighborhoods"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  Rendering neighborhoods/show.html.erb within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."neighborhood_id" = $1[0m  [["neighborhood_id", 18]]
+  [1m[36mPost Load (6.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."neighborhood_id" = $1[0m  [["neighborhood_id", 18]]
+  Rendered neighborhoods/show.html.erb within layouts/application (15.3ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 112ms (Views: 97.2ms | ActiveRecord: 7.4ms)
+
+
+Started GET "/neighborhoods/18/posts/2" for 127.0.0.1 at 2017-11-29 12:41:25 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"neighborhood_id"=>"18", "id"=>"2"}
+  [1m[36mNeighborhood Load (0.3ms)[0m  [1m[34mSELECT  "neighborhoods".* FROM "neighborhoods" WHERE "neighborhoods"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."neighborhood_id" = $1 AND "posts"."id" = $2 LIMIT $3[0m  [["neighborhood_id", 18], ["id", 2], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (33.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered posts/show.html.erb within layouts/application (41.7ms)
+Completed 200 OK in 77ms (Views: 34.9ms | ActiveRecord: 34.3ms)
+
+
+Started GET "/neighborhoods/18/posts/2" for 127.0.0.1 at 2017-11-29 12:46:49 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"neighborhood_id"=>"18", "id"=>"2"}
+  [1m[36mNeighborhood Load (0.9ms)[0m  [1m[34mSELECT  "neighborhoods".* FROM "neighborhoods" WHERE "neighborhoods"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mPost Load (1.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."neighborhood_id" = $1 AND "posts"."id" = $2 LIMIT $3[0m  [["neighborhood_id", 18], ["id", 2], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered posts/show.html.erb within layouts/application (20.3ms)
+Completed 200 OK in 115ms (Views: 67.1ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/neighborhoods/18/posts/2/edit" for 127.0.0.1 at 2017-11-29 12:46:51 -0500
+Processing by PostsController#edit as HTML
+  Parameters: {"neighborhood_id"=>"18", "id"=>"2"}
+  [1m[36mNeighborhood Load (0.4ms)[0m  [1m[34mSELECT  "neighborhoods".* FROM "neighborhoods" WHERE "neighborhoods"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."neighborhood_id" = $1 AND "posts"."id" = $2 LIMIT $3[0m  [["neighborhood_id", 18], ["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/edit.html.erb within layouts/application (38.2ms)
+Completed 200 OK in 89ms (Views: 73.0ms | ActiveRecord: 2.5ms)
+
+
+Started PATCH "/neighborhoods/18/posts/2" for 127.0.0.1 at 2017-11-29 12:46:55 -0500
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VdQLdDk/m0vYW4EiHli2VHAMMJaV3LGqryvolQE5wiDeNhszzy4pgUwPIPMFKm/XGzcSbZxYFeGCjzfnPTcHHw==", "post"=>{"author"=>"meg", "title"=>"hiiii", "location"=>"plz", "photo_url"=>"", "content"=>"plz"}, "inquiry_type"=>"public health", "commit"=>"Update Post", "neighborhood_id"=>"18", "id"=>"2"}
+  [1m[36mNeighborhood Load (0.7ms)[0m  [1m[34mSELECT  "neighborhoods".* FROM "neighborhoods" WHERE "neighborhoods"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."neighborhood_id" = $1 AND "posts"."id" = $2 LIMIT $3[0m  [["neighborhood_id", 18], ["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/neighborhoods/18/posts/2
+Completed 302 Found in 16ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/neighborhoods/18/posts/2" for 127.0.0.1 at 2017-11-29 12:46:55 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"neighborhood_id"=>"18", "id"=>"2"}
+  [1m[36mNeighborhood Load (0.5ms)[0m  [1m[34mSELECT  "neighborhoods".* FROM "neighborhoods" WHERE "neighborhoods"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."neighborhood_id" = $1 AND "posts"."id" = $2 LIMIT $3[0m  [["neighborhood_id", 18], ["id", 2], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered posts/show.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 38ms (Views: 25.7ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/neighborhoods/18/posts/2/edit" for 127.0.0.1 at 2017-11-29 12:48:08 -0500
+Processing by PostsController#edit as HTML
+  Parameters: {"neighborhood_id"=>"18", "id"=>"2"}
+  [1m[36mNeighborhood Load (0.9ms)[0m  [1m[34mSELECT  "neighborhoods".* FROM "neighborhoods" WHERE "neighborhoods"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mPost Load (2.7ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."neighborhood_id" = $1 AND "posts"."id" = $2 LIMIT $3[0m  [["neighborhood_id", 18], ["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/edit.html.erb within layouts/application (34.8ms)
+Completed 200 OK in 116ms (Views: 73.3ms | ActiveRecord: 4.7ms)
+
+
+Started PATCH "/neighborhoods/18/posts/2" for 127.0.0.1 at 2017-11-29 12:48:10 -0500
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iJE7OIDojhQgRUET/5yeM3oU0fzQYuhTqa3ITXITcBYDcyt/dvk83rQR4MLk7kewES/zB9nmTBiECRc/Th21KQ==", "post"=>{"author"=>"meg", "title"=>"hiiii", "location"=>"plz", "photo_url"=>"", "content"=>"plz", "inquiry_type"=>"public health"}, "commit"=>"Update Post", "neighborhood_id"=>"18", "id"=>"2"}
+  [1m[36mNeighborhood Load (0.3ms)[0m  [1m[34mSELECT  "neighborhoods".* FROM "neighborhoods" WHERE "neighborhoods"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."neighborhood_id" = $1 AND "posts"."id" = $2 LIMIT $3[0m  [["neighborhood_id", 18], ["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (41.3ms)[0m  [1m[33mUPDATE "posts" SET "inquiry_type" = $1, "updated_at" = $2 WHERE "posts"."id" = $3[0m  [["inquiry_type", "public health"], ["updated_at", "2017-11-29 17:48:10.822448"], ["id", 2]]
+  [1m[35m (18.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/neighborhoods/18/posts/2
+Completed 302 Found in 82ms (ActiveRecord: 62.2ms)
+
+
+Started GET "/neighborhoods/18/posts/2" for 127.0.0.1 at 2017-11-29 12:48:10 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"neighborhood_id"=>"18", "id"=>"2"}
+  [1m[36mNeighborhood Load (0.2ms)[0m  [1m[34mSELECT  "neighborhoods".* FROM "neighborhoods" WHERE "neighborhoods"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."neighborhood_id" = $1 AND "posts"."id" = $2 LIMIT $3[0m  [["neighborhood_id", 18], ["id", 2], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered posts/show.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 34ms (Views: 27.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/neighborhoods" for 127.0.0.1 at 2017-11-29 12:48:56 -0500
+Processing by NeighborhoodsController#index as HTML
+  Rendering neighborhoods/index.html.erb within layouts/application
+  [1m[36mNeighborhood Load (1.4ms)[0m  [1m[34mSELECT "neighborhoods".* FROM "neighborhoods"[0m
+  Rendered neighborhoods/index.html.erb within layouts/application (16.6ms)
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 77ms (Views: 62.3ms | ActiveRecord: 2.5ms)
+
+
