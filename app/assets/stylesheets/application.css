@@ -14,8 +14,17 @@
  *= require_self
  */
 
+body {
+
+}
+
 header, footer {
   text-align: center;
+  text-decoration: none;
+}
+
+nav {
+
 }
 
 h1 {
@@ -50,6 +59,10 @@ h5 {
 
 }
 
+.timestamp {
+
+}
+
 .bottom-nav {
-  
+
 }

@@ -10,9 +10,16 @@
   <h4><%= @post.content %></h4>
 </div>
 
+<div class="timestamp">
+  <p>created on <%= @post.created_at %></p>
+  <p>updated on <%= @post.updated_at %></p>
+</div>
+
 <div class="bottom-nav">
-    <%= link_to "Edit Post", edit_neighborhood_post_path(@neighborhood, @post)%> ||
-    <%= link_to "Delete Post", neighborhood_post_path(@neighborhood, @post), method: :delete %>
+    <% if current_user == @post.user %>
+      <%= link_to "Edit Post", edit_neighborhood_post_path(@neighborhood, @post)%> ||
+      <%= link_to "Delete Post", neighborhood_post_path(@neighborhood, @post), method: :delete %>
+    <% end %>
   <br>
     <%= link_to "Return to #{@neighborhood.name} Page", neighborhood_path(@neighborhood) %>
 </div>

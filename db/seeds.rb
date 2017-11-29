@@ -8,6 +8,12 @@
 
 Neighborhood.destroy_all
 Post.destroy_all
+User.destroy_all
+
+meg = User.create(email: "meg@email.com", password: "meg1234")
+tom = User.create(email: "tom@email.com", password: "tom1234")
+rebecca = User.create(email: "rebecca@email.com", password: "rebecca1234")
+curt = User.create(email: "curt@email.com", password: "curt124")
 
 Neighborhood.create([
   {name: "Adams Morgan", quadrant: "NW", photo_url: "https://washington-org.s3.amazonaws.com/s3fs-public/admo-18th-st-rows-of-stores-credit-ted-eytan_flickr-user-taedc.jpg"},
@@ -36,19 +42,7 @@ Neighborhood.create([
   {name: "Other SE", quadrant: "SE", photo_url: ""}
 ])
 
-# Landmark.create([
-#   {name: "parking lot", photo_url: "", location: "NW", agency: "National Park Service"},
-#   {name: "Rock Creek Park", photo_url: "https://npca.s3.amazonaws.com/images/9216/bdb45704-5a6c-413f-96de-00816ddd863c-banner.jpg?1446236516", location: "NW", agency: "National Park Service"},
-#   {name: "Theodore Roosevelt Island", photo_url: "https://www.findyourchesapeake.com/public/nps_global/images/places_large/theodorerooseveltisland.jpg", location: "Potomac River", agency: "National Park Service"},
-#   {name: "Anacostia Park", photo_url: "https://www.findyourchesapeake.com/public/nps_global/images/places_large/anacostia2.jpg", location: "SE", agency: "National Park Service"},
-#   {name: "Kingman Island", photo_url: "https://static1.squarespace.com/static/5666fd6b1c12104ed9dc343d/t/569516fb0e4c11c98e31322a/1468361910316/Kingman+11.6.08+019.jpg", location: "Anacostia River", agency: "Living Classrooms National Capital Region"},
-#   {name: "National Arboretum", photo_url: "http://packedsuitcase.com/wp-content/uploads/2014/04/National-Arboretum-Capitol-Columns-from-afar-2.jpg", location: "NE", agency: "USDA"},
-#   {name: "Miscellaneous", photo_url: "https://upload.wikimedia.org/wikipedia/commons/8/8a/Flag_Map_of_Washington_DC.png", location: "Elsewhere in DC", agency: "various"}
-# ])
-
-Post.create([
-  {author: "Meg", title: "Community Garden at 13th & Irving", content: "There isi interest from the community to install a community garden in the dilapidated parking lot at 13th & I", inquiry_type: "public health", location: "13th St NW & Irving St NW", neighborhood_id: 6},
-  {author: "Curt", title: "Install Accessible Ramp on Waterfront Walk", content: "The waterfront boardwalk area should really have a ramp to make it accessible to all citizens!", inquiry_type: "accessibility", location: "600 Water St SW", neighborhood_id: 18},
-  {author: "Tom", title: "More Street Lights Needed", content: "The streets are very dark in this area. New streetlights would greatly improve public safety and overall neighborhood satisfaction.", inquiry_type: "public safety", location: "20 M St SE", neighborhood_id: 5},
-  {author: "Rebecca", title: "New Paint on Playground", content: "The playground at Joseph H. Cole Recreation is looking rather dilapidated and could use another coat of paint!", inquiry_type: "aesthetics", location: "1299 Neal Street, NE", neighborhood_id: 11},
-])
+Post.create(author: "Meg", title: "Community Garden at 13th & Irving", content: "There isi interest from the community to install a community garden in the dilapidated parking lot at 13th & I", inquiry_type: "public health", location: "13th St NW & Irving St NW", neighborhood_id: 6)
+Post.create(author: "Curt", title: "Install Accessible Ramp on Waterfront Walk", content: "The waterfront boardwalk area should really have a ramp to make it accessible to all citizens!", inquiry_type: "accessibility", location: "600 Water St SW", neighborhood_id: 18)
+Post.create(author: "Tom", title: "More Street Lights Needed", content: "The streets are very dark in this area. New streetlights would greatly improve public safety and overall neighborhood satisfaction.", inquiry_type: "public safety", location: "20 M St SE", neighborhood_id: 5)
+Post.create(author: "Rebecca", title: "New Paint on Playground", content: "The playground at Joseph H. Cole Recreation is looking rather dilapidated and could use another coat of paint!", inquiry_type: "aesthetics", location: "1299 Neal Street, NE", neighborhood_id: 11)
