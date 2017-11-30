@@ -19,14 +19,18 @@ body {
 }
 
 .inner-body {
-  padding: 0% 10% 0% 10%;
-  margin: 2% 5% 2% 5%;
+  padding: 0% 10% 0 10%;
+  margin: 2% 5% -2% 5%;
 }
 
 header {
   text-align: center;
   text-decoration: none;
   margin-top: 10px;
+}
+
+footer {
+  text-align: center;
 }
 
 .dc-flag {
@@ -62,12 +66,10 @@ header {
   height: 200px;
   width: 200px;
   border-radius: 50%;
-  opacity: 50%;
 }
 
 .neighborhood-name {
   color: white;
-
   font-weight: bold;
   font-size: 18pt;
   position: absolute;
@@ -79,16 +81,16 @@ header {
   color: black;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
 
-h4 {
-
+.showpage-title {
+ font-size: 25pt;
 }
 
-h5 {
-
+#quadrant {
+  margin-top: -2%;
+  margin-bottom: -1%;
 }
 
 #map {
@@ -103,22 +105,27 @@ h5 {
 .page-content-container {
   padding: 0% 20% 0% 20%;
   margin: 2% 10% 2% 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.neighborhood-post-container {
+  padding: 0 4% 0 4%;
+  border: dotted 1px gray;
+}
+
+.post-details {
+  line-height: 2pt;
 }
 
 .post-content {
   font-style: italic;
-}
-
-.form-elements {
-
+  margin-top: -5%;
 }
 
 .timestamp {
-
-}
-
-.bottom-nav {
-
+  line-height: 8pt;
 }
 
 .centered-title {
@@ -126,6 +133,6 @@ h5 {
   text-align: center;
 }
 
-footer {
-  text-align: center;
+.post-here {
+  text-decoration: none;
 }

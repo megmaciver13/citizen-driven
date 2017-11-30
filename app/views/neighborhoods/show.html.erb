@@ -1,24 +1,31 @@
 <div class="title-banner">
-  <h3><%= @neighborhood.name %></h3>
-  <h5>Quadrant: <%= @neighborhood.quadrant %></h5>
-  <div id="map"></div>
+  <h3><div class="showpage-title"><%= @neighborhood.name %></div></h3>
+  <h5 id="quadrant">Quadrant: <%= @neighborhood.quadrant %></h5>
+  <h3><div class="post-here"><%= link_to "Post Your Input", new_neighborhood_post_path(@neighborhood)%></div></h3>
+
+
 </div>
 
 <div class="page-content-container">
-  <h4>Posts for <%= @neighborhood.name %></h4>
-  <h5><%= link_to "(+) New Post", new_neighborhood_post_path(@neighborhood)%></h5>
 
-  <h5>
-    <% if @neighborhood.posts.count == 0 %>
-      <div class="no-posts">No Posts for <%= @neighborhood.name %></div>
-    <% else %>
-      <% @neighborhood.posts.each do |post| %>
-        <div><%= link_to post.title, neighborhood_post_path(@neighborhood, post) %></div>
+  <div class="neighborhood-post-container">
+    <div class="centered-title">
+      <h3>Citizen Voices</h3>
+    </div>
+
+    <h3>
+      <% if @neighborhood.posts.count == 0 %>
+        <div class="no-posts">No Posts Yet for <%= @neighborhood.name %></div>
+      <% else %>
+        <% @neighborhood.posts.each do |post| %>
+          <div class="hood-posts"><%= link_to post.title, neighborhood_post_path(@neighborhood, post) %></div>
+        <% end %>
       <% end %>
-    <% end %>
-  </h5>
+    </h3>
+  </div>
 
   <br>
+  <div id="map"></div>
 
   <div class="bottom-nav">
    <%= link_to "Return to All Neighborhoods", neighborhoods_path %>

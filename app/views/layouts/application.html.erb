@@ -25,15 +25,16 @@
 
     <div class="inner-body">
       <header>
-        <h1><a href="/neighborhoods" class="citizen-driven">CITIZEN <img src="http://open.dc.gov/open-source-guidelines/assets/img/dc_logo.png" class="dc-flag"> DRIVEN</a></h1>
+        <h1><a href="/neighborhoods" class="citizen-driven">CITIZEN <img src="http://open.dc.gov/open-source-guidelines/assets/img/dc_logo.png" alt="" class="dc-flag"> DRIVEN</a></h1>
         <p class="tagline">Bringing Voice to the Community</p>
       </header>
 
       <%= yield %>
       <br>
       <br>
-      <footer><%= link_to "Return Home", neighborhoods_path %> | <%= link_to "Learn More", neighborhoods_path %></footer>
-
     </div>
+
+    <footer><%= link_to "Return Home", neighborhoods_path %> | <%= link_to "Learn More", neighborhoods_path %></footer>
+
   </body>
 </html>
