@@ -4,7 +4,7 @@ This app, called Citizen Driven, is designed to help community members voice the
 
 ## List of Features
 * On every page, there are a few key features:
-- the app header, Citizen Driven, which links back to the neighborhood index page, and the tagline underneath
+-- the app header, Citizen Driven, which links back to the neighborhood index page, and the tagline underneath
 - top left: links for user to sign in and sign up (if not logged in), or log out (if currently logged in)
 - bottom: links to home page
 * On the home page, there is a little bit of info about the purpose of the app with a link to enter to the next page.
