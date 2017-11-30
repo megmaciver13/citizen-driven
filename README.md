@@ -3,16 +3,16 @@
 This app, called Citizen Driven, is designed to help community members voice their ideas for improvements that could/should be made to their community. By allowing users to see others' posts, it is a way to engage the community and bring them together around community pride. For this project, the seed data reflects communities within DC, but it could also be extrapolated to other cities.
 
 ## List of Features
-* On every page, there are a few key features:
--- the app header, Citizen Driven, which links back to the neighborhood index page, and the tagline underneath
+On every page, there are a few key features:
+- the app header, Citizen Driven, which links back to the neighborhood index page, and the tagline underneath
 - top left: links for user to sign in and sign up (if not logged in), or log out (if currently logged in)
 - bottom: links to home page
-* On the home page, there is a little bit of info about the purpose of the app with a link to enter to the next page.
-* The next page shows a list of DC neighborhoods. When you click one, it takes you to a show page for that individual neighborhood.
-* Each neighborhood page shows the name of the neighborhood, the quadrant of the city that it is located in, a link to post your input, a list of others' input, a map of DC, and a link back to the post displaying all the neighborhoods.
+On the home page, there is a little bit of info about the purpose of the app with a link to enter to the next page.
+The next page shows a list of DC neighborhoods. When you click one, it takes you to a show page for that individual neighborhood.
+Each neighborhood page shows the name of the neighborhood, the quadrant of the city that it is located in, a link to post your input, a list of others' input, a map of DC, and a link back to the post displaying all the neighborhoods.
 - If you click to post your input, you are taken to a form. (In order to post your input, you must be logged in.)
 - If you click on another's post, you are taken to that post show page.
-* Each post show page shows:
+Each post show page shows:
 - The post title, content, author, associated neighborhood, type of inquiry, a map, created on/updated on dates, and a link back to the neighborhood show page.
 - If you are logged in and you are the author of the post, there will be links visible to edit or delete the post.
 
