@@ -42,7 +42,7 @@ And type http://localhost:3000/ into your browser.
 
 ## Deployment
 
-To access Citizen Driven on a live system, visit _____________________.
+To access Citizen Driven on a live system, visit https://citizen-driven.herokuapp.com/.
 
 ## Built With
 
