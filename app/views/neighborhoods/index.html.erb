@@ -2,7 +2,7 @@
 
 <div class="neighborhood-container">
   <% @neighborhoods.each do |neighborhood| %>
-    <a href="/neighborhoods/<%= params[:id]%>">
+    <a href="/neighborhoods/<%= neighborhood.id %>">
      <div class="individual-neighborhood">
        <img src="<%= neighborhood.photo_url %>" alt="<%= neighborhood.name %> photo" class="neighborhood-photo">
        <div class="neighborhood-name"><%= neighborhood.name %></div>

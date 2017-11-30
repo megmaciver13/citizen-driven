@@ -36,10 +36,10 @@ neighborhoods = Neighborhood.create([
   {name: "SW Waterfront", quadrant: "SW", photo_url: "https://a0.muscache.com/locations/uploads/photo/image/13143/0_4200_0_2800_one_USA_WashingtonDC_SouthwestWaterfront_CKW-40.jpg"},
   {name: "Upper Northwest", quadrant: "NW", photo_url: "https://assets.fodors.com/destinations/4728/national-cathedral-washington-dc-usa-north-america_main.jpg"},
   {name: "Woodley Park", quadrant: "NW", photo_url: "https://images1.apartments.com/i2/pkC33nq7NL392gbIiHRJuhw1GYyQe5htuwAhSs7JmXY/110/woodley-park-washington-dc-neighborhood-photo.jpg"},
-  {name: "Other NW", quadrant: "NW", photo_url: ""},
-  {name: "Other SW", quadrant: "SW", photo_url: ""},
-  {name: "Other NE", quadrant: "NE", photo_url: ""},
-  {name: "Other SE", quadrant: "SE", photo_url: ""}
+  {name: "Other NW", quadrant: "NW", photo_url: "http://www.buckmanrealtor.com/images/landing-pages/Logan_Circle.jpg"},
+  {name: "Other SW", quadrant: "SW", photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Homes_in_SWDC%2C_HUD_headquarters.jpg/350px-Homes_in_SWDC%2C_HUD_headquarters.jpg"},
+  {name: "Other NE", quadrant: "NE", photo_url: "https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwilqaPojOXXAhXDl-AKHW2gAPAQjRwIBw&url=https%3A%2F%2Fwww.flickr.com%2Fphotos%2Fmr_t_in_dc%2F6157734262&psig=AOvVaw1cUJqksgX8BhoWYa1LMsBm&ust=1512090122380798"},
+  {name: "Other SE", quadrant: "SE", photo_url: "http://lgsem.com/wp-content/uploads/2017/06/se-dc-apartments-interior-design-ideas-simple-under-se-dc-apartments-home-interior-ideas.jpg"}
 ])
 
 meg.posts.create(author: "Meg", title: "Community Garden at 13th & Irving", content: "There isi interest from the community to install a community garden in the dilapidated parking lot at 13th & I", inquiry_type: "public health", location: "13th St NW & Irving St NW", neighborhood_id: 6)

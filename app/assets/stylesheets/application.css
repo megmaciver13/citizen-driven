@@ -24,17 +24,22 @@ body {
 }
 
 header {
-  font-family: 'Indie Flower', cursive;
   text-align: center;
+  text-decoration: none;
   margin-top: 10px;
 }
 
-h1 {
-  size: 70pt;
+.dc-flag {
+  height: 40px;
+}
+
+.citizen-driven {
   text-decoration: none;
+  font-size: 40pt;
 }
 
 .tagline {
+  font-family: 'Indie Flower', cursive;
   font-style: italic;
   margin-top: -20px;
 }
@@ -62,7 +67,7 @@ h1 {
 
 .neighborhood-name {
   color: white;
-  
+
   font-weight: bold;
   font-size: 18pt;
   position: absolute;

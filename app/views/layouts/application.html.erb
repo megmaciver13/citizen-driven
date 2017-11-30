@@ -15,7 +15,7 @@
   <body>
     <nav>
         <% if !current_user %>
-          <p><%= link_to "Sign Up", new_user_registration_path %> || <%= link_to "Sign In", new_user_session_path %></p>
+          <p><%= link_to "Sign Up", new_user_registration_path %> | <%= link_to "Sign In", new_user_session_path %></p>
         <% else %>
           <p><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></p>
         <% end %>
@@ -25,14 +25,14 @@
 
     <div class="inner-body">
       <header>
-        <h1><%= link_to "Citizen Driven", neighborhoods_path %></h1>
+        <h1><a href="/neighborhoods" class="citizen-driven">CITIZEN <img src="http://open.dc.gov/open-source-guidelines/assets/img/dc_logo.png" class="dc-flag"> DRIVEN</a></h1>
         <p class="tagline">Bringing Voice to the Community</p>
       </header>
 
       <%= yield %>
       <br>
       <br>
-      <footer><%= link_to "Return Home", neighborhoods_path %>  <%= link_to "Learn More", neighborhoods_path %></footer>
+      <footer><%= link_to "Return Home", neighborhoods_path %> | <%= link_to "Learn More", neighborhoods_path %></footer>
 
     </div>
   </body>
