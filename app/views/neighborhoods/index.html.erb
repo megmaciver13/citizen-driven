@@ -1,10 +1,15 @@
-<h3>Neighborhoods</h3>
+<h3 class="centered-title">Neighborhoods</h3>
 
-<ul>
+<div class="neighborhood-container">
   <% @neighborhoods.each do |neighborhood| %>
-   <li><%= link_to neighborhood.name, neighborhood_path(neighborhood) %></li>
+    <a href="/neighborhoods/<%= params[:id]%>">
+     <div class="individual-neighborhood">
+       <img src="<%= neighborhood.photo_url %>" alt="<%= neighborhood.name %> photo" class="neighborhood-photo">
+       <div class="neighborhood-name"><%= neighborhood.name %></div>
+     </div>
+    </a>
   <% end %>
-</ul>
+</div>
 
 <div class="bottom-nav">
 

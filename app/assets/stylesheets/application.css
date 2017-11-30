@@ -15,28 +15,67 @@
  */
 
 body {
-
+  font-family: 'PT Sans', sans-serif;
 }
 
-header, footer {
+.inner-body {
+  padding: 0% 10% 0% 10%;
+  margin: 2% 5% 2% 5%;
+}
+
+header {
+  font-family: 'Indie Flower', cursive;
   text-align: center;
-  text-decoration: none;
-}
-
-nav {
-
+  margin-top: 10px;
 }
 
 h1 {
-
+  size: 70pt;
+  text-decoration: none;
 }
 
 .tagline {
   font-style: italic;
+  margin-top: -20px;
 }
 
-h3 {
+.neighborhood-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
 
+.individual-neighborhood {
+  position: relative;
+  text-align: center;
+}
+
+.neighborhood-photo {
+  object-fit: cover;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  opacity: 50%;
+}
+
+.neighborhood-name {
+  color: white;
+  
+  font-weight: bold;
+  font-size: 18pt;
+  position: absolute;
+  top: 45%;
+  width: 100%;
+}
+
+.title-banner {
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 h4 {
@@ -48,13 +87,17 @@ h5 {
 }
 
 #map {
-  height: 600px;
-  width: 600px;
-  text-align: center;
+  height: 250px;
+  width: 400px;
 }
 
 .no-posts {
   font-style: italic;
+}
+
+.page-content-container {
+  padding: 0% 20% 0% 20%;
+  margin: 2% 10% 2% 10%;
 }
 
 .post-content {
@@ -71,4 +114,13 @@ h5 {
 
 .bottom-nav {
 
+}
+
+.centered-title {
+  color: #5a5e63;
+  text-align: center;
+}
+
+footer {
+  text-align: center;
 }

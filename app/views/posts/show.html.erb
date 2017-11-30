@@ -1,28 +1,40 @@
-<h3><%= @post.title %></h3>
-
-
-
-
-<h4>submitted by: <%= @post.author %></h4>
-<h4>neighborhood: <%= @neighborhood.name %></h4>
-<h4>type of inquiry: <%= @post.inquiry_type %></h4>
-
-<img src="<%= @post.photo_url %>">
-
-<div class="post-content">
-  <h4><%= @post.content %></h4>
+<div class="title-banner">
+  <h3><%= @post.title %></h3>
+  <div id="map"></div>
 </div>
 
-<div class="timestamp">
-  <p>created on <%= @post.created_at %></p>
-  <p>updated on <%= @post.updated_at %></p>
+
+<div class="page-content-container">
+  <h4>submitted by: <%= @post.author %></h4>
+  <h4>neighborhood: <%= @neighborhood.name %></h4>
+  <h4>type of inquiry: <%= @post.inquiry_type %></h4>
+
+  <img src="<%= @post.photo_url %>">
+
+  <div class="post-content">
+    <h4><%= @post.content %></h4>
+  </div>
+
+  <div class="timestamp">
+    <p>created on <%= @post.created_at %></p>
+    <p>updated on <%= @post.updated_at %></p>
+  </div>
+
+  <div class="bottom-nav">
+      <% if current_user == @post.user %>
+        <%= link_to "Edit Post", edit_neighborhood_post_path(@neighborhood, @post)%> ||
+        <%= link_to "Delete Post", neighborhood_post_path(@neighborhood, @post), method: :delete %>
+      <% end %>
+    <br>
+      <%= link_to "Return to #{@neighborhood.name} Page", neighborhood_path(@neighborhood) %>
+  </div>
 </div>
 
-<div class="bottom-nav">
-    <% if current_user == @post.user %>
-      <%= link_to "Edit Post", edit_neighborhood_post_path(@neighborhood, @post)%> ||
-      <%= link_to "Delete Post", neighborhood_post_path(@neighborhood, @post), method: :delete %>
-    <% end %>
-  <br>
-    <%= link_to "Return to #{@neighborhood.name} Page", neighborhood_path(@neighborhood) %>
-</div>
+<script>
+handler = Gmaps.build('Google');
+handler.buildMap({ provider: {
+  center: {lat: 38.909110, lng: -77.017607},
+  minZoom: 12
+}, internal: {id: 'map'}}, function(){
+});
+</script>

@@ -20,7 +20,6 @@ neighborhoods = Neighborhood.create([
   {name: "Anacostia", quadrant: "SE", photo_url: "https://hd1n2hd4y-res.cloudinary.com/image/upload/c_scale,w_800/post-148011.png"},
   {name: "Brookland", quadrant: "NE", photo_url: "https://ggwash.org/images/posts/201309-060134.jpg"},
   {name: "Capitol Hill", quadrant: "Central", photo_url: "https://a1.muscache.com/locations/uploads/photo/image/6823/75_4125_0_2538_two_USA_WashingtonDC_CapitolHill_CKW-6.jpg"},
-  {name: "Navy Yard", quadrant: "SE", photo_url: "https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwiDneqln-LXAhVD52MKHeEkC1MQjRwIBw&url=https%3A%2F%2Fwww.airbnb.com%2Flocations%2Fwashington-dc%2Fnavy-yard&psig=AOvVaw1KbYjXh6mXk7-WwZPsF6nS&ust=1511992003441515"},
   {name: "Columbia Heights", quadrant: "NW", photo_url: "https://a2.muscache.com/locations/uploads/photo/image/7934/0_4200_0_2800_one_USA_WashingtonDC_ColumbiaHeights_CKW-16.jpg"},
   {name: "Downtown", quadrant: "NW", photo_url: "http://cache.marriott.com/propertyimages/w/wasdc/wasdc_main01_r.jpg?resize=0.5x:0.5x"},
   {name: "Dupont Circle", quadrant: "NW", photo_url: "http://www.hotelpalomar-dc.com/images/1700-960/img-4621v2-3-0c37c2ad.jpg"},
@@ -29,6 +28,7 @@ neighborhoods = Neighborhood.create([
   {name: "H Street", quadrant: "NE", photo_url: "http://www.elevationdcmedia.com/galleries/Neighborhoods/HStreet/hstreet-5.jpg"},
   {name: "Logan Circle", quadrant: "NW", photo_url: "https://washington-org.s3.amazonaws.com/s3fs-public/styles/listicle_image/public/people-enjoying-logan-circle-on-a-spring-evening_ddc-photo.jpg?itok=0y9gY85F"},
   {name: "National Mall", quadrant: "Central", photo_url: "https://ridb.recreation.gov/images/81894.jpg"},
+  {name: "Navy Yard", quadrant: "SE", photo_url: "http://www.jdland.com/dc/images/overhead-601lw-35-200711-05.jpg"},
   {name: "NoMa", quadrant: "NE", photo_url: "https://cdn.vox-cdn.com/uploads/chorus_image/image/50407079/20489737062_d7b3650a4f_o.0.0.jpg"},
   {name: "Penn Quarter & Chinatown", quadrant: "NW", photo_url: "http://www.longandfoster.com/images/uploads/recos/35009/community/washington/penn-quarter/01.jpg"},
   {name: "Petworth", quadrant: "NW", photo_url: "http://msqrealty.com/wp-content/sv-galleries/pic8.png"},
@@ -43,6 +43,6 @@ neighborhoods = Neighborhood.create([
 ])
 
 meg.posts.create(author: "Meg", title: "Community Garden at 13th & Irving", content: "There isi interest from the community to install a community garden in the dilapidated parking lot at 13th & I", inquiry_type: "public health", location: "13th St NW & Irving St NW", neighborhood_id: 6)
-Post.create(author: "Curt", title: "Install Accessible Ramp on Waterfront Walk", content: "The waterfront boardwalk area should really have a ramp to make it accessible to all citizens!", inquiry_type: "accessibility", location: "600 Water St SW", neighborhood_id: neighborhoods[17])
-Post.create(author: "Tom", title: "More Street Lights Needed", content: "The streets are very dark in this area. New streetlights would greatly improve public safety and overall neighborhood satisfaction.", inquiry_type: "public safety", location: "20 M St SE", neighborhood_id: neighborhoods[4])
-Post.create(author: "Rebecca", title: "New Paint on Playground", content: "The playground at Joseph H. Cole Recreation is looking rather dilapidated and could use another coat of paint!", inquiry_type: "aesthetics", location: "1299 Neal Street, NE", neighborhood_id: neighborhoods[10])
+curt.posts.create(author: "Curt", title: "Install Accessible Ramp on Waterfront Walk", content: "The waterfront boardwalk area should really have a ramp to make it accessible to all citizens!", inquiry_type: "accessibility", location: "600 Water St SW", neighborhood_id: 18)
+tom.posts.create(author: "Tom", title: "More Street Lights Needed", content: "The streets are very dark in this area. New streetlights would greatly improve public safety and overall neighborhood satisfaction.", inquiry_type: "public safety", location: "20 M St SE", neighborhood_id: 5)
+rebecca.posts.create(author: "Rebecca", title: "New Paint on Playground", content: "The playground at Joseph H. Cole Recreation is looking rather dilapidated and could use another coat of paint!", inquiry_type: "aesthetics", location: "1299 Neal Street, NE", neighborhood_id: 11)
