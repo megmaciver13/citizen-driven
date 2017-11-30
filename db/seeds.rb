@@ -38,11 +38,11 @@ neighborhoods = Neighborhood.create([
   {name: "Woodley Park", quadrant: "NW", photo_url: "https://images1.apartments.com/i2/pkC33nq7NL392gbIiHRJuhw1GYyQe5htuwAhSs7JmXY/110/woodley-park-washington-dc-neighborhood-photo.jpg"},
   {name: "Other NW", quadrant: "NW", photo_url: "http://www.buckmanrealtor.com/images/landing-pages/Logan_Circle.jpg"},
   {name: "Other SW", quadrant: "SW", photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Homes_in_SWDC%2C_HUD_headquarters.jpg/350px-Homes_in_SWDC%2C_HUD_headquarters.jpg"},
-  {name: "Other NE", quadrant: "NE", photo_url: "https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwilqaPojOXXAhXDl-AKHW2gAPAQjRwIBw&url=https%3A%2F%2Fwww.flickr.com%2Fphotos%2Fmr_t_in_dc%2F6157734262&psig=AOvVaw1cUJqksgX8BhoWYa1LMsBm&ust=1512090122380798"},
+  {name: "Other NE", quadrant: "NE", photo_url: "https://imageserver-bisnow1.netdna-ssl.com/oAM-QRPTxZ-JxdEwTcQbZbOfNvo=/0x0/publisher/56d88a8495efe_NE_DC.jpeg"},
   {name: "Other SE", quadrant: "SE", photo_url: "http://lgsem.com/wp-content/uploads/2017/06/se-dc-apartments-interior-design-ideas-simple-under-se-dc-apartments-home-interior-ideas.jpg"}
 ])
 
-meg.posts.create(author: "Meg", title: "Community Garden at 13th & Irving", content: "There isi interest from the community to install a community garden in the dilapidated parking lot at 13th & I", inquiry_type: "public health", location: "13th St NW & Irving St NW", neighborhood_id: 5)
+meg.posts.create(author: "Meg", title: "Community Garden at 13th & Irving", content: "There is interest from the community to install a community garden in the dilapidated parking lot at 13th & I St NW. This garden would be an opportunity to grow food locally as well as an educational opportunity to teach about gardening and nutrition.", inquiry_type: "public health", location: "13th St NW & Irving St NW", neighborhood_id: 5)
 curt.posts.create(author: "Curt", title: "Install Accessible Ramp on Waterfront Walk", content: "The waterfront boardwalk area should really have a ramp to make it accessible to all citizens!", inquiry_type: "accessibility", location: "600 Water St SW", neighborhood_id: 18)
 tom.posts.create(author: "Tom", title: "More Street Lights Needed", content: "The streets are very dark in this area. New streetlights would greatly improve public safety and overall neighborhood satisfaction.", inquiry_type: "public safety", location: "20 M St SE", neighborhood_id: 13)
 rebecca.posts.create(author: "Rebecca", title: "New Paint on Playground", content: "The playground at Joseph H. Cole Recreation is looking rather dilapidated and could use another coat of paint!", inquiry_type: "aesthetics", location: "1299 Neal Street, NE", neighborhood_id: 10)

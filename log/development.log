@@ -12068,3 +12068,1052 @@ Processing by NeighborhoodsController#index as HTML
 Completed 200 OK in 94ms (Views: 91.0ms | ActiveRecord: 0.6ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-11-30 11:05:48 -0500
+  [1m[35m (7.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 360ms (Views: 350.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-30 11:16:33 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 88ms (Views: 84.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-11-30 11:17:57 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering /Users/megmaciver/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/devise-4.3.0/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/megmaciver/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/devise-4.3.0/app/views/devise/shared/_links.html.erb (2.0ms)
+  Rendered /Users/megmaciver/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/devise-4.3.0/app/views/devise/sessions/new.html.erb within layouts/application (44.5ms)
+Completed 200 OK in 233ms (Views: 138.3ms | ActiveRecord: 67.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-11-30 11:18:04 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YETplf/UB/L5O/Ua7q8rGZzuOWNbBf9dy0iJxGhEpMD6sX4XanPm5FX7DHNwJye42bnw4NOlhcqRh4WGDQSEbA==", "user"=>{"email"=>"meg@email.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "meg@email.com"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (8.3ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["current_sign_in_at", "2017-11-30 16:18:04.343960"], ["last_sign_in_at", "2017-11-30 14:45:24.344833"], ["sign_in_count", 3], ["updated_at", "2017-11-30 16:18:04.349354"], ["id", 1]]
+  [1m[35m (11.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 229ms (ActiveRecord: 23.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-30 11:18:04 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (1.6ms)
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 164ms (Views: 154.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/neighborhoods" for 127.0.0.1 at 2017-11-30 11:18:08 -0500
+Processing by NeighborhoodsController#index as HTML
+  Rendering neighborhoods/index.html.erb within layouts/application
+  [1m[36mNeighborhood Load (2.9ms)[0m  [1m[34mSELECT "neighborhoods".* FROM "neighborhoods"[0m
+  Rendered neighborhoods/index.html.erb within layouts/application (90.9ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 170ms (Views: 149.9ms | ActiveRecord: 10.8ms)
+
+
+Started GET "/neighborhoods/5" for 127.0.0.1 at 2017-11-30 11:18:10 -0500
+Processing by NeighborhoodsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mNeighborhood Load (0.7ms)[0m  [1m[34mSELECT  "neighborhoods".* FROM "neighborhoods" WHERE "neighborhoods"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering neighborhoods/show.html.erb within layouts/application
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (10.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."neighborhood_id" = $1[0m  [["neighborhood_id", 5]]
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."neighborhood_id" = $1[0m  [["neighborhood_id", 5]]
+  Rendered neighborhoods/show.html.erb within layouts/application (170.0ms)
+Completed 200 OK in 266ms (Views: 234.9ms | ActiveRecord: 19.4ms)
+
+
+Started GET "/neighborhoods/5/posts/3" for 127.0.0.1 at 2017-11-30 11:18:15 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"neighborhood_id"=>"5", "id"=>"3"}
+  [1m[36mNeighborhood Load (1.0ms)[0m  [1m[34mSELECT  "neighborhoods".* FROM "neighborhoods" WHERE "neighborhoods"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mPost Load (1.6ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."neighborhood_id" = $1 AND "posts"."id" = $2 LIMIT $3[0m  [["neighborhood_id", 5], ["id", 3], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (53.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered posts/show.html.erb within layouts/application (79.1ms)
+Completed 200 OK in 195ms (Views: 112.3ms | ActiveRecord: 56.9ms)
+
+
+Started GET "/neighborhoods/4" for 127.0.0.1 at 2017-11-30 11:18:22 -0500
+Processing by NeighborhoodsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mNeighborhood Load (0.6ms)[0m  [1m[34mSELECT  "neighborhoods".* FROM "neighborhoods" WHERE "neighborhoods"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering neighborhoods/show.html.erb within layouts/application
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."neighborhood_id" = $1[0m  [["neighborhood_id", 4]]
+  Rendered neighborhoods/show.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 182ms (Views: 165.0ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/neighborhoods/6" for 127.0.0.1 at 2017-11-30 11:18:25 -0500
+Processing by NeighborhoodsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mNeighborhood Load (1.1ms)[0m  [1m[34mSELECT  "neighborhoods".* FROM "neighborhoods" WHERE "neighborhoods"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering neighborhoods/show.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (50.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."neighborhood_id" = $1[0m  [["neighborhood_id", 6]]
+  [1m[36mPost Load (2.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."neighborhood_id" = $1[0m  [["neighborhood_id", 6]]
+  Rendered neighborhoods/show.html.erb within layouts/application (77.3ms)
+Completed 200 OK in 164ms (Views: 96.7ms | ActiveRecord: 55.3ms)
+
+
+  [1m[35m (6.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (201.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "projects_development"[0m
+  [1m[35m (213.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "projects_test"[0m
+  [1m[35m (531.8ms)[0m  [1m[35mCREATE DATABASE "projects_development" ENCODING = 'unicode'[0m
+  [1m[35m (454.7ms)[0m  [1m[35mCREATE DATABASE "projects_test" ENCODING = 'unicode'[0m
+  [1m[35m (18.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (8.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (6.9ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5410015084792356885)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateNeighborhoods (20171129141154)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (28.6ms)[0m  [1m[35mCREATE TABLE "neighborhoods" ("id" bigserial primary key, "name" character varying NOT NULL, "quadrant" character varying, "photo_url" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (2.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20171129141154"]]
+  [1m[35m (8.9ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreatePosts (20171129141159)
+  [1m[35m (6.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (23.4ms)[0m  [1m[35mCREATE TABLE "posts" ("id" bigserial primary key, "author" character varying NOT NULL, "title" character varying NOT NULL, "photo_url" character varying, "content" character varying NOT NULL, "inquiry_type" character varying, "location" character varying NOT NULL, "neighborhood_id" bigint NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_7de4b12a4e"
+FOREIGN KEY ("neighborhood_id")
+  REFERENCES "neighborhoods" ("id")
+)[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE  INDEX  "index_posts_on_neighborhood_id" ON "posts"  ("neighborhood_id")[0m
+  [1m[35mSQL (2.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20171129141159"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to DeviseCreateUsers (20171129154613)
+  [1m[35m (6.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (17.8ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" inet, "last_sign_in_ip" inet, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20171129154613"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddUsersToPosts (20171129163302)
+  [1m[35m (6.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (8.0ms)[0m  [1m[35mALTER TABLE "posts" ADD "user_id" bigint[0m
+  [1m[35m (7.2ms)[0m  [1m[35mCREATE  INDEX  "index_posts_on_user_id" ON "posts"  ("user_id")[0m
+  [1m[35m (7.1ms)[0m  [1m[35mALTER TABLE "posts" ADD CONSTRAINT "fk_rails_5b5ddfd518"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20171129163302"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddLatLongToPosts (20171129181350)
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.2ms)[0m  [1m[35mALTER TABLE "posts" ADD "latitude" float[0m
+  [1m[35m (0.8ms)[0m  [1m[35mALTER TABLE "posts" ADD "longitude" float[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20171129181350"]]
+  [1m[35m (6.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-11-30 16:18:55.430277"], ["updated_at", "2017-11-30 16:18:55.430277"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(5410015084792356885)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mNeighborhood Load (2.1ms)[0m  [1m[34mSELECT "neighborhoods".* FROM "neighborhoods"[0m
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "meg@email.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "meg@email.com"], ["encrypted_password", "$2a$11$a5.a/SCD/BNOGHgZhLHo2uLELPOC5iASLx6QCq0V/HfN14u3zm1Za"], ["created_at", "2017-11-30 16:18:55.800614"], ["updated_at", "2017-11-30 16:18:55.800614"]]
+  [1m[35m (6.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "tom@email.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "tom@email.com"], ["encrypted_password", "$2a$11$YLowC4MSJ9YOAe4FaT6wiuOMoLN0ZnqLfg5bw7sgtX6co5Oog8Nnm"], ["created_at", "2017-11-30 16:18:55.948189"], ["updated_at", "2017-11-30 16:18:55.948189"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "rebecca@email.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "rebecca@email.com"], ["encrypted_password", "$2a$11$Dd9MdQGUyH3gpOrGyg0BhObJhBKe6VkUsPOqe6SNlsfnk2MhJ6KDW"], ["created_at", "2017-11-30 16:18:56.086812"], ["updated_at", "2017-11-30 16:18:56.086812"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "curt@email.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "curt@email.com"], ["encrypted_password", "$2a$11$MBg92nKRp5gLupaXeXV3Ve6eQq06w5oqrn7RKiBjEK9JxLO3V1Nlu"], ["created_at", "2017-11-30 16:18:56.224771"], ["updated_at", "2017-11-30 16:18:56.224771"]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "neighborhoods" ("name", "quadrant", "photo_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Adams Morgan"], ["quadrant", "NW"], ["photo_url", "https://washington-org.s3.amazonaws.com/s3fs-public/admo-18th-st-rows-of-stores-credit-ted-eytan_flickr-user-taedc.jpg"], ["created_at", "2017-11-30 16:18:56.242425"], ["updated_at", "2017-11-30 16:18:56.242425"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "neighborhoods" ("name", "quadrant", "photo_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Anacostia"], ["quadrant", "SE"], ["photo_url", "https://hd1n2hd4y-res.cloudinary.com/image/upload/c_scale,w_800/post-148011.png"], ["created_at", "2017-11-30 16:18:56.253037"], ["updated_at", "2017-11-30 16:18:56.253037"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "neighborhoods" ("name", "quadrant", "photo_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Brookland"], ["quadrant", "NE"], ["photo_url", "https://ggwash.org/images/posts/201309-060134.jpg"], ["created_at", "2017-11-30 16:18:56.257590"], ["updated_at", "2017-11-30 16:18:56.257590"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "neighborhoods" ("name", "quadrant", "photo_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Capitol Hill"], ["quadrant", "Central"], ["photo_url", "https://a1.muscache.com/locations/uploads/photo/image/6823/75_4125_0_2538_two_USA_WashingtonDC_CapitolHill_CKW-6.jpg"], ["created_at", "2017-11-30 16:18:56.263266"], ["updated_at", "2017-11-30 16:18:56.263266"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[32mINSERT INTO "neighborhoods" ("name", "quadrant", "photo_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Columbia Heights"], ["quadrant", "NW"], ["photo_url", "https://a2.muscache.com/locations/uploads/photo/image/7934/0_4200_0_2800_one_USA_WashingtonDC_ColumbiaHeights_CKW-16.jpg"], ["created_at", "2017-11-30 16:18:56.266885"], ["updated_at", "2017-11-30 16:18:56.266885"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "neighborhoods" ("name", "quadrant", "photo_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Downtown"], ["quadrant", "NW"], ["photo_url", "http://cache.marriott.com/propertyimages/w/wasdc/wasdc_main01_r.jpg?resize=0.5x:0.5x"], ["created_at", "2017-11-30 16:18:56.273414"], ["updated_at", "2017-11-30 16:18:56.273414"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "neighborhoods" ("name", "quadrant", "photo_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Dupont Circle"], ["quadrant", "NW"], ["photo_url", "http://www.hotelpalomar-dc.com/images/1700-960/img-4621v2-3-0c37c2ad.jpg"], ["created_at", "2017-11-30 16:18:56.276242"], ["updated_at", "2017-11-30 16:18:56.276242"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "neighborhoods" ("name", "quadrant", "photo_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Foggy Bottom"], ["quadrant", "NW"], ["photo_url", "https://a0.muscache.com/locations/uploads/photo/image/6956/0_4200_0_2800_one_USA_WashingtonDC_FoggyBottom_WestEnd_CKW-29.jpg"], ["created_at", "2017-11-30 16:18:56.281818"], ["updated_at", "2017-11-30 16:18:56.281818"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "neighborhoods" ("name", "quadrant", "photo_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Georgetown"], ["quadrant", "NW"], ["photo_url", "https://static1.squarespace.com/static/58efabe6d482e960c0e68f8f/58f61046579fb37c1caf2694/58f6104920099ed0c8f2b0b2/1492521202704/georgetown-waterfront-with-boats-visitors_credit-washington-harbour.jpg"], ["created_at", "2017-11-30 16:18:56.285812"], ["updated_at", "2017-11-30 16:18:56.285812"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "neighborhoods" ("name", "quadrant", "photo_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "H Street"], ["quadrant", "NE"], ["photo_url", "http://www.elevationdcmedia.com/galleries/Neighborhoods/HStreet/hstreet-5.jpg"], ["created_at", "2017-11-30 16:18:56.289821"], ["updated_at", "2017-11-30 16:18:56.289821"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "neighborhoods" ("name", "quadrant", "photo_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Logan Circle"], ["quadrant", "NW"], ["photo_url", "https://washington-org.s3.amazonaws.com/s3fs-public/styles/listicle_image/public/people-enjoying-logan-circle-on-a-spring-evening_ddc-photo.jpg?itok=0y9gY85F"], ["created_at", "2017-11-30 16:18:56.293944"], ["updated_at", "2017-11-30 16:18:56.293944"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "neighborhoods" ("name", "quadrant", "photo_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "National Mall"], ["quadrant", "Central"], ["photo_url", "https://ridb.recreation.gov/images/81894.jpg"], ["created_at", "2017-11-30 16:18:56.297836"], ["updated_at", "2017-11-30 16:18:56.297836"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "neighborhoods" ("name", "quadrant", "photo_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Navy Yard"], ["quadrant", "SE"], ["photo_url", "http://www.jdland.com/dc/images/overhead-601lw-35-200711-05.jpg"], ["created_at", "2017-11-30 16:18:56.300578"], ["updated_at", "2017-11-30 16:18:56.300578"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "neighborhoods" ("name", "quadrant", "photo_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "NoMa"], ["quadrant", "NE"], ["photo_url", "https://cdn.vox-cdn.com/uploads/chorus_image/image/50407079/20489737062_d7b3650a4f_o.0.0.jpg"], ["created_at", "2017-11-30 16:18:56.304261"], ["updated_at", "2017-11-30 16:18:56.304261"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "neighborhoods" ("name", "quadrant", "photo_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Penn Quarter & Chinatown"], ["quadrant", "NW"], ["photo_url", "http://www.longandfoster.com/images/uploads/recos/35009/community/washington/penn-quarter/01.jpg"], ["created_at", "2017-11-30 16:18:56.306985"], ["updated_at", "2017-11-30 16:18:56.306985"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "neighborhoods" ("name", "quadrant", "photo_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Petworth"], ["quadrant", "NW"], ["photo_url", "http://msqrealty.com/wp-content/sv-galleries/pic8.png"], ["created_at", "2017-11-30 16:18:56.311229"], ["updated_at", "2017-11-30 16:18:56.311229"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "neighborhoods" ("name", "quadrant", "photo_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Shaw"], ["quadrant", "NW"], ["photo_url", "https://a2.muscache.com/locations/uploads/photo/image/7218/0_4200_0_2800_one_USA_WashingtonDC_Shaw_CKW-17.jpg"], ["created_at", "2017-11-30 16:18:56.313690"], ["updated_at", "2017-11-30 16:18:56.313690"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "neighborhoods" ("name", "quadrant", "photo_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "SW Waterfront"], ["quadrant", "SW"], ["photo_url", "https://a0.muscache.com/locations/uploads/photo/image/13143/0_4200_0_2800_one_USA_WashingtonDC_SouthwestWaterfront_CKW-40.jpg"], ["created_at", "2017-11-30 16:18:56.316981"], ["updated_at", "2017-11-30 16:18:56.316981"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "neighborhoods" ("name", "quadrant", "photo_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Upper Northwest"], ["quadrant", "NW"], ["photo_url", "https://assets.fodors.com/destinations/4728/national-cathedral-washington-dc-usa-north-america_main.jpg"], ["created_at", "2017-11-30 16:18:56.320881"], ["updated_at", "2017-11-30 16:18:56.320881"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO "neighborhoods" ("name", "quadrant", "photo_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Woodley Park"], ["quadrant", "NW"], ["photo_url", "https://images1.apartments.com/i2/pkC33nq7NL392gbIiHRJuhw1GYyQe5htuwAhSs7JmXY/110/woodley-park-washington-dc-neighborhood-photo.jpg"], ["created_at", "2017-11-30 16:18:56.325259"], ["updated_at", "2017-11-30 16:18:56.325259"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "neighborhoods" ("name", "quadrant", "photo_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Other NW"], ["quadrant", "NW"], ["photo_url", "http://www.buckmanrealtor.com/images/landing-pages/Logan_Circle.jpg"], ["created_at", "2017-11-30 16:18:56.332824"], ["updated_at", "2017-11-30 16:18:56.332824"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "neighborhoods" ("name", "quadrant", "photo_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Other SW"], ["quadrant", "SW"], ["photo_url", "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Homes_in_SWDC%2C_HUD_headquarters.jpg/350px-Homes_in_SWDC%2C_HUD_headquarters.jpg"], ["created_at", "2017-11-30 16:18:56.336872"], ["updated_at", "2017-11-30 16:18:56.336872"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "neighborhoods" ("name", "quadrant", "photo_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Other NE"], ["quadrant", "NE"], ["photo_url", "https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwilqaPojOXXAhXDl-AKHW2gAPAQjRwIBw&url=https%3A%2F%2Fwww.flickr.com%2Fphotos%2Fmr_t_in_dc%2F6157734262&psig=AOvVaw1cUJqksgX8BhoWYa1LMsBm&ust=1512090122380798"], ["created_at", "2017-11-30 16:18:56.339829"], ["updated_at", "2017-11-30 16:18:56.339829"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "neighborhoods" ("name", "quadrant", "photo_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Other SE"], ["quadrant", "SE"], ["photo_url", "http://lgsem.com/wp-content/uploads/2017/06/se-dc-apartments-interior-design-ideas-simple-under-se-dc-apartments-home-interior-ideas.jpg"], ["created_at", "2017-11-30 16:18:56.344519"], ["updated_at", "2017-11-30 16:18:56.344519"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNeighborhood Load (0.5ms)[0m  [1m[34mSELECT  "neighborhoods".* FROM "neighborhoods" WHERE "neighborhoods"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35mSQL (24.3ms)[0m  [1m[32mINSERT INTO "posts" ("author", "title", "content", "inquiry_type", "location", "neighborhood_id", "created_at", "updated_at", "user_id", "latitude", "longitude") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["author", "Meg"], ["title", "Community Garden at 13th & Irving"], ["content", "There isi interest from the community to install a community garden in the dilapidated parking lot at 13th & I"], ["inquiry_type", "public health"], ["location", "13th St NW & Irving St NW"], ["neighborhood_id", 5], ["created_at", "2017-11-30 16:18:57.516251"], ["updated_at", "2017-11-30 16:18:57.516251"], ["user_id", 1], ["latitude", 38.9286296], ["longitude", -77.0297045]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNeighborhood Load (0.5ms)[0m  [1m[34mSELECT  "neighborhoods".* FROM "neighborhoods" WHERE "neighborhoods"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[35mSQL (1.5ms)[0m  [1m[32mINSERT INTO "posts" ("author", "title", "content", "inquiry_type", "location", "neighborhood_id", "created_at", "updated_at", "user_id", "latitude", "longitude") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["author", "Curt"], ["title", "Install Accessible Ramp on Waterfront Walk"], ["content", "The waterfront boardwalk area should really have a ramp to make it accessible to all citizens!"], ["inquiry_type", "accessibility"], ["location", "600 Water St SW"], ["neighborhood_id", 18], ["created_at", "2017-11-30 16:18:58.210476"], ["updated_at", "2017-11-30 16:18:58.210476"], ["user_id", 4], ["latitude", 38.8762111], ["longitude", -77.02136209999999]]
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNeighborhood Load (0.8ms)[0m  [1m[34mSELECT  "neighborhoods".* FROM "neighborhoods" WHERE "neighborhoods"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "posts" ("author", "title", "content", "inquiry_type", "location", "neighborhood_id", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["author", "Tom"], ["title", "More Street Lights Needed"], ["content", "The streets are very dark in this area. New streetlights would greatly improve public safety and overall neighborhood satisfaction."], ["inquiry_type", "public safety"], ["location", "20 M St SE"], ["neighborhood_id", 13], ["created_at", "2017-11-30 16:18:58.271575"], ["updated_at", "2017-11-30 16:18:58.271575"], ["user_id", 2]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNeighborhood Load (0.8ms)[0m  [1m[34mSELECT  "neighborhoods".* FROM "neighborhoods" WHERE "neighborhoods"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "posts" ("author", "title", "content", "inquiry_type", "location", "neighborhood_id", "created_at", "updated_at", "user_id", "latitude", "longitude") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["author", "Rebecca"], ["title", "New Paint on Playground"], ["content", "The playground at Joseph H. Cole Recreation is looking rather dilapidated and could use another coat of paint!"], ["inquiry_type", "aesthetics"], ["location", "1299 Neal Street, NE"], ["neighborhood_id", 10], ["created_at", "2017-11-30 16:18:58.873172"], ["updated_at", "2017-11-30 16:18:58.873172"], ["user_id", 3], ["latitude", 38.9042927], ["longitude", -76.9884533]]
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/" for 127.0.0.1 at 2017-11-30 11:19:12 -0500
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (3.7ms)
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 676ms (Views: 634.9ms | ActiveRecord: 24.3ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-11-30 11:19:18 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering /Users/megmaciver/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/devise-4.3.0/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/megmaciver/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/devise-4.3.0/app/views/devise/shared/_links.html.erb (1.1ms)
+  Rendered /Users/megmaciver/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/devise-4.3.0/app/views/devise/sessions/new.html.erb within layouts/application (61.0ms)
+Completed 200 OK in 257ms (Views: 191.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-11-30 11:19:28 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aYVoisM2zJOxxLkTnUXoxlNGI6VopK/od9cxO8/zfuNN2Jm9qPg9eqP8oqlJ5j/fMP02mTfel7bT7dDhFViNkg==", "user"=>{"email"=>"meg@email.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "meg@email.com"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "current_sign_in_ip" = $3, "last_sign_in_ip" = $4, "sign_in_count" = $5, "updated_at" = $6 WHERE "users"."id" = $7[0m  [["current_sign_in_at", "2017-11-30 16:19:28.197378"], ["last_sign_in_at", "2017-11-30 16:19:28.197378"], ["current_sign_in_ip", "127.0.0.1/32"], ["last_sign_in_ip", "127.0.0.1/32"], ["sign_in_count", 1], ["updated_at", "2017-11-30 16:19:28.201197"], ["id", 1]]
+  [1m[35m (3.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 213ms (ActiveRecord: 8.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-30 11:19:28 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (1.4ms)
+  [1m[36mUser Load (4.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 136ms (Views: 120.8ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/neighborhoods" for 127.0.0.1 at 2017-11-30 11:19:30 -0500
+Processing by NeighborhoodsController#index as HTML
+  Rendering neighborhoods/index.html.erb within layouts/application
+  [1m[36mNeighborhood Load (1.4ms)[0m  [1m[34mSELECT "neighborhoods".* FROM "neighborhoods"[0m
+  Rendered neighborhoods/index.html.erb within layouts/application (133.6ms)
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 339ms (Views: 295.9ms | ActiveRecord: 16.8ms)
+
+
+Started GET "/neighborhoods/5" for 127.0.0.1 at 2017-11-30 11:19:32 -0500
+Processing by NeighborhoodsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mNeighborhood Load (1.5ms)[0m  [1m[34mSELECT  "neighborhoods".* FROM "neighborhoods" WHERE "neighborhoods"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering neighborhoods/show.html.erb within layouts/application
+  [1m[36mUser Load (43.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."neighborhood_id" = $1[0m  [["neighborhood_id", 5]]
+  [1m[36mPost Load (1.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."neighborhood_id" = $1[0m  [["neighborhood_id", 5]]
+  Rendered neighborhoods/show.html.erb within layouts/application (187.0ms)
+Completed 200 OK in 350ms (Views: 264.0ms | ActiveRecord: 70.7ms)
+
+
+Started GET "/neighborhoods/5/posts/1" for 127.0.0.1 at 2017-11-30 11:19:34 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"neighborhood_id"=>"5", "id"=>"1"}
+  [1m[36mNeighborhood Load (1.4ms)[0m  [1m[34mSELECT  "neighborhoods".* FROM "neighborhoods" WHERE "neighborhoods"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mPost Load (2.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."neighborhood_id" = $1 AND "posts"."id" = $2 LIMIT $3[0m  [["neighborhood_id", 5], ["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (6.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered posts/show.html.erb within layouts/application (65.8ms)
+Completed 200 OK in 388ms (Views: 338.3ms | ActiveRecord: 10.9ms)
+
+
+Started GET "/neighborhoods/5/posts/1/edit" for 127.0.0.1 at 2017-11-30 11:19:38 -0500
+Processing by PostsController#edit as HTML
+  Parameters: {"neighborhood_id"=>"5", "id"=>"1"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mNeighborhood Load (2.6ms)[0m  [1m[34mSELECT  "neighborhoods".* FROM "neighborhoods" WHERE "neighborhoods"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mPost Load (6.6ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."neighborhood_id" = $1 AND "posts"."id" = $2 LIMIT $3[0m  [["neighborhood_id", 5], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (8.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/edit.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 313ms (Views: 144.8ms | ActiveRecord: 19.5ms)
+
+
+Started PATCH "/neighborhoods/5/posts/1" for 127.0.0.1 at 2017-11-30 11:21:13 -0500
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"a3PhLUCc2zoOt8G4EKzxqFQ7pzCRPHR3KjWclbACwp4psMg0llmAZbMKgQs7j7Vevs2EeWakHHzurBJCXeJ2WA==", "post"=>{"author"=>"Meg", "title"=>"Community Garden at 13th & Irving", "location"=>"13th St NW & Irving St NW", "photo_url"=>"", "content"=>"There is interest from the community to install a community garden in the dilapidated parking lot at 13th & I St NW. It would be an opportunity to not only grow food, but also run educational programs about gardening and nutrition.", "inquiry_type"=>"public health"}, "commit"=>"Update Post", "neighborhood_id"=>"5", "id"=>"1"}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mNeighborhood Load (1.3ms)[0m  [1m[34mSELECT  "neighborhoods".* FROM "neighborhoods" WHERE "neighborhoods"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."neighborhood_id" = $1 AND "posts"."id" = $2 LIMIT $3[0m  [["neighborhood_id", 5], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE "posts" SET "photo_url" = $1, "content" = $2, "updated_at" = $3 WHERE "posts"."id" = $4[0m  [["photo_url", ""], ["content", "There is interest from the community to install a community garden in the dilapidated parking lot at 13th & I St NW. It would be an opportunity to not only grow food, but also run educational programs about gardening and nutrition."], ["updated_at", "2017-11-30 16:21:13.355892"], ["id", 1]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/neighborhoods/5/posts/1
+Completed 302 Found in 193ms (ActiveRecord: 7.5ms)
+
+
+Started GET "/neighborhoods/5/posts/1" for 127.0.0.1 at 2017-11-30 11:21:13 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"neighborhood_id"=>"5", "id"=>"1"}
+  [1m[36mNeighborhood Load (0.3ms)[0m  [1m[34mSELECT  "neighborhoods".* FROM "neighborhoods" WHERE "neighborhoods"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mPost Load (1.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."neighborhood_id" = $1 AND "posts"."id" = $2 LIMIT $3[0m  [["neighborhood_id", 5], ["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered posts/show.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 87ms (Views: 70.7ms | ActiveRecord: 4.1ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2017-11-30 11:21:18 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"I2gzhkoEaWvuFb+sdt5mpqnCNgFSGJNosoFiXDCqMOM/u5vXJvm024onjphRPe4aHI68AGFGXBGh9RoUc4jGFQ=="}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 14ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-30 11:21:18 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 107ms (Views: 103.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-11-30 11:22:25 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering /Users/megmaciver/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/devise-4.3.0/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/megmaciver/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/devise-4.3.0/app/views/devise/shared/_links.html.erb (5.1ms)
+  Rendered /Users/megmaciver/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/devise-4.3.0/app/views/devise/sessions/new.html.erb within layouts/application (24.9ms)
+Completed 200 OK in 162ms (Views: 158.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-11-30 11:22:34 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"f6cVokxlGXGp+3DWgVjPANkjz0/h4TrvHThD0A8rNK4i7gPTstVtJj0/iwQrVVMsk2i6HQ2wu31/60ssw0KKrw==", "user"=>{"email"=>"meg@email.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "meg@email.com"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = $1, "sign_in_count" = $2, "updated_at" = $3 WHERE "users"."id" = $4[0m  [["current_sign_in_at", "2017-11-30 16:22:34.565876"], ["sign_in_count", 2], ["updated_at", "2017-11-30 16:22:34.566985"], ["id", 1]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 176ms (ActiveRecord: 4.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-30 11:22:34 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (2.7ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 131ms (Views: 125.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/neighborhoods" for 127.0.0.1 at 2017-11-30 11:22:43 -0500
+Processing by NeighborhoodsController#index as HTML
+  Rendering neighborhoods/index.html.erb within layouts/application
+  [1m[36mNeighborhood Load (0.6ms)[0m  [1m[34mSELECT "neighborhoods".* FROM "neighborhoods"[0m
+  Rendered neighborhoods/index.html.erb within layouts/application (9.9ms)
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 227ms (Views: 222.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/neighborhoods" for 127.0.0.1 at 2017-11-30 11:22:48 -0500
+Processing by NeighborhoodsController#index as HTML
+  Rendering neighborhoods/index.html.erb within layouts/application
+  [1m[36mNeighborhood Load (0.6ms)[0m  [1m[34mSELECT "neighborhoods".* FROM "neighborhoods"[0m
+  Rendered neighborhoods/index.html.erb within layouts/application (5.5ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 187ms (Views: 179.5ms | ActiveRecord: 1.6ms)
+
+
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (193.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "projects_development"[0m
+  [1m[35m (190.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "projects_test"[0m
+  [1m[35m (458.0ms)[0m  [1m[35mCREATE DATABASE "projects_development" ENCODING = 'unicode'[0m
+  [1m[35m (401.3ms)[0m  [1m[35mCREATE DATABASE "projects_test" ENCODING = 'unicode'[0m
+  [1m[35m (4.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5410015084792356885)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateNeighborhoods (20171129141154)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (17.9ms)[0m  [1m[35mCREATE TABLE "neighborhoods" ("id" bigserial primary key, "name" character varying NOT NULL, "quadrant" character varying, "photo_url" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20171129141154"]]
+  [1m[35m (4.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreatePosts (20171129141159)
+  [1m[35m (6.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (19.5ms)[0m  [1m[35mCREATE TABLE "posts" ("id" bigserial primary key, "author" character varying NOT NULL, "title" character varying NOT NULL, "photo_url" character varying, "content" character varying NOT NULL, "inquiry_type" character varying, "location" character varying NOT NULL, "neighborhood_id" bigint NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_7de4b12a4e"
+FOREIGN KEY ("neighborhood_id")
+  REFERENCES "neighborhoods" ("id")
+)[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE  INDEX  "index_posts_on_neighborhood_id" ON "posts"  ("neighborhood_id")[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20171129141159"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to DeviseCreateUsers (20171129154613)
+  [1m[35m (6.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (16.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" inet, "last_sign_in_ip" inet, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20171129154613"]]
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddUsersToPosts (20171129163302)
+  [1m[35m (6.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.8ms)[0m  [1m[35mALTER TABLE "posts" ADD "user_id" bigint[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE  INDEX  "index_posts_on_user_id" ON "posts"  ("user_id")[0m
+  [1m[35m (2.4ms)[0m  [1m[35mALTER TABLE "posts" ADD CONSTRAINT "fk_rails_5b5ddfd518"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20171129163302"]]
+  [1m[35m (6.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddLatLongToPosts (20171129181350)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "posts" ADD "latitude" float[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "posts" ADD "longitude" float[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20171129181350"]]
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-11-30 16:24:18.270512"], ["updated_at", "2017-11-30 16:24:18.270512"]]
+  [1m[35m (5.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(5410015084792356885)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mNeighborhood Load (0.5ms)[0m  [1m[34mSELECT "neighborhoods".* FROM "neighborhoods"[0m
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "meg@email.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "meg@email.com"], ["encrypted_password", "$2a$11$jbOlVomINw/zk3CFqmtvT.W6EYv6ksZJCZLw8jyMHdEHERTCFtnQm"], ["created_at", "2017-11-30 16:24:18.551255"], ["updated_at", "2017-11-30 16:24:18.551255"]]
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "tom@email.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "tom@email.com"], ["encrypted_password", "$2a$11$ST8dHWzLWChYSGu5xuuujedTvD1IE.z7FAneDvTyfWcrEPKsKQiya"], ["created_at", "2017-11-30 16:24:18.695063"], ["updated_at", "2017-11-30 16:24:18.695063"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "rebecca@email.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "rebecca@email.com"], ["encrypted_password", "$2a$11$NUcaITjRLXOTOQF5JtAOi.sRi6gjCsyA79AACQm6EOYwLMYxYUkqq"], ["created_at", "2017-11-30 16:24:18.830291"], ["updated_at", "2017-11-30 16:24:18.830291"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "curt@email.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "curt@email.com"], ["encrypted_password", "$2a$11$s83qWN1srP7abol1V1TPTeE356TmcE9/itvyYWIeIjBMf7cU8H2OW"], ["created_at", "2017-11-30 16:24:18.962112"], ["updated_at", "2017-11-30 16:24:18.962112"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "neighborhoods" ("name", "quadrant", "photo_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Adams Morgan"], ["quadrant", "NW"], ["photo_url", "https://washington-org.s3.amazonaws.com/s3fs-public/admo-18th-st-rows-of-stores-credit-ted-eytan_flickr-user-taedc.jpg"], ["created_at", "2017-11-30 16:24:18.971837"], ["updated_at", "2017-11-30 16:24:18.971837"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "neighborhoods" ("name", "quadrant", "photo_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Anacostia"], ["quadrant", "SE"], ["photo_url", "https://hd1n2hd4y-res.cloudinary.com/image/upload/c_scale,w_800/post-148011.png"], ["created_at", "2017-11-30 16:24:18.974225"], ["updated_at", "2017-11-30 16:24:18.974225"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "neighborhoods" ("name", "quadrant", "photo_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Brookland"], ["quadrant", "NE"], ["photo_url", "https://ggwash.org/images/posts/201309-060134.jpg"], ["created_at", "2017-11-30 16:24:18.976749"], ["updated_at", "2017-11-30 16:24:18.976749"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "neighborhoods" ("name", "quadrant", "photo_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Capitol Hill"], ["quadrant", "Central"], ["photo_url", "https://a1.muscache.com/locations/uploads/photo/image/6823/75_4125_0_2538_two_USA_WashingtonDC_CapitolHill_CKW-6.jpg"], ["created_at", "2017-11-30 16:24:18.978708"], ["updated_at", "2017-11-30 16:24:18.978708"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "neighborhoods" ("name", "quadrant", "photo_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Columbia Heights"], ["quadrant", "NW"], ["photo_url", "https://a2.muscache.com/locations/uploads/photo/image/7934/0_4200_0_2800_one_USA_WashingtonDC_ColumbiaHeights_CKW-16.jpg"], ["created_at", "2017-11-30 16:24:18.981237"], ["updated_at", "2017-11-30 16:24:18.981237"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "neighborhoods" ("name", "quadrant", "photo_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Downtown"], ["quadrant", "NW"], ["photo_url", "http://cache.marriott.com/propertyimages/w/wasdc/wasdc_main01_r.jpg?resize=0.5x:0.5x"], ["created_at", "2017-11-30 16:24:18.983204"], ["updated_at", "2017-11-30 16:24:18.983204"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "neighborhoods" ("name", "quadrant", "photo_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Dupont Circle"], ["quadrant", "NW"], ["photo_url", "http://www.hotelpalomar-dc.com/images/1700-960/img-4621v2-3-0c37c2ad.jpg"], ["created_at", "2017-11-30 16:24:18.985176"], ["updated_at", "2017-11-30 16:24:18.985176"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "neighborhoods" ("name", "quadrant", "photo_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Foggy Bottom"], ["quadrant", "NW"], ["photo_url", "https://a0.muscache.com/locations/uploads/photo/image/6956/0_4200_0_2800_one_USA_WashingtonDC_FoggyBottom_WestEnd_CKW-29.jpg"], ["created_at", "2017-11-30 16:24:18.987486"], ["updated_at", "2017-11-30 16:24:18.987486"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "neighborhoods" ("name", "quadrant", "photo_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Georgetown"], ["quadrant", "NW"], ["photo_url", "https://static1.squarespace.com/static/58efabe6d482e960c0e68f8f/58f61046579fb37c1caf2694/58f6104920099ed0c8f2b0b2/1492521202704/georgetown-waterfront-with-boats-visitors_credit-washington-harbour.jpg"], ["created_at", "2017-11-30 16:24:18.989504"], ["updated_at", "2017-11-30 16:24:18.989504"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "neighborhoods" ("name", "quadrant", "photo_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "H Street"], ["quadrant", "NE"], ["photo_url", "http://www.elevationdcmedia.com/galleries/Neighborhoods/HStreet/hstreet-5.jpg"], ["created_at", "2017-11-30 16:24:18.992030"], ["updated_at", "2017-11-30 16:24:18.992030"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "neighborhoods" ("name", "quadrant", "photo_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Logan Circle"], ["quadrant", "NW"], ["photo_url", "https://washington-org.s3.amazonaws.com/s3fs-public/styles/listicle_image/public/people-enjoying-logan-circle-on-a-spring-evening_ddc-photo.jpg?itok=0y9gY85F"], ["created_at", "2017-11-30 16:24:18.994147"], ["updated_at", "2017-11-30 16:24:18.994147"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "neighborhoods" ("name", "quadrant", "photo_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "National Mall"], ["quadrant", "Central"], ["photo_url", "https://ridb.recreation.gov/images/81894.jpg"], ["created_at", "2017-11-30 16:24:18.996218"], ["updated_at", "2017-11-30 16:24:18.996218"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "neighborhoods" ("name", "quadrant", "photo_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Navy Yard"], ["quadrant", "SE"], ["photo_url", "http://www.jdland.com/dc/images/overhead-601lw-35-200711-05.jpg"], ["created_at", "2017-11-30 16:24:18.998414"], ["updated_at", "2017-11-30 16:24:18.998414"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "neighborhoods" ("name", "quadrant", "photo_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "NoMa"], ["quadrant", "NE"], ["photo_url", "https://cdn.vox-cdn.com/uploads/chorus_image/image/50407079/20489737062_d7b3650a4f_o.0.0.jpg"], ["created_at", "2017-11-30 16:24:19.000918"], ["updated_at", "2017-11-30 16:24:19.000918"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "neighborhoods" ("name", "quadrant", "photo_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Penn Quarter & Chinatown"], ["quadrant", "NW"], ["photo_url", "http://www.longandfoster.com/images/uploads/recos/35009/community/washington/penn-quarter/01.jpg"], ["created_at", "2017-11-30 16:24:19.003424"], ["updated_at", "2017-11-30 16:24:19.003424"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "neighborhoods" ("name", "quadrant", "photo_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Petworth"], ["quadrant", "NW"], ["photo_url", "http://msqrealty.com/wp-content/sv-galleries/pic8.png"], ["created_at", "2017-11-30 16:24:19.005697"], ["updated_at", "2017-11-30 16:24:19.005697"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "neighborhoods" ("name", "quadrant", "photo_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Shaw"], ["quadrant", "NW"], ["photo_url", "https://a2.muscache.com/locations/uploads/photo/image/7218/0_4200_0_2800_one_USA_WashingtonDC_Shaw_CKW-17.jpg"], ["created_at", "2017-11-30 16:24:19.007940"], ["updated_at", "2017-11-30 16:24:19.007940"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "neighborhoods" ("name", "quadrant", "photo_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "SW Waterfront"], ["quadrant", "SW"], ["photo_url", "https://a0.muscache.com/locations/uploads/photo/image/13143/0_4200_0_2800_one_USA_WashingtonDC_SouthwestWaterfront_CKW-40.jpg"], ["created_at", "2017-11-30 16:24:19.010959"], ["updated_at", "2017-11-30 16:24:19.010959"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "neighborhoods" ("name", "quadrant", "photo_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Upper Northwest"], ["quadrant", "NW"], ["photo_url", "https://assets.fodors.com/destinations/4728/national-cathedral-washington-dc-usa-north-america_main.jpg"], ["created_at", "2017-11-30 16:24:19.013255"], ["updated_at", "2017-11-30 16:24:19.013255"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "neighborhoods" ("name", "quadrant", "photo_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Woodley Park"], ["quadrant", "NW"], ["photo_url", "https://images1.apartments.com/i2/pkC33nq7NL392gbIiHRJuhw1GYyQe5htuwAhSs7JmXY/110/woodley-park-washington-dc-neighborhood-photo.jpg"], ["created_at", "2017-11-30 16:24:19.015452"], ["updated_at", "2017-11-30 16:24:19.015452"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "neighborhoods" ("name", "quadrant", "photo_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Other NW"], ["quadrant", "NW"], ["photo_url", "http://www.buckmanrealtor.com/images/landing-pages/Logan_Circle.jpg"], ["created_at", "2017-11-30 16:24:19.017510"], ["updated_at", "2017-11-30 16:24:19.017510"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "neighborhoods" ("name", "quadrant", "photo_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Other SW"], ["quadrant", "SW"], ["photo_url", "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Homes_in_SWDC%2C_HUD_headquarters.jpg/350px-Homes_in_SWDC%2C_HUD_headquarters.jpg"], ["created_at", "2017-11-30 16:24:19.019434"], ["updated_at", "2017-11-30 16:24:19.019434"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "neighborhoods" ("name", "quadrant", "photo_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Other NE"], ["quadrant", "NE"], ["photo_url", "https://imageserver-bisnow1.netdna-ssl.com/oAM-QRPTxZ-JxdEwTcQbZbOfNvo=/0x0/publisher/56d88a8495efe_NE_DC.jpeg"], ["created_at", "2017-11-30 16:24:19.021397"], ["updated_at", "2017-11-30 16:24:19.021397"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "neighborhoods" ("name", "quadrant", "photo_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Other SE"], ["quadrant", "SE"], ["photo_url", "http://lgsem.com/wp-content/uploads/2017/06/se-dc-apartments-interior-design-ideas-simple-under-se-dc-apartments-home-interior-ideas.jpg"], ["created_at", "2017-11-30 16:24:19.024457"], ["updated_at", "2017-11-30 16:24:19.024457"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNeighborhood Load (0.3ms)[0m  [1m[34mSELECT  "neighborhoods".* FROM "neighborhoods" WHERE "neighborhoods"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO "posts" ("author", "title", "content", "inquiry_type", "location", "neighborhood_id", "created_at", "updated_at", "user_id", "latitude", "longitude") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["author", "Meg"], ["title", "Community Garden at 13th & Irving"], ["content", "There isi interest from the community to install a community garden in the dilapidated parking lot at 13th & I"], ["inquiry_type", "public health"], ["location", "13th St NW & Irving St NW"], ["neighborhood_id", 5], ["created_at", "2017-11-30 16:24:20.987077"], ["updated_at", "2017-11-30 16:24:20.987077"], ["user_id", 1], ["latitude", 38.9286296], ["longitude", -77.0297045]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNeighborhood Load (0.4ms)[0m  [1m[34mSELECT  "neighborhoods".* FROM "neighborhoods" WHERE "neighborhoods"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "posts" ("author", "title", "content", "inquiry_type", "location", "neighborhood_id", "created_at", "updated_at", "user_id", "latitude", "longitude") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["author", "Curt"], ["title", "Install Accessible Ramp on Waterfront Walk"], ["content", "The waterfront boardwalk area should really have a ramp to make it accessible to all citizens!"], ["inquiry_type", "accessibility"], ["location", "600 Water St SW"], ["neighborhood_id", 18], ["created_at", "2017-11-30 16:24:21.403437"], ["updated_at", "2017-11-30 16:24:21.403437"], ["user_id", 4], ["latitude", 38.8762111], ["longitude", -77.02136209999999]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNeighborhood Load (0.5ms)[0m  [1m[34mSELECT  "neighborhoods".* FROM "neighborhoods" WHERE "neighborhoods"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "posts" ("author", "title", "content", "inquiry_type", "location", "neighborhood_id", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["author", "Tom"], ["title", "More Street Lights Needed"], ["content", "The streets are very dark in this area. New streetlights would greatly improve public safety and overall neighborhood satisfaction."], ["inquiry_type", "public safety"], ["location", "20 M St SE"], ["neighborhood_id", 13], ["created_at", "2017-11-30 16:24:21.482704"], ["updated_at", "2017-11-30 16:24:21.482704"], ["user_id", 2]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNeighborhood Load (0.4ms)[0m  [1m[34mSELECT  "neighborhoods".* FROM "neighborhoods" WHERE "neighborhoods"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "posts" ("author", "title", "content", "inquiry_type", "location", "neighborhood_id", "created_at", "updated_at", "user_id", "latitude", "longitude") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["author", "Rebecca"], ["title", "New Paint on Playground"], ["content", "The playground at Joseph H. Cole Recreation is looking rather dilapidated and could use another coat of paint!"], ["inquiry_type", "aesthetics"], ["location", "1299 Neal Street, NE"], ["neighborhood_id", 10], ["created_at", "2017-11-30 16:24:21.881922"], ["updated_at", "2017-11-30 16:24:21.881922"], ["user_id", 3], ["latitude", 38.9042927], ["longitude", -76.9884533]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (193.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "projects_development"[0m
+  [1m[35m (192.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "projects_test"[0m
+  [1m[35m (454.7ms)[0m  [1m[35mCREATE DATABASE "projects_development" ENCODING = 'unicode'[0m
+  [1m[35m (387.0ms)[0m  [1m[35mCREATE DATABASE "projects_test" ENCODING = 'unicode'[0m
+  [1m[35m (4.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (4.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5410015084792356885)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateNeighborhoods (20171129141154)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (17.3ms)[0m  [1m[35mCREATE TABLE "neighborhoods" ("id" bigserial primary key, "name" character varying NOT NULL, "quadrant" character varying, "photo_url" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20171129141154"]]
+  [1m[35m (5.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreatePosts (20171129141159)
+  [1m[35m (5.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (20.6ms)[0m  [1m[35mCREATE TABLE "posts" ("id" bigserial primary key, "author" character varying NOT NULL, "title" character varying NOT NULL, "photo_url" character varying, "content" character varying NOT NULL, "inquiry_type" character varying, "location" character varying NOT NULL, "neighborhood_id" bigint NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_7de4b12a4e"
+FOREIGN KEY ("neighborhood_id")
+  REFERENCES "neighborhoods" ("id")
+)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE  INDEX  "index_posts_on_neighborhood_id" ON "posts"  ("neighborhood_id")[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20171129141159"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to DeviseCreateUsers (20171129154613)
+  [1m[35m (6.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (17.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" inet, "last_sign_in_ip" inet, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20171129154613"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddUsersToPosts (20171129163302)
+  [1m[35m (5.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "posts" ADD "user_id" bigint[0m
+  [1m[35m (7.0ms)[0m  [1m[35mCREATE  INDEX  "index_posts_on_user_id" ON "posts"  ("user_id")[0m
+  [1m[35m (2.8ms)[0m  [1m[35mALTER TABLE "posts" ADD CONSTRAINT "fk_rails_5b5ddfd518"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20171129163302"]]
+  [1m[35m (5.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddLatLongToPosts (20171129181350)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "posts" ADD "latitude" float[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "posts" ADD "longitude" float[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20171129181350"]]
+  [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-11-30 16:25:29.499417"], ["updated_at", "2017-11-30 16:25:29.499417"]]
+  [1m[35m (5.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(5410015084792356885)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mNeighborhood Load (0.5ms)[0m  [1m[34mSELECT "neighborhoods".* FROM "neighborhoods"[0m
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "meg@email.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "meg@email.com"], ["encrypted_password", "$2a$11$W2iuDaP3JeM.nke/lnDJb.NMVpQyWRSN4U3ip.tJUD6Zcw2FlJRFa"], ["created_at", "2017-11-30 16:25:29.764426"], ["updated_at", "2017-11-30 16:25:29.764426"]]
+  [1m[35m (5.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "tom@email.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "tom@email.com"], ["encrypted_password", "$2a$11$Nc2E13iKsP7TwwKZWNV8/OWUjjACfX6v.7NlLAmTiqkqPxJsA6Jl6"], ["created_at", "2017-11-30 16:25:29.903650"], ["updated_at", "2017-11-30 16:25:29.903650"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "rebecca@email.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "rebecca@email.com"], ["encrypted_password", "$2a$11$43ckQIcicWvbl0l5ppxSE.JfUdfuxxUdW8isF13RE7KpnD0IoQMEW"], ["created_at", "2017-11-30 16:25:30.039802"], ["updated_at", "2017-11-30 16:25:30.039802"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "curt@email.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "curt@email.com"], ["encrypted_password", "$2a$11$cKo6wjqkvlOmaQhNQfEb..AEQclBkTB77ySwbMFMmd6VqKOupbMsu"], ["created_at", "2017-11-30 16:25:30.176406"], ["updated_at", "2017-11-30 16:25:30.176406"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "neighborhoods" ("name", "quadrant", "photo_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Adams Morgan"], ["quadrant", "NW"], ["photo_url", "https://washington-org.s3.amazonaws.com/s3fs-public/admo-18th-st-rows-of-stores-credit-ted-eytan_flickr-user-taedc.jpg"], ["created_at", "2017-11-30 16:25:30.188977"], ["updated_at", "2017-11-30 16:25:30.188977"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "neighborhoods" ("name", "quadrant", "photo_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Anacostia"], ["quadrant", "SE"], ["photo_url", "https://hd1n2hd4y-res.cloudinary.com/image/upload/c_scale,w_800/post-148011.png"], ["created_at", "2017-11-30 16:25:30.191666"], ["updated_at", "2017-11-30 16:25:30.191666"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "neighborhoods" ("name", "quadrant", "photo_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Brookland"], ["quadrant", "NE"], ["photo_url", "https://ggwash.org/images/posts/201309-060134.jpg"], ["created_at", "2017-11-30 16:25:30.194077"], ["updated_at", "2017-11-30 16:25:30.194077"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "neighborhoods" ("name", "quadrant", "photo_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Capitol Hill"], ["quadrant", "Central"], ["photo_url", "https://a1.muscache.com/locations/uploads/photo/image/6823/75_4125_0_2538_two_USA_WashingtonDC_CapitolHill_CKW-6.jpg"], ["created_at", "2017-11-30 16:25:30.197010"], ["updated_at", "2017-11-30 16:25:30.197010"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "neighborhoods" ("name", "quadrant", "photo_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Columbia Heights"], ["quadrant", "NW"], ["photo_url", "https://a2.muscache.com/locations/uploads/photo/image/7934/0_4200_0_2800_one_USA_WashingtonDC_ColumbiaHeights_CKW-16.jpg"], ["created_at", "2017-11-30 16:25:30.199945"], ["updated_at", "2017-11-30 16:25:30.199945"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "neighborhoods" ("name", "quadrant", "photo_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Downtown"], ["quadrant", "NW"], ["photo_url", "http://cache.marriott.com/propertyimages/w/wasdc/wasdc_main01_r.jpg?resize=0.5x:0.5x"], ["created_at", "2017-11-30 16:25:30.202843"], ["updated_at", "2017-11-30 16:25:30.202843"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "neighborhoods" ("name", "quadrant", "photo_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Dupont Circle"], ["quadrant", "NW"], ["photo_url", "http://www.hotelpalomar-dc.com/images/1700-960/img-4621v2-3-0c37c2ad.jpg"], ["created_at", "2017-11-30 16:25:30.205479"], ["updated_at", "2017-11-30 16:25:30.205479"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "neighborhoods" ("name", "quadrant", "photo_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Foggy Bottom"], ["quadrant", "NW"], ["photo_url", "https://a0.muscache.com/locations/uploads/photo/image/6956/0_4200_0_2800_one_USA_WashingtonDC_FoggyBottom_WestEnd_CKW-29.jpg"], ["created_at", "2017-11-30 16:25:30.217323"], ["updated_at", "2017-11-30 16:25:30.217323"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "neighborhoods" ("name", "quadrant", "photo_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Georgetown"], ["quadrant", "NW"], ["photo_url", "https://static1.squarespace.com/static/58efabe6d482e960c0e68f8f/58f61046579fb37c1caf2694/58f6104920099ed0c8f2b0b2/1492521202704/georgetown-waterfront-with-boats-visitors_credit-washington-harbour.jpg"], ["created_at", "2017-11-30 16:25:30.219466"], ["updated_at", "2017-11-30 16:25:30.219466"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "neighborhoods" ("name", "quadrant", "photo_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "H Street"], ["quadrant", "NE"], ["photo_url", "http://www.elevationdcmedia.com/galleries/Neighborhoods/HStreet/hstreet-5.jpg"], ["created_at", "2017-11-30 16:25:30.221439"], ["updated_at", "2017-11-30 16:25:30.221439"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "neighborhoods" ("name", "quadrant", "photo_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Logan Circle"], ["quadrant", "NW"], ["photo_url", "https://washington-org.s3.amazonaws.com/s3fs-public/styles/listicle_image/public/people-enjoying-logan-circle-on-a-spring-evening_ddc-photo.jpg?itok=0y9gY85F"], ["created_at", "2017-11-30 16:25:30.223368"], ["updated_at", "2017-11-30 16:25:30.223368"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "neighborhoods" ("name", "quadrant", "photo_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "National Mall"], ["quadrant", "Central"], ["photo_url", "https://ridb.recreation.gov/images/81894.jpg"], ["created_at", "2017-11-30 16:25:30.226338"], ["updated_at", "2017-11-30 16:25:30.226338"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "neighborhoods" ("name", "quadrant", "photo_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Navy Yard"], ["quadrant", "SE"], ["photo_url", "http://www.jdland.com/dc/images/overhead-601lw-35-200711-05.jpg"], ["created_at", "2017-11-30 16:25:30.228735"], ["updated_at", "2017-11-30 16:25:30.228735"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "neighborhoods" ("name", "quadrant", "photo_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "NoMa"], ["quadrant", "NE"], ["photo_url", "https://cdn.vox-cdn.com/uploads/chorus_image/image/50407079/20489737062_d7b3650a4f_o.0.0.jpg"], ["created_at", "2017-11-30 16:25:30.230908"], ["updated_at", "2017-11-30 16:25:30.230908"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "neighborhoods" ("name", "quadrant", "photo_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Penn Quarter & Chinatown"], ["quadrant", "NW"], ["photo_url", "http://www.longandfoster.com/images/uploads/recos/35009/community/washington/penn-quarter/01.jpg"], ["created_at", "2017-11-30 16:25:30.233059"], ["updated_at", "2017-11-30 16:25:30.233059"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "neighborhoods" ("name", "quadrant", "photo_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Petworth"], ["quadrant", "NW"], ["photo_url", "http://msqrealty.com/wp-content/sv-galleries/pic8.png"], ["created_at", "2017-11-30 16:25:30.235453"], ["updated_at", "2017-11-30 16:25:30.235453"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "neighborhoods" ("name", "quadrant", "photo_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Shaw"], ["quadrant", "NW"], ["photo_url", "https://a2.muscache.com/locations/uploads/photo/image/7218/0_4200_0_2800_one_USA_WashingtonDC_Shaw_CKW-17.jpg"], ["created_at", "2017-11-30 16:25:30.237576"], ["updated_at", "2017-11-30 16:25:30.237576"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "neighborhoods" ("name", "quadrant", "photo_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "SW Waterfront"], ["quadrant", "SW"], ["photo_url", "https://a0.muscache.com/locations/uploads/photo/image/13143/0_4200_0_2800_one_USA_WashingtonDC_SouthwestWaterfront_CKW-40.jpg"], ["created_at", "2017-11-30 16:25:30.239481"], ["updated_at", "2017-11-30 16:25:30.239481"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "neighborhoods" ("name", "quadrant", "photo_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Upper Northwest"], ["quadrant", "NW"], ["photo_url", "https://assets.fodors.com/destinations/4728/national-cathedral-washington-dc-usa-north-america_main.jpg"], ["created_at", "2017-11-30 16:25:30.241686"], ["updated_at", "2017-11-30 16:25:30.241686"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "neighborhoods" ("name", "quadrant", "photo_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Woodley Park"], ["quadrant", "NW"], ["photo_url", "https://images1.apartments.com/i2/pkC33nq7NL392gbIiHRJuhw1GYyQe5htuwAhSs7JmXY/110/woodley-park-washington-dc-neighborhood-photo.jpg"], ["created_at", "2017-11-30 16:25:30.243906"], ["updated_at", "2017-11-30 16:25:30.243906"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "neighborhoods" ("name", "quadrant", "photo_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Other NW"], ["quadrant", "NW"], ["photo_url", "http://www.buckmanrealtor.com/images/landing-pages/Logan_Circle.jpg"], ["created_at", "2017-11-30 16:25:30.246645"], ["updated_at", "2017-11-30 16:25:30.246645"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "neighborhoods" ("name", "quadrant", "photo_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Other SW"], ["quadrant", "SW"], ["photo_url", "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Homes_in_SWDC%2C_HUD_headquarters.jpg/350px-Homes_in_SWDC%2C_HUD_headquarters.jpg"], ["created_at", "2017-11-30 16:25:30.248949"], ["updated_at", "2017-11-30 16:25:30.248949"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "neighborhoods" ("name", "quadrant", "photo_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Other NE"], ["quadrant", "NE"], ["photo_url", "https://imageserver-bisnow1.netdna-ssl.com/oAM-QRPTxZ-JxdEwTcQbZbOfNvo=/0x0/publisher/56d88a8495efe_NE_DC.jpeg"], ["created_at", "2017-11-30 16:25:30.251164"], ["updated_at", "2017-11-30 16:25:30.251164"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "neighborhoods" ("name", "quadrant", "photo_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Other SE"], ["quadrant", "SE"], ["photo_url", "http://lgsem.com/wp-content/uploads/2017/06/se-dc-apartments-interior-design-ideas-simple-under-se-dc-apartments-home-interior-ideas.jpg"], ["created_at", "2017-11-30 16:25:30.253540"], ["updated_at", "2017-11-30 16:25:30.253540"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNeighborhood Load (0.3ms)[0m  [1m[34mSELECT  "neighborhoods".* FROM "neighborhoods" WHERE "neighborhoods"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO "posts" ("author", "title", "content", "inquiry_type", "location", "neighborhood_id", "created_at", "updated_at", "user_id", "latitude", "longitude") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["author", "Meg"], ["title", "Community Garden at 13th & Irving"], ["content", "There is interest from the community to install a community garden in the dilapidated parking lot at 13th & I St NW. This garden would be an opportunity to grow food locally as well as an educational opportunity to teach about gardening and nutrition."], ["inquiry_type", "public health"], ["location", "13th St NW & Irving St NW"], ["neighborhood_id", 5], ["created_at", "2017-11-30 16:25:31.254435"], ["updated_at", "2017-11-30 16:25:31.254435"], ["user_id", 1], ["latitude", 38.9286296], ["longitude", -77.0297045]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNeighborhood Load (0.3ms)[0m  [1m[34mSELECT  "neighborhoods".* FROM "neighborhoods" WHERE "neighborhoods"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "posts" ("author", "title", "content", "inquiry_type", "location", "neighborhood_id", "created_at", "updated_at", "user_id", "latitude", "longitude") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["author", "Curt"], ["title", "Install Accessible Ramp on Waterfront Walk"], ["content", "The waterfront boardwalk area should really have a ramp to make it accessible to all citizens!"], ["inquiry_type", "accessibility"], ["location", "600 Water St SW"], ["neighborhood_id", 18], ["created_at", "2017-11-30 16:25:31.612063"], ["updated_at", "2017-11-30 16:25:31.612063"], ["user_id", 4], ["latitude", 38.8762111], ["longitude", -77.02136209999999]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNeighborhood Load (0.3ms)[0m  [1m[34mSELECT  "neighborhoods".* FROM "neighborhoods" WHERE "neighborhoods"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "posts" ("author", "title", "content", "inquiry_type", "location", "neighborhood_id", "created_at", "updated_at", "user_id", "latitude", "longitude") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["author", "Tom"], ["title", "More Street Lights Needed"], ["content", "The streets are very dark in this area. New streetlights would greatly improve public safety and overall neighborhood satisfaction."], ["inquiry_type", "public safety"], ["location", "20 M St SE"], ["neighborhood_id", 13], ["created_at", "2017-11-30 16:25:32.250248"], ["updated_at", "2017-11-30 16:25:32.250248"], ["user_id", 2], ["latitude", 38.8767441], ["longitude", -77.0078731]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNeighborhood Load (0.4ms)[0m  [1m[34mSELECT  "neighborhoods".* FROM "neighborhoods" WHERE "neighborhoods"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "posts" ("author", "title", "content", "inquiry_type", "location", "neighborhood_id", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["author", "Rebecca"], ["title", "New Paint on Playground"], ["content", "The playground at Joseph H. Cole Recreation is looking rather dilapidated and could use another coat of paint!"], ["inquiry_type", "aesthetics"], ["location", "1299 Neal Street, NE"], ["neighborhood_id", 10], ["created_at", "2017-11-30 16:25:32.313561"], ["updated_at", "2017-11-30 16:25:32.313561"], ["user_id", 3]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/neighborhoods/18" for 127.0.0.1 at 2017-11-30 11:25:47 -0500
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by NeighborhoodsController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mNeighborhood Load (1.0ms)[0m  [1m[34mSELECT  "neighborhoods".* FROM "neighborhoods" WHERE "neighborhoods"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  Rendering neighborhoods/show.html.erb within layouts/application
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."neighborhood_id" = $1[0m  [["neighborhood_id", 18]]
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."neighborhood_id" = $1[0m  [["neighborhood_id", 18]]
+  Rendered neighborhoods/show.html.erb within layouts/application (88.3ms)
+Completed 200 OK in 442ms (Views: 393.0ms | ActiveRecord: 20.4ms)
+
+
+Started GET "/neighborhoods/18" for 127.0.0.1 at 2017-11-30 11:25:48 -0500
+Processing by NeighborhoodsController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mNeighborhood Load (0.6ms)[0m  [1m[34mSELECT  "neighborhoods".* FROM "neighborhoods" WHERE "neighborhoods"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  Rendering neighborhoods/show.html.erb within layouts/application
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."neighborhood_id" = $1[0m  [["neighborhood_id", 18]]
+  [1m[36mPost Load (2.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."neighborhood_id" = $1[0m  [["neighborhood_id", 18]]
+  Rendered neighborhoods/show.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 114ms (Views: 103.1ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/neighborhoods" for 127.0.0.1 at 2017-11-30 11:25:50 -0500
+Processing by NeighborhoodsController#index as HTML
+  Rendering neighborhoods/index.html.erb within layouts/application
+  [1m[36mNeighborhood Load (0.7ms)[0m  [1m[34mSELECT "neighborhoods".* FROM "neighborhoods"[0m
+  Rendered neighborhoods/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 84ms (Views: 80.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/neighborhoods" for 127.0.0.1 at 2017-11-30 11:26:05 -0500
+Processing by NeighborhoodsController#index as HTML
+  Rendering neighborhoods/index.html.erb within layouts/application
+  [1m[36mNeighborhood Load (0.5ms)[0m  [1m[34mSELECT "neighborhoods".* FROM "neighborhoods"[0m
+  Rendered neighborhoods/index.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 100ms (Views: 95.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/pages" for 127.0.0.1 at 2017-11-30 11:26:09 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 94ms (Views: 79.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-11-30 11:26:52 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering /Users/megmaciver/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/devise-4.3.0/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/megmaciver/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/devise-4.3.0/app/views/devise/shared/_links.html.erb (1.6ms)
+  Rendered /Users/megmaciver/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/devise-4.3.0/app/views/devise/sessions/new.html.erb within layouts/application (40.0ms)
+Completed 200 OK in 134ms (Views: 126.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-11-30 11:27:00 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DFFVx4YU9hNe+jHw/YlKihEeOn16IDn9CkZzxv7X1jumSGf43WaoM8+cgzu2s/7nH4tP729S9tVWbbAlFbIXBQ==", "user"=>{"email"=>"meg@email.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "meg@email.com"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.2ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "current_sign_in_ip" = $3, "last_sign_in_ip" = $4, "sign_in_count" = $5, "updated_at" = $6 WHERE "users"."id" = $7[0m  [["current_sign_in_at", "2017-11-30 16:27:00.404138"], ["last_sign_in_at", "2017-11-30 16:27:00.404138"], ["current_sign_in_ip", "127.0.0.1/32"], ["last_sign_in_ip", "127.0.0.1/32"], ["sign_in_count", 1], ["updated_at", "2017-11-30 16:27:00.406490"], ["id", 1]]
+  [1m[35m (6.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 217ms (ActiveRecord: 12.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-30 11:27:00 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (2.0ms)
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 221ms (Views: 216.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/neighborhoods" for 127.0.0.1 at 2017-11-30 11:27:07 -0500
+Processing by NeighborhoodsController#index as HTML
+  Rendering neighborhoods/index.html.erb within layouts/application
+  [1m[36mNeighborhood Load (0.5ms)[0m  [1m[34mSELECT "neighborhoods".* FROM "neighborhoods"[0m
+  Rendered neighborhoods/index.html.erb within layouts/application (17.3ms)
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 287ms (Views: 277.2ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/neighborhoods/3" for 127.0.0.1 at 2017-11-30 11:27:08 -0500
+Processing by NeighborhoodsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mNeighborhood Load (3.4ms)[0m  [1m[34mSELECT  "neighborhoods".* FROM "neighborhoods" WHERE "neighborhoods"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering neighborhoods/show.html.erb within layouts/application
+  [1m[36mUser Load (53.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (18.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."neighborhood_id" = $1[0m  [["neighborhood_id", 3]]
+  Rendered neighborhoods/show.html.erb within layouts/application (82.0ms)
+Completed 200 OK in 759ms (Views: 402.7ms | ActiveRecord: 75.2ms)
+
+
+Started GET "/neighborhoods" for 127.0.0.1 at 2017-11-30 11:27:23 -0500
+Processing by NeighborhoodsController#index as HTML
+  Rendering neighborhoods/index.html.erb within layouts/application
+  [1m[36mNeighborhood Load (1.1ms)[0m  [1m[34mSELECT "neighborhoods".* FROM "neighborhoods"[0m
+  Rendered neighborhoods/index.html.erb within layouts/application (10.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 411ms (Views: 396.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/pages" for 127.0.0.1 at 2017-11-30 11:27:29 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (1.6ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 261ms (Views: 255.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/neighborhoods" for 127.0.0.1 at 2017-11-30 11:27:33 -0500
+Processing by NeighborhoodsController#index as HTML
+  Rendering neighborhoods/index.html.erb within layouts/application
+  [1m[36mNeighborhood Load (2.0ms)[0m  [1m[34mSELECT "neighborhoods".* FROM "neighborhoods"[0m
+  Rendered neighborhoods/index.html.erb within layouts/application (44.0ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 422ms (Views: 411.4ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/neighborhoods/5" for 127.0.0.1 at 2017-11-30 11:27:36 -0500
+Processing by NeighborhoodsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mNeighborhood Load (0.7ms)[0m  [1m[34mSELECT  "neighborhoods".* FROM "neighborhoods" WHERE "neighborhoods"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering neighborhoods/show.html.erb within layouts/application
+  [1m[36mUser Load (6.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."neighborhood_id" = $1[0m  [["neighborhood_id", 5]]
+  [1m[36mPost Load (8.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."neighborhood_id" = $1[0m  [["neighborhood_id", 5]]
+  Rendered neighborhoods/show.html.erb within layouts/application (27.6ms)
+Completed 200 OK in 256ms (Views: 233.0ms | ActiveRecord: 18.4ms)
+
+
+Started GET "/neighborhoods/5/posts/1" for 127.0.0.1 at 2017-11-30 11:28:14 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"neighborhood_id"=>"5", "id"=>"1"}
+  [1m[36mNeighborhood Load (1.3ms)[0m  [1m[34mSELECT  "neighborhoods".* FROM "neighborhoods" WHERE "neighborhoods"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mPost Load (2.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."neighborhood_id" = $1 AND "posts"."id" = $2 LIMIT $3[0m  [["neighborhood_id", 5], ["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (4.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered posts/show.html.erb within layouts/application (74.6ms)
+Completed 200 OK in 194ms (Views: 151.4ms | ActiveRecord: 11.2ms)
+
+
+Started GET "/neighborhoods/5" for 127.0.0.1 at 2017-11-30 11:28:49 -0500
+Processing by NeighborhoodsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mNeighborhood Load (0.7ms)[0m  [1m[34mSELECT  "neighborhoods".* FROM "neighborhoods" WHERE "neighborhoods"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering neighborhoods/show.html.erb within layouts/application
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (79.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."neighborhood_id" = $1[0m  [["neighborhood_id", 5]]
+  [1m[36mPost Load (4.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."neighborhood_id" = $1[0m  [["neighborhood_id", 5]]
+  Rendered neighborhoods/show.html.erb within layouts/application (94.9ms)
+Completed 200 OK in 431ms (Views: 340.0ms | ActiveRecord: 85.8ms)
+
+
+Started GET "/neighborhoods" for 127.0.0.1 at 2017-11-30 11:28:54 -0500
+Processing by NeighborhoodsController#index as HTML
+  Rendering neighborhoods/index.html.erb within layouts/application
+  [1m[36mNeighborhood Load (0.8ms)[0m  [1m[34mSELECT "neighborhoods".* FROM "neighborhoods"[0m
+  Rendered neighborhoods/index.html.erb within layouts/application (14.1ms)
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 338ms (Views: 331.6ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/pages" for 127.0.0.1 at 2017-11-30 11:29:05 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (2.3ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 258ms (Views: 252.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/neighborhoods" for 127.0.0.1 at 2017-11-30 11:29:15 -0500
+Processing by NeighborhoodsController#index as HTML
+  Rendering neighborhoods/index.html.erb within layouts/application
+  [1m[36mNeighborhood Load (2.3ms)[0m  [1m[34mSELECT "neighborhoods".* FROM "neighborhoods"[0m
+  Rendered neighborhoods/index.html.erb within layouts/application (19.3ms)
+  [1m[36mUser Load (3.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 334ms (Views: 313.0ms | ActiveRecord: 6.2ms)
+
+
+Started GET "/neighborhoods/18" for 127.0.0.1 at 2017-11-30 11:29:48 -0500
+Processing by NeighborhoodsController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mNeighborhood Load (0.7ms)[0m  [1m[34mSELECT  "neighborhoods".* FROM "neighborhoods" WHERE "neighborhoods"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  Rendering neighborhoods/show.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."neighborhood_id" = $1[0m  [["neighborhood_id", 18]]
+  [1m[36mPost Load (7.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."neighborhood_id" = $1[0m  [["neighborhood_id", 18]]
+  Rendered neighborhoods/show.html.erb within layouts/application (28.0ms)
+Completed 200 OK in 250ms (Views: 233.8ms | ActiveRecord: 9.9ms)
+
+
+Started GET "/neighborhoods/18/posts/2" for 127.0.0.1 at 2017-11-30 11:29:57 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"neighborhood_id"=>"18", "id"=>"2"}
+  [1m[36mNeighborhood Load (0.6ms)[0m  [1m[34mSELECT  "neighborhoods".* FROM "neighborhoods" WHERE "neighborhoods"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mPost Load (0.9ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."neighborhood_id" = $1 AND "posts"."id" = $2 LIMIT $3[0m  [["neighborhood_id", 18], ["id", 2], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered posts/show.html.erb within layouts/application (22.9ms)
+Completed 200 OK in 235ms (Views: 221.7ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/neighborhoods/18/posts/new" for 127.0.0.1 at 2017-11-30 11:30:13 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"neighborhood_id"=>"18"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mNeighborhood Load (3.1ms)[0m  [1m[34mSELECT  "neighborhoods".* FROM "neighborhoods" WHERE "neighborhoods"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (73.8ms)
+Completed 200 OK in 178ms (Views: 161.9ms | ActiveRecord: 4.8ms)
+
+
+Started POST "/neighborhoods/18/posts" for 127.0.0.1 at 2017-11-30 11:31:01 -0500
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Fxau03dPCPeT2w8W3P5mMftaDL/kDpqWRCNsMXKf2NYUVUU2zEfq8Ir0//PgGVQh7eUYt5Oj9BEQed8SdEUEiQ==", "post"=>{"author"=>"Meg", "title"=>"Have free candy!!", "location"=>"600 H St SW", "photo_url"=>"", "content"=>"I think there should be free candy all the time.", "inquiry_type"=>"aesthetics"}, "commit"=>"Create Post", "neighborhood_id"=>"18"}
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mNeighborhood Load (0.6ms)[0m  [1m[34mSELECT  "neighborhoods".* FROM "neighborhoods" WHERE "neighborhoods"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (3.6ms)[0m  [1m[32mINSERT INTO "posts" ("author", "title", "photo_url", "content", "inquiry_type", "location", "neighborhood_id", "created_at", "updated_at", "user_id", "latitude", "longitude") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["author", "Meg"], ["title", "Have free candy!!"], ["photo_url", ""], ["content", "I think there should be free candy all the time."], ["inquiry_type", "aesthetics"], ["location", "600 H St SW"], ["neighborhood_id", 18], ["created_at", "2017-11-30 16:31:02.074416"], ["updated_at", "2017-11-30 16:31:02.074416"], ["user_id", 1], ["latitude", 34.6472073], ["longitude", -120.4574682]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/neighborhoods/18
+Completed 302 Found in 849ms (ActiveRecord: 9.0ms)
+
+
+Started GET "/neighborhoods/18" for 127.0.0.1 at 2017-11-30 11:31:02 -0500
+Processing by NeighborhoodsController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mNeighborhood Load (0.7ms)[0m  [1m[34mSELECT  "neighborhoods".* FROM "neighborhoods" WHERE "neighborhoods"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  Rendering neighborhoods/show.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."neighborhood_id" = $1[0m  [["neighborhood_id", 18]]
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."neighborhood_id" = $1[0m  [["neighborhood_id", 18]]
+  Rendered neighborhoods/show.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 88ms (Views: 81.6ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/neighborhoods/18/posts/5" for 127.0.0.1 at 2017-11-30 11:31:09 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"neighborhood_id"=>"18", "id"=>"5"}
+  [1m[36mNeighborhood Load (1.2ms)[0m  [1m[34mSELECT  "neighborhoods".* FROM "neighborhoods" WHERE "neighborhoods"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mPost Load (0.9ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."neighborhood_id" = $1 AND "posts"."id" = $2 LIMIT $3[0m  [["neighborhood_id", 18], ["id", 5], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (15.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (73.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered posts/show.html.erb within layouts/application (111.3ms)
+Completed 200 OK in 207ms (Views: 106.0ms | ActiveRecord: 90.9ms)
+
+
+Started DELETE "/neighborhoods/18/posts/5" for 127.0.0.1 at 2017-11-30 11:31:19 -0500
+Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"CKr5yBRA7nZINQf6quLxanAZOA9BCl0WfQukF69H8+L7yu12j/2/JxsrMfSWL7mphCsMrlSZI1cbMP8i5TZYGQ==", "neighborhood_id"=>"18", "id"=>"5"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mNeighborhood Load (0.3ms)[0m  [1m[34mSELECT  "neighborhoods".* FROM "neighborhoods" WHERE "neighborhoods"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mPost Load (1.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."neighborhood_id" = $1 AND "posts"."id" = $2 LIMIT $3[0m  [["neighborhood_id", 18], ["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = $1[0m  [["id", 5]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/neighborhoods/18
+Completed 302 Found in 19ms (ActiveRecord: 4.7ms)
+
+
+Started GET "/neighborhoods/18" for 127.0.0.1 at 2017-11-30 11:31:19 -0500
+Processing by NeighborhoodsController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mNeighborhood Load (0.5ms)[0m  [1m[34mSELECT  "neighborhoods".* FROM "neighborhoods" WHERE "neighborhoods"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  Rendering neighborhoods/show.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."neighborhood_id" = $1[0m  [["neighborhood_id", 18]]
+  [1m[36mPost Load (2.9ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."neighborhood_id" = $1[0m  [["neighborhood_id", 18]]
+  Rendered neighborhoods/show.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 102ms (Views: 87.4ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/neighborhoods" for 127.0.0.1 at 2017-11-30 11:31:51 -0500
+Processing by NeighborhoodsController#index as HTML
+  Rendering neighborhoods/index.html.erb within layouts/application
+  [1m[36mNeighborhood Load (0.4ms)[0m  [1m[34mSELECT "neighborhoods".* FROM "neighborhoods"[0m
+  Rendered neighborhoods/index.html.erb within layouts/application (4.7ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 170ms (Views: 158.4ms | ActiveRecord: 1.2ms)
+
+
