@@ -110,7 +110,7 @@ footer {
   justify-content: center;
 }
 
-.neighborhood-post-container {
+.dotted-outline {
   padding: 0 4% 0 4%;
   border: dotted 1px gray;
 }
