@@ -6,7 +6,8 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCE4qctqRHc5dKUMgh6-dxoCOz4dh4VIGY"></script>
+    <script type='text/javascript' src='config.js'></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=" + config.API_KEY ></script>
     <script src="//cdn.rawgit.com/mahnunchik/markerclustererplus/master/dist/markerclusterer.min.js"></script>
     <script src='//cdn.rawgit.com/printercu/google-maps-utility-library-v3-read-only/master/infobox/src/infobox_packed.js' type='text/javascript'></script>
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower|PT+Sans" rel="stylesheet">
