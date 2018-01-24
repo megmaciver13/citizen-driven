@@ -13117,3 +13117,1230 @@ Processing by NeighborhoodsController#index as HTML
 Completed 200 OK in 170ms (Views: 158.4ms | ActiveRecord: 1.2ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-01-24 12:53:11 -0500
+  [1m[35m (4.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 513ms (Views: 502.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/neighborhoods" for 127.0.0.1 at 2018-01-24 12:58:54 -0500
+Processing by NeighborhoodsController#index as HTML
+  Rendering neighborhoods/index.html.erb within layouts/application
+  [1m[36mNeighborhood Load (33.9ms)[0m  [1m[34mSELECT "neighborhoods".* FROM "neighborhoods"[0m
+  Rendered neighborhoods/index.html.erb within layouts/application (62.0ms)
+Completed 200 OK in 176ms (Views: 116.5ms | ActiveRecord: 51.7ms)
+
+
+Started GET "/neighborhoods/1" for 127.0.0.1 at 2018-01-24 13:04:40 -0500
+Processing by NeighborhoodsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mNeighborhood Load (2.0ms)[0m  [1m[34mSELECT  "neighborhoods".* FROM "neighborhoods" WHERE "neighborhoods"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering neighborhoods/show.html.erb within layouts/application
+  [1m[35m (23.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."neighborhood_id" = $1[0m  [["neighborhood_id", 1]]
+  Rendered neighborhoods/show.html.erb within layouts/application (91.9ms)
+Completed 200 OK in 268ms (Views: 169.3ms | ActiveRecord: 36.7ms)
+
+
+Started GET "/neighborhoods" for 127.0.0.1 at 2018-01-24 13:07:54 -0500
+Processing by NeighborhoodsController#index as HTML
+  Rendering neighborhoods/index.html.erb within layouts/application
+  [1m[36mNeighborhood Load (0.4ms)[0m  [1m[34mSELECT "neighborhoods".* FROM "neighborhoods"[0m
+  Rendered neighborhoods/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 115ms (Views: 111.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/neighborhoods" for 127.0.0.1 at 2018-01-24 13:08:15 -0500
+Processing by NeighborhoodsController#index as HTML
+  Rendering neighborhoods/index.html.erb within layouts/application
+  [1m[36mNeighborhood Load (0.5ms)[0m  [1m[34mSELECT "neighborhoods".* FROM "neighborhoods"[0m
+  Rendered neighborhoods/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 137ms (Views: 133.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/neighborhoods" for 127.0.0.1 at 2018-01-24 13:08:18 -0500
+Processing by NeighborhoodsController#index as HTML
+  Rendering neighborhoods/index.html.erb within layouts/application
+  [1m[36mNeighborhood Load (0.5ms)[0m  [1m[34mSELECT "neighborhoods".* FROM "neighborhoods"[0m
+  Rendered neighborhoods/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 67ms (Views: 62.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/neighborhoods" for 127.0.0.1 at 2018-01-24 13:10:11 -0500
+Processing by NeighborhoodsController#index as HTML
+  Rendering neighborhoods/index.html.erb within layouts/application
+  [1m[36mNeighborhood Load (0.5ms)[0m  [1m[34mSELECT "neighborhoods".* FROM "neighborhoods"[0m
+  Rendered neighborhoods/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 85ms (Views: 80.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/neighborhoods" for 127.0.0.1 at 2018-01-24 13:10:12 -0500
+Processing by NeighborhoodsController#index as HTML
+  Rendering neighborhoods/index.html.erb within layouts/application
+  [1m[36mNeighborhood Load (0.9ms)[0m  [1m[34mSELECT "neighborhoods".* FROM "neighborhoods"[0m
+  Rendered neighborhoods/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 103ms (Views: 98.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/neighborhoods" for 127.0.0.1 at 2018-01-24 13:10:34 -0500
+Processing by NeighborhoodsController#index as HTML
+  Rendering neighborhoods/index.html.erb within layouts/application
+  [1m[36mNeighborhood Load (1.4ms)[0m  [1m[34mSELECT "neighborhoods".* FROM "neighborhoods"[0m
+  Rendered neighborhoods/index.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 102ms (Views: 98.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/neighborhoods" for 127.0.0.1 at 2018-01-24 13:11:30 -0500
+Processing by NeighborhoodsController#index as HTML
+  Rendering neighborhoods/index.html.erb within layouts/application
+  [1m[36mNeighborhood Load (0.3ms)[0m  [1m[34mSELECT "neighborhoods".* FROM "neighborhoods"[0m
+  Rendered neighborhoods/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 90ms (Views: 87.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/neighborhoods" for 127.0.0.1 at 2018-01-24 13:11:32 -0500
+Processing by NeighborhoodsController#index as HTML
+  Rendering neighborhoods/index.html.erb within layouts/application
+  [1m[36mNeighborhood Load (0.4ms)[0m  [1m[34mSELECT "neighborhoods".* FROM "neighborhoods"[0m
+  Rendered neighborhoods/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 102ms (Views: 98.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/neighborhoods" for 127.0.0.1 at 2018-01-24 13:14:19 -0500
+Processing by NeighborhoodsController#index as HTML
+  Rendering neighborhoods/index.html.erb within layouts/application
+  [1m[36mNeighborhood Load (0.5ms)[0m  [1m[34mSELECT "neighborhoods".* FROM "neighborhoods"[0m
+  Rendered neighborhoods/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 89ms (Views: 85.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/neighborhoods" for 127.0.0.1 at 2018-01-24 13:17:24 -0500
+Processing by NeighborhoodsController#index as HTML
+  Rendering neighborhoods/index.html.erb within layouts/application
+  [1m[36mNeighborhood Load (0.4ms)[0m  [1m[34mSELECT "neighborhoods".* FROM "neighborhoods"[0m
+  Rendered neighborhoods/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 94ms (Views: 91.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/neighborhoods" for 127.0.0.1 at 2018-01-24 13:18:27 -0500
+Processing by NeighborhoodsController#index as HTML
+  Rendering neighborhoods/index.html.erb within layouts/application
+  [1m[36mNeighborhood Load (0.4ms)[0m  [1m[34mSELECT "neighborhoods".* FROM "neighborhoods"[0m
+  Rendered neighborhoods/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 87ms (Views: 84.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/neighborhoods" for 127.0.0.1 at 2018-01-24 13:18:34 -0500
+Processing by NeighborhoodsController#index as HTML
+  Rendering neighborhoods/index.html.erb within layouts/application
+  [1m[36mNeighborhood Load (0.4ms)[0m  [1m[34mSELECT "neighborhoods".* FROM "neighborhoods"[0m
+  Rendered neighborhoods/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 81ms (Views: 78.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/neighborhoods" for 127.0.0.1 at 2018-01-24 13:18:45 -0500
+Processing by NeighborhoodsController#index as HTML
+  Rendering neighborhoods/index.html.erb within layouts/application
+  [1m[36mNeighborhood Load (0.4ms)[0m  [1m[34mSELECT "neighborhoods".* FROM "neighborhoods"[0m
+  Rendered neighborhoods/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 73ms (Views: 70.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/neighborhoods" for 127.0.0.1 at 2018-01-24 13:18:46 -0500
+Processing by NeighborhoodsController#index as HTML
+  Rendering neighborhoods/index.html.erb within layouts/application
+  [1m[36mNeighborhood Load (0.5ms)[0m  [1m[34mSELECT "neighborhoods".* FROM "neighborhoods"[0m
+  Rendered neighborhoods/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 108ms (Views: 105.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/neighborhoods" for 127.0.0.1 at 2018-01-24 13:19:51 -0500
+Processing by NeighborhoodsController#index as HTML
+  Rendering neighborhoods/index.html.erb within layouts/application
+  [1m[36mNeighborhood Load (0.4ms)[0m  [1m[34mSELECT "neighborhoods".* FROM "neighborhoods"[0m
+  Rendered neighborhoods/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 80ms (Views: 77.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/neighborhoods" for 127.0.0.1 at 2018-01-24 13:20:14 -0500
+Processing by NeighborhoodsController#index as HTML
+  Rendering neighborhoods/index.html.erb within layouts/application
+  [1m[36mNeighborhood Load (0.4ms)[0m  [1m[34mSELECT "neighborhoods".* FROM "neighborhoods"[0m
+  Rendered neighborhoods/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 78ms (Views: 73.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/neighborhoods" for 127.0.0.1 at 2018-01-24 13:20:38 -0500
+Processing by NeighborhoodsController#index as HTML
+  Rendering neighborhoods/index.html.erb within layouts/application
+  [1m[36mNeighborhood Load (0.8ms)[0m  [1m[34mSELECT "neighborhoods".* FROM "neighborhoods"[0m
+  Rendered neighborhoods/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 89ms (Views: 85.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/neighborhoods" for 127.0.0.1 at 2018-01-24 13:20:59 -0500
+Processing by NeighborhoodsController#index as HTML
+  Rendering neighborhoods/index.html.erb within layouts/application
+  [1m[36mNeighborhood Load (0.4ms)[0m  [1m[34mSELECT "neighborhoods".* FROM "neighborhoods"[0m
+  Rendered neighborhoods/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 88ms (Views: 85.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/neighborhoods" for 127.0.0.1 at 2018-01-24 13:21:09 -0500
+Processing by NeighborhoodsController#index as HTML
+  Rendering neighborhoods/index.html.erb within layouts/application
+  [1m[36mNeighborhood Load (1.3ms)[0m  [1m[34mSELECT "neighborhoods".* FROM "neighborhoods"[0m
+  Rendered neighborhoods/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 80ms (Views: 76.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/neighborhoods" for 127.0.0.1 at 2018-01-24 13:21:19 -0500
+Processing by NeighborhoodsController#index as HTML
+  Rendering neighborhoods/index.html.erb within layouts/application
+  [1m[36mNeighborhood Load (0.4ms)[0m  [1m[34mSELECT "neighborhoods".* FROM "neighborhoods"[0m
+  Rendered neighborhoods/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 91ms (Views: 88.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/neighborhoods" for 127.0.0.1 at 2018-01-24 13:21:27 -0500
+Processing by NeighborhoodsController#index as HTML
+  Rendering neighborhoods/index.html.erb within layouts/application
+  [1m[36mNeighborhood Load (58.3ms)[0m  [1m[34mSELECT "neighborhoods".* FROM "neighborhoods"[0m
+  Rendered neighborhoods/index.html.erb within layouts/application (112.2ms)
+Completed 200 OK in 200ms (Views: 139.3ms | ActiveRecord: 58.3ms)
+
+
+Started GET "/neighborhoods" for 127.0.0.1 at 2018-01-24 13:21:31 -0500
+Processing by NeighborhoodsController#index as HTML
+  Rendering neighborhoods/index.html.erb within layouts/application
+  [1m[36mNeighborhood Load (1.5ms)[0m  [1m[34mSELECT "neighborhoods".* FROM "neighborhoods"[0m
+  Rendered neighborhoods/index.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 235ms (Views: 231.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/neighborhoods" for 127.0.0.1 at 2018-01-24 13:21:52 -0500
+Processing by NeighborhoodsController#index as HTML
+  Rendering neighborhoods/index.html.erb within layouts/application
+  [1m[36mNeighborhood Load (0.6ms)[0m  [1m[34mSELECT "neighborhoods".* FROM "neighborhoods"[0m
+  Rendered neighborhoods/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 86ms (Views: 82.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/neighborhoods" for 127.0.0.1 at 2018-01-24 13:22:42 -0500
+Processing by NeighborhoodsController#index as HTML
+  Rendering neighborhoods/index.html.erb within layouts/application
+  [1m[36mNeighborhood Load (0.4ms)[0m  [1m[34mSELECT "neighborhoods".* FROM "neighborhoods"[0m
+  Rendered neighborhoods/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 80ms (Views: 76.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/neighborhoods" for 127.0.0.1 at 2018-01-24 13:23:07 -0500
+Processing by NeighborhoodsController#index as HTML
+  Rendering neighborhoods/index.html.erb within layouts/application
+  [1m[36mNeighborhood Load (0.5ms)[0m  [1m[34mSELECT "neighborhoods".* FROM "neighborhoods"[0m
+  Rendered neighborhoods/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 83ms (Views: 75.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/neighborhoods" for 127.0.0.1 at 2018-01-24 13:23:08 -0500
+Processing by NeighborhoodsController#index as HTML
+  Rendering neighborhoods/index.html.erb within layouts/application
+  [1m[36mNeighborhood Load (0.6ms)[0m  [1m[34mSELECT "neighborhoods".* FROM "neighborhoods"[0m
+  Rendered neighborhoods/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 103ms (Views: 99.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/neighborhoods" for 127.0.0.1 at 2018-01-24 13:23:10 -0500
+Processing by NeighborhoodsController#index as HTML
+  Rendering neighborhoods/index.html.erb within layouts/application
+  [1m[36mNeighborhood Load (0.5ms)[0m  [1m[34mSELECT "neighborhoods".* FROM "neighborhoods"[0m
+  Rendered neighborhoods/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 75ms (Views: 71.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/neighborhoods" for 127.0.0.1 at 2018-01-24 13:24:35 -0500
+Processing by NeighborhoodsController#index as HTML
+  Rendering neighborhoods/index.html.erb within layouts/application
+  [1m[36mNeighborhood Load (0.4ms)[0m  [1m[34mSELECT "neighborhoods".* FROM "neighborhoods"[0m
+  Rendered neighborhoods/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 103ms (Views: 99.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/neighborhoods" for 127.0.0.1 at 2018-01-24 13:24:46 -0500
+Processing by NeighborhoodsController#index as HTML
+  Rendering neighborhoods/index.html.erb within layouts/application
+  [1m[36mNeighborhood Load (0.5ms)[0m  [1m[34mSELECT "neighborhoods".* FROM "neighborhoods"[0m
+  Rendered neighborhoods/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 107ms (Views: 101.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/neighborhoods" for 127.0.0.1 at 2018-01-24 13:24:48 -0500
+Processing by NeighborhoodsController#index as HTML
+  Rendering neighborhoods/index.html.erb within layouts/application
+  [1m[36mNeighborhood Load (0.7ms)[0m  [1m[34mSELECT "neighborhoods".* FROM "neighborhoods"[0m
+  Rendered neighborhoods/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 81ms (Views: 77.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/neighborhoods" for 127.0.0.1 at 2018-01-24 13:24:50 -0500
+Processing by NeighborhoodsController#index as HTML
+  Rendering neighborhoods/index.html.erb within layouts/application
+  [1m[36mNeighborhood Load (0.4ms)[0m  [1m[34mSELECT "neighborhoods".* FROM "neighborhoods"[0m
+  Rendered neighborhoods/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 63ms (Views: 59.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/neighborhoods" for 127.0.0.1 at 2018-01-24 13:24:58 -0500
+Processing by NeighborhoodsController#index as HTML
+  Rendering neighborhoods/index.html.erb within layouts/application
+  [1m[36mNeighborhood Load (0.4ms)[0m  [1m[34mSELECT "neighborhoods".* FROM "neighborhoods"[0m
+  Rendered neighborhoods/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 96ms (Views: 92.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/neighborhoods" for 127.0.0.1 at 2018-01-24 13:25:20 -0500
+Processing by NeighborhoodsController#index as HTML
+  Rendering neighborhoods/index.html.erb within layouts/application
+  [1m[36mNeighborhood Load (0.6ms)[0m  [1m[34mSELECT "neighborhoods".* FROM "neighborhoods"[0m
+  Rendered neighborhoods/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 93ms (Views: 86.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/neighborhoods" for 127.0.0.1 at 2018-01-24 13:25:33 -0500
+Processing by NeighborhoodsController#index as HTML
+  Rendering neighborhoods/index.html.erb within layouts/application
+  [1m[36mNeighborhood Load (0.5ms)[0m  [1m[34mSELECT "neighborhoods".* FROM "neighborhoods"[0m
+  Rendered neighborhoods/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 77ms (Views: 74.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/neighborhoods" for 127.0.0.1 at 2018-01-24 13:26:19 -0500
+Processing by NeighborhoodsController#index as HTML
+  Rendering neighborhoods/index.html.erb within layouts/application
+  [1m[36mNeighborhood Load (1.0ms)[0m  [1m[34mSELECT "neighborhoods".* FROM "neighborhoods"[0m
+  Rendered neighborhoods/index.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 79ms (Views: 75.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/neighborhoods" for 127.0.0.1 at 2018-01-24 13:26:27 -0500
+Processing by NeighborhoodsController#index as HTML
+  Rendering neighborhoods/index.html.erb within layouts/application
+  [1m[36mNeighborhood Load (0.5ms)[0m  [1m[34mSELECT "neighborhoods".* FROM "neighborhoods"[0m
+  Rendered neighborhoods/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 80ms (Views: 76.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/neighborhoods" for 127.0.0.1 at 2018-01-24 13:26:29 -0500
+Processing by NeighborhoodsController#index as HTML
+  Rendering neighborhoods/index.html.erb within layouts/application
+  [1m[36mNeighborhood Load (1.0ms)[0m  [1m[34mSELECT "neighborhoods".* FROM "neighborhoods"[0m
+  Rendered neighborhoods/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 62ms (Views: 58.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/neighborhoods" for 127.0.0.1 at 2018-01-24 13:26:39 -0500
+Processing by NeighborhoodsController#index as HTML
+  Rendering neighborhoods/index.html.erb within layouts/application
+  [1m[36mNeighborhood Load (0.5ms)[0m  [1m[34mSELECT "neighborhoods".* FROM "neighborhoods"[0m
+  Rendered neighborhoods/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 94ms (Views: 91.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/neighborhoods" for 127.0.0.1 at 2018-01-24 13:26:53 -0500
+Processing by NeighborhoodsController#index as HTML
+  Rendering neighborhoods/index.html.erb within layouts/application
+  [1m[36mNeighborhood Load (0.4ms)[0m  [1m[34mSELECT "neighborhoods".* FROM "neighborhoods"[0m
+  Rendered neighborhoods/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 79ms (Views: 74.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/neighborhoods/1" for 127.0.0.1 at 2018-01-24 13:27:00 -0500
+Processing by NeighborhoodsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mNeighborhood Load (5.3ms)[0m  [1m[34mSELECT  "neighborhoods".* FROM "neighborhoods" WHERE "neighborhoods"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering neighborhoods/show.html.erb within layouts/application
+  [1m[35m (37.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."neighborhood_id" = $1[0m  [["neighborhood_id", 1]]
+  Rendered neighborhoods/show.html.erb within layouts/application (57.7ms)
+Completed 200 OK in 166ms (Views: 117.5ms | ActiveRecord: 42.7ms)
+
+
+Started GET "/neighborhoods/5" for 127.0.0.1 at 2018-01-24 13:27:05 -0500
+Processing by NeighborhoodsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mNeighborhood Load (0.6ms)[0m  [1m[34mSELECT  "neighborhoods".* FROM "neighborhoods" WHERE "neighborhoods"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering neighborhoods/show.html.erb within layouts/application
+  [1m[35m (55.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."neighborhood_id" = $1[0m  [["neighborhood_id", 5]]
+  [1m[36mPost Load (19.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."neighborhood_id" = $1[0m  [["neighborhood_id", 5]]
+  Rendered neighborhoods/show.html.erb within layouts/application (117.5ms)
+Completed 200 OK in 189ms (Views: 102.1ms | ActiveRecord: 80.2ms)
+
+
+Started GET "/neighborhoods/5/posts/1" for 127.0.0.1 at 2018-01-24 13:27:11 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"neighborhood_id"=>"5", "id"=>"1"}
+  [1m[36mNeighborhood Load (1.0ms)[0m  [1m[34mSELECT  "neighborhoods".* FROM "neighborhoods" WHERE "neighborhoods"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mPost Load (81.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."neighborhood_id" = $1 AND "posts"."id" = $2 LIMIT $3[0m  [["neighborhood_id", 5], ["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (8.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered posts/show.html.erb within layouts/application (38.2ms)
+Completed 200 OK in 192ms (Views: 76.9ms | ActiveRecord: 96.7ms)
+
+
+Started GET "/neighborhoods/5" for 127.0.0.1 at 2018-01-24 13:27:48 -0500
+Processing by NeighborhoodsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mNeighborhood Load (0.3ms)[0m  [1m[34mSELECT  "neighborhoods".* FROM "neighborhoods" WHERE "neighborhoods"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering neighborhoods/show.html.erb within layouts/application
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."neighborhood_id" = $1[0m  [["neighborhood_id", 5]]
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."neighborhood_id" = $1[0m  [["neighborhood_id", 5]]
+  Rendered neighborhoods/show.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 62ms (Views: 57.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/neighborhoods/5/posts/1" for 127.0.0.1 at 2018-01-24 13:27:53 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"neighborhood_id"=>"5", "id"=>"1"}
+  [1m[36mNeighborhood Load (0.4ms)[0m  [1m[34mSELECT  "neighborhoods".* FROM "neighborhoods" WHERE "neighborhoods"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mPost Load (4.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."neighborhood_id" = $1 AND "posts"."id" = $2 LIMIT $3[0m  [["neighborhood_id", 5], ["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (48.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered posts/show.html.erb within layouts/application (53.0ms)
+Completed 200 OK in 174ms (Views: 114.3ms | ActiveRecord: 52.9ms)
+
+
+Started GET "/neighborhoods/5/posts/1" for 127.0.0.1 at 2018-01-24 13:28:05 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"neighborhood_id"=>"5", "id"=>"1"}
+  [1m[36mNeighborhood Load (0.5ms)[0m  [1m[34mSELECT  "neighborhoods".* FROM "neighborhoods" WHERE "neighborhoods"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."neighborhood_id" = $1 AND "posts"."id" = $2 LIMIT $3[0m  [["neighborhood_id", 5], ["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered posts/show.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 62ms (Views: 53.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/neighborhoods" for 127.0.0.1 at 2018-01-24 13:36:55 -0500
+Processing by NeighborhoodsController#index as HTML
+  Rendering neighborhoods/index.html.erb within layouts/application
+  [1m[36mNeighborhood Load (1.6ms)[0m  [1m[34mSELECT "neighborhoods".* FROM "neighborhoods"[0m
+  Rendered neighborhoods/index.html.erb within layouts/application (21.4ms)
+Completed 200 OK in 274ms (Views: 142.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/neighborhoods" for 127.0.0.1 at 2018-01-24 13:36:57 -0500
+Processing by NeighborhoodsController#index as HTML
+  Rendering neighborhoods/index.html.erb within layouts/application
+  [1m[36mNeighborhood Load (2.9ms)[0m  [1m[34mSELECT "neighborhoods".* FROM "neighborhoods"[0m
+  Rendered neighborhoods/index.html.erb within layouts/application (110.5ms)
+Completed 200 OK in 312ms (Views: 302.8ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-24 13:37:04 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 112ms (Views: 109.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-24 13:38:08 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 111ms (Views: 107.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-24 13:38:10 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 82ms (Views: 79.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-24 13:39:39 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 116ms (Views: 112.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-24 13:39:50 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 88ms (Views: 84.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-24 13:39:52 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 103ms (Views: 98.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-24 13:40:11 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 92ms (Views: 89.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-24 13:40:25 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 84ms (Views: 80.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-24 13:40:42 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 142ms (Views: 132.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-24 13:41:01 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 115ms (Views: 106.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-24 13:42:15 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 98ms (Views: 95.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-24 13:42:35 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 122ms (Views: 119.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-24 13:42:43 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 75ms (Views: 72.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-24 13:43:29 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 106ms (Views: 102.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-24 13:43:41 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 90ms (Views: 85.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-24 13:43:51 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 97ms (Views: 94.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-24 13:43:59 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 112ms (Views: 108.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-24 13:44:13 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 79ms (Views: 75.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-24 13:44:21 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 102ms (Views: 99.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-24 13:44:29 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 79ms (Views: 76.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-24 13:44:36 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 100ms (Views: 95.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-24 13:44:44 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 87ms (Views: 84.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-24 13:44:58 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 81ms (Views: 77.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-24 13:45:43 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 103ms (Views: 100.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-24 13:46:13 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 92ms (Views: 90.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/neighborhoods" for 127.0.0.1 at 2018-01-24 13:46:27 -0500
+Processing by NeighborhoodsController#index as HTML
+  Rendering neighborhoods/index.html.erb within layouts/application
+  [1m[36mNeighborhood Load (1.0ms)[0m  [1m[34mSELECT "neighborhoods".* FROM "neighborhoods"[0m
+  Rendered neighborhoods/index.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 194ms (Views: 187.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/neighborhoods/5" for 127.0.0.1 at 2018-01-24 13:46:30 -0500
+Processing by NeighborhoodsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mNeighborhood Load (0.9ms)[0m  [1m[34mSELECT  "neighborhoods".* FROM "neighborhoods" WHERE "neighborhoods"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering neighborhoods/show.html.erb within layouts/application
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."neighborhood_id" = $1[0m  [["neighborhood_id", 5]]
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."neighborhood_id" = $1[0m  [["neighborhood_id", 5]]
+  Rendered neighborhoods/show.html.erb within layouts/application (113.4ms)
+Completed 200 OK in 208ms (Views: 194.6ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/neighborhoods/5" for 127.0.0.1 at 2018-01-24 13:47:40 -0500
+Processing by NeighborhoodsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mNeighborhood Load (0.4ms)[0m  [1m[34mSELECT  "neighborhoods".* FROM "neighborhoods" WHERE "neighborhoods"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering neighborhoods/show.html.erb within layouts/application
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."neighborhood_id" = $1[0m  [["neighborhood_id", 5]]
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."neighborhood_id" = $1[0m  [["neighborhood_id", 5]]
+  Rendered neighborhoods/show.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 91ms (Views: 85.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/neighborhoods/5" for 127.0.0.1 at 2018-01-24 13:48:39 -0500
+Processing by NeighborhoodsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mNeighborhood Load (0.5ms)[0m  [1m[34mSELECT  "neighborhoods".* FROM "neighborhoods" WHERE "neighborhoods"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering neighborhoods/show.html.erb within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."neighborhood_id" = $1[0m  [["neighborhood_id", 5]]
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."neighborhood_id" = $1[0m  [["neighborhood_id", 5]]
+  Rendered neighborhoods/show.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 97ms (Views: 91.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/neighborhoods/5" for 127.0.0.1 at 2018-01-24 13:48:51 -0500
+Processing by NeighborhoodsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mNeighborhood Load (0.5ms)[0m  [1m[34mSELECT  "neighborhoods".* FROM "neighborhoods" WHERE "neighborhoods"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering neighborhoods/show.html.erb within layouts/application
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."neighborhood_id" = $1[0m  [["neighborhood_id", 5]]
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."neighborhood_id" = $1[0m  [["neighborhood_id", 5]]
+  Rendered neighborhoods/show.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 117ms (Views: 111.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/neighborhoods/5" for 127.0.0.1 at 2018-01-24 13:50:45 -0500
+Processing by NeighborhoodsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mNeighborhood Load (1.5ms)[0m  [1m[34mSELECT  "neighborhoods".* FROM "neighborhoods" WHERE "neighborhoods"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering neighborhoods/show.html.erb within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."neighborhood_id" = $1[0m  [["neighborhood_id", 5]]
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."neighborhood_id" = $1[0m  [["neighborhood_id", 5]]
+  Rendered neighborhoods/show.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 100ms (Views: 93.9ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/neighborhoods/5" for 127.0.0.1 at 2018-01-24 13:51:00 -0500
+Processing by NeighborhoodsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mNeighborhood Load (0.7ms)[0m  [1m[34mSELECT  "neighborhoods".* FROM "neighborhoods" WHERE "neighborhoods"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering neighborhoods/show.html.erb within layouts/application
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."neighborhood_id" = $1[0m  [["neighborhood_id", 5]]
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."neighborhood_id" = $1[0m  [["neighborhood_id", 5]]
+  Rendered neighborhoods/show.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 87ms (Views: 80.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/neighborhoods/5" for 127.0.0.1 at 2018-01-24 13:51:16 -0500
+Processing by NeighborhoodsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mNeighborhood Load (0.7ms)[0m  [1m[34mSELECT  "neighborhoods".* FROM "neighborhoods" WHERE "neighborhoods"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering neighborhoods/show.html.erb within layouts/application
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."neighborhood_id" = $1[0m  [["neighborhood_id", 5]]
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."neighborhood_id" = $1[0m  [["neighborhood_id", 5]]
+  Rendered neighborhoods/show.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 92ms (Views: 84.9ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/neighborhoods/5" for 127.0.0.1 at 2018-01-24 13:51:34 -0500
+Processing by NeighborhoodsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mNeighborhood Load (0.7ms)[0m  [1m[34mSELECT  "neighborhoods".* FROM "neighborhoods" WHERE "neighborhoods"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering neighborhoods/show.html.erb within layouts/application
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."neighborhood_id" = $1[0m  [["neighborhood_id", 5]]
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."neighborhood_id" = $1[0m  [["neighborhood_id", 5]]
+  Rendered neighborhoods/show.html.erb within layouts/application (13.8ms)
+Completed 200 OK in 102ms (Views: 96.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/neighborhoods/5" for 127.0.0.1 at 2018-01-24 13:51:41 -0500
+Processing by NeighborhoodsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mNeighborhood Load (3.0ms)[0m  [1m[34mSELECT  "neighborhoods".* FROM "neighborhoods" WHERE "neighborhoods"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering neighborhoods/show.html.erb within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."neighborhood_id" = $1[0m  [["neighborhood_id", 5]]
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."neighborhood_id" = $1[0m  [["neighborhood_id", 5]]
+  Rendered neighborhoods/show.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 118ms (Views: 105.8ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/neighborhoods/5" for 127.0.0.1 at 2018-01-24 13:51:54 -0500
+Processing by NeighborhoodsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mNeighborhood Load (0.5ms)[0m  [1m[34mSELECT  "neighborhoods".* FROM "neighborhoods" WHERE "neighborhoods"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering neighborhoods/show.html.erb within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."neighborhood_id" = $1[0m  [["neighborhood_id", 5]]
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."neighborhood_id" = $1[0m  [["neighborhood_id", 5]]
+  Rendered neighborhoods/show.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 108ms (Views: 103.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/neighborhoods/5" for 127.0.0.1 at 2018-01-24 13:52:05 -0500
+Processing by NeighborhoodsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mNeighborhood Load (1.9ms)[0m  [1m[34mSELECT  "neighborhoods".* FROM "neighborhoods" WHERE "neighborhoods"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering neighborhoods/show.html.erb within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."neighborhood_id" = $1[0m  [["neighborhood_id", 5]]
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."neighborhood_id" = $1[0m  [["neighborhood_id", 5]]
+  Rendered neighborhoods/show.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 127ms (Views: 114.3ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/neighborhoods/5/posts/1" for 127.0.0.1 at 2018-01-24 13:52:08 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"neighborhood_id"=>"5", "id"=>"1"}
+  [1m[36mNeighborhood Load (1.0ms)[0m  [1m[34mSELECT  "neighborhoods".* FROM "neighborhoods" WHERE "neighborhoods"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."neighborhood_id" = $1 AND "posts"."id" = $2 LIMIT $3[0m  [["neighborhood_id", 5], ["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered posts/show.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 192ms (Views: 178.0ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/neighborhoods/5/posts/1" for 127.0.0.1 at 2018-01-24 13:52:34 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"neighborhood_id"=>"5", "id"=>"1"}
+  [1m[36mNeighborhood Load (1.4ms)[0m  [1m[34mSELECT  "neighborhoods".* FROM "neighborhoods" WHERE "neighborhoods"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mPost Load (1.5ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."neighborhood_id" = $1 AND "posts"."id" = $2 LIMIT $3[0m  [["neighborhood_id", 5], ["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered posts/show.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 128ms (Views: 115.1ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/neighborhoods/5/posts/1" for 127.0.0.1 at 2018-01-24 13:52:41 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"neighborhood_id"=>"5", "id"=>"1"}
+  [1m[36mNeighborhood Load (0.4ms)[0m  [1m[34mSELECT  "neighborhoods".* FROM "neighborhoods" WHERE "neighborhoods"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."neighborhood_id" = $1 AND "posts"."id" = $2 LIMIT $3[0m  [["neighborhood_id", 5], ["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered posts/show.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 90ms (Views: 77.7ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/neighborhoods/5/posts/1" for 127.0.0.1 at 2018-01-24 13:53:19 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"neighborhood_id"=>"5", "id"=>"1"}
+  [1m[36mNeighborhood Load (0.5ms)[0m  [1m[34mSELECT  "neighborhoods".* FROM "neighborhoods" WHERE "neighborhoods"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mPost Load (1.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."neighborhood_id" = $1 AND "posts"."id" = $2 LIMIT $3[0m  [["neighborhood_id", 5], ["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered posts/show.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 104ms (Views: 91.2ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/neighborhoods/5/posts/1" for 127.0.0.1 at 2018-01-24 13:53:32 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"neighborhood_id"=>"5", "id"=>"1"}
+  [1m[36mNeighborhood Load (1.6ms)[0m  [1m[34mSELECT  "neighborhoods".* FROM "neighborhoods" WHERE "neighborhoods"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."neighborhood_id" = $1 AND "posts"."id" = $2 LIMIT $3[0m  [["neighborhood_id", 5], ["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered posts/show.html.erb within layouts/application (16.7ms)
+Completed 200 OK in 164ms (Views: 145.7ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/neighborhoods/5/posts/1" for 127.0.0.1 at 2018-01-24 13:53:43 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"neighborhood_id"=>"5", "id"=>"1"}
+  [1m[36mNeighborhood Load (0.2ms)[0m  [1m[34mSELECT  "neighborhoods".* FROM "neighborhoods" WHERE "neighborhoods"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."neighborhood_id" = $1 AND "posts"."id" = $2 LIMIT $3[0m  [["neighborhood_id", 5], ["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered posts/show.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 97ms (Views: 91.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/neighborhoods/5/posts/1" for 127.0.0.1 at 2018-01-24 13:54:58 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"neighborhood_id"=>"5", "id"=>"1"}
+  [1m[36mNeighborhood Load (0.3ms)[0m  [1m[34mSELECT  "neighborhoods".* FROM "neighborhoods" WHERE "neighborhoods"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."neighborhood_id" = $1 AND "posts"."id" = $2 LIMIT $3[0m  [["neighborhood_id", 5], ["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered posts/show.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 115ms (Views: 105.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/neighborhoods/5/posts/1" for 127.0.0.1 at 2018-01-24 13:55:20 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"neighborhood_id"=>"5", "id"=>"1"}
+  [1m[36mNeighborhood Load (0.4ms)[0m  [1m[34mSELECT  "neighborhoods".* FROM "neighborhoods" WHERE "neighborhoods"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mPost Load (1.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."neighborhood_id" = $1 AND "posts"."id" = $2 LIMIT $3[0m  [["neighborhood_id", 5], ["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered posts/show.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 120ms (Views: 111.1ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/neighborhoods/5/posts/1" for 127.0.0.1 at 2018-01-24 13:56:12 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"neighborhood_id"=>"5", "id"=>"1"}
+  [1m[36mNeighborhood Load (0.3ms)[0m  [1m[34mSELECT  "neighborhoods".* FROM "neighborhoods" WHERE "neighborhoods"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mPost Load (2.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."neighborhood_id" = $1 AND "posts"."id" = $2 LIMIT $3[0m  [["neighborhood_id", 5], ["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered posts/show.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 80ms (Views: 69.5ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/neighborhoods/5/posts/1" for 127.0.0.1 at 2018-01-24 13:57:15 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"neighborhood_id"=>"5", "id"=>"1"}
+  [1m[36mNeighborhood Load (0.4ms)[0m  [1m[34mSELECT  "neighborhoods".* FROM "neighborhoods" WHERE "neighborhoods"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mPost Load (2.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."neighborhood_id" = $1 AND "posts"."id" = $2 LIMIT $3[0m  [["neighborhood_id", 5], ["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (9.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered posts/show.html.erb within layouts/application (14.8ms)
+Completed 200 OK in 122ms (Views: 99.9ms | ActiveRecord: 12.3ms)
+
+
+Started GET "/neighborhoods/5/posts/1" for 127.0.0.1 at 2018-01-24 13:57:37 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"neighborhood_id"=>"5", "id"=>"1"}
+  [1m[36mNeighborhood Load (0.9ms)[0m  [1m[34mSELECT  "neighborhoods".* FROM "neighborhoods" WHERE "neighborhoods"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mPost Load (1.7ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."neighborhood_id" = $1 AND "posts"."id" = $2 LIMIT $3[0m  [["neighborhood_id", 5], ["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (6.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered posts/show.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 136ms (Views: 114.4ms | ActiveRecord: 8.6ms)
+
+
+Started GET "/neighborhoods/5/posts/1" for 127.0.0.1 at 2018-01-24 13:57:50 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"neighborhood_id"=>"5", "id"=>"1"}
+  [1m[36mNeighborhood Load (0.2ms)[0m  [1m[34mSELECT  "neighborhoods".* FROM "neighborhoods" WHERE "neighborhoods"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."neighborhood_id" = $1 AND "posts"."id" = $2 LIMIT $3[0m  [["neighborhood_id", 5], ["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered posts/show.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 84ms (Views: 76.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/neighborhoods/5/posts/1" for 127.0.0.1 at 2018-01-24 13:58:03 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"neighborhood_id"=>"5", "id"=>"1"}
+  [1m[36mNeighborhood Load (0.3ms)[0m  [1m[34mSELECT  "neighborhoods".* FROM "neighborhoods" WHERE "neighborhoods"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."neighborhood_id" = $1 AND "posts"."id" = $2 LIMIT $3[0m  [["neighborhood_id", 5], ["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered posts/show.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 101ms (Views: 92.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/neighborhoods/5/posts/1" for 127.0.0.1 at 2018-01-24 13:59:00 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"neighborhood_id"=>"5", "id"=>"1"}
+  [1m[36mNeighborhood Load (0.2ms)[0m  [1m[34mSELECT  "neighborhoods".* FROM "neighborhoods" WHERE "neighborhoods"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."neighborhood_id" = $1 AND "posts"."id" = $2 LIMIT $3[0m  [["neighborhood_id", 5], ["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered posts/show.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 119ms (Views: 113.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/neighborhoods/5/posts/1" for 127.0.0.1 at 2018-01-24 13:59:08 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"neighborhood_id"=>"5", "id"=>"1"}
+  [1m[36mNeighborhood Load (0.2ms)[0m  [1m[34mSELECT  "neighborhoods".* FROM "neighborhoods" WHERE "neighborhoods"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."neighborhood_id" = $1 AND "posts"."id" = $2 LIMIT $3[0m  [["neighborhood_id", 5], ["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered posts/show.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 92ms (Views: 85.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/neighborhoods/5/posts/1" for 127.0.0.1 at 2018-01-24 13:59:37 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"neighborhood_id"=>"5", "id"=>"1"}
+  [1m[36mNeighborhood Load (0.2ms)[0m  [1m[34mSELECT  "neighborhoods".* FROM "neighborhoods" WHERE "neighborhoods"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."neighborhood_id" = $1 AND "posts"."id" = $2 LIMIT $3[0m  [["neighborhood_id", 5], ["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered posts/show.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 93ms (Views: 87.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/neighborhoods/5/posts/1" for 127.0.0.1 at 2018-01-24 14:00:29 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"neighborhood_id"=>"5", "id"=>"1"}
+  [1m[36mNeighborhood Load (0.5ms)[0m  [1m[34mSELECT  "neighborhoods".* FROM "neighborhoods" WHERE "neighborhoods"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mPost Load (0.9ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."neighborhood_id" = $1 AND "posts"."id" = $2 LIMIT $3[0m  [["neighborhood_id", 5], ["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered posts/show.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 129ms (Views: 114.0ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/neighborhoods/5" for 127.0.0.1 at 2018-01-24 14:00:40 -0500
+Processing by NeighborhoodsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mNeighborhood Load (0.4ms)[0m  [1m[34mSELECT  "neighborhoods".* FROM "neighborhoods" WHERE "neighborhoods"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering neighborhoods/show.html.erb within layouts/application
+  [1m[35m (4.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."neighborhood_id" = $1[0m  [["neighborhood_id", 5]]
+  [1m[36mPost Load (14.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."neighborhood_id" = $1[0m  [["neighborhood_id", 5]]
+  Rendered neighborhoods/show.html.erb within layouts/application (24.9ms)
+Completed 200 OK in 200ms (Views: 175.0ms | ActiveRecord: 19.1ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-01-24 14:00:42 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering /Users/megmaciver/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/devise-4.3.0/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/megmaciver/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/devise-4.3.0/app/views/devise/shared/_links.html.erb (2.0ms)
+  Rendered /Users/megmaciver/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/devise-4.3.0/app/views/devise/sessions/new.html.erb within layouts/application (70.8ms)
+Completed 200 OK in 192ms (Views: 183.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-01-24 14:00:54 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fgtFOZhdyF2Vgk+48Abq7ONEl8iT91Z4AnDo6USNQ+nkW9DYhAEtkvyScuPHM1/ZcfIJeaLN5oYLDFVbyQUqiw==", "user"=>{"email"=>"meg@email.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (24.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "meg@email.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 179ms (ActiveRecord: 24.9ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fgtFOZhdyF2Vgk+48Abq7ONEl8iT91Z4AnDo6USNQ+nkW9DYhAEtkvyScuPHM1/ZcfIJeaLN5oYLDFVbyQUqiw==", "user"=>{"email"=>"meg@email.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering /Users/megmaciver/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/devise-4.3.0/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/megmaciver/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/devise-4.3.0/app/views/devise/shared/_links.html.erb (0.9ms)
+  Rendered /Users/megmaciver/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/devise-4.3.0/app/views/devise/sessions/new.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 218ms (Views: 89.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-01-24 14:00:57 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering /Users/megmaciver/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/devise-4.3.0/app/views/devise/registrations/new.html.erb within layouts/application
+  Rendered /Users/megmaciver/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/devise-4.3.0/app/views/devise/shared/_links.html.erb (1.1ms)
+  Rendered /Users/megmaciver/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/devise-4.3.0/app/views/devise/registrations/new.html.erb within layouts/application (23.6ms)
+Completed 200 OK in 196ms (Views: 195.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-01-24 14:01:05 -0500
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2ySlo1SCEVbPgh4GWP+Eh+/arsOpu83ICtJv6fA7n10Yj9osFn65It9tW+nYbk1k5RcpOjhG4rVPk5Fw3b52oA==", "user"=>{"email"=>"meg@email.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (1.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (6.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "meg@email.com"], ["LIMIT", 1]]
+  [1m[35m (12.9ms)[0m  [1m[31mROLLBACK[0m
+  Rendering /Users/megmaciver/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/devise-4.3.0/app/views/devise/registrations/new.html.erb within layouts/application
+  Rendered /Users/megmaciver/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/devise-4.3.0/app/views/devise/shared/_links.html.erb (1.6ms)
+  Rendered /Users/megmaciver/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/devise-4.3.0/app/views/devise/registrations/new.html.erb within layouts/application (17.2ms)
+Completed 200 OK in 303ms (Views: 110.6ms | ActiveRecord: 21.3ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-01-24 14:01:27 -0500
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0Sdkd1IeRcFKB43KoAGK3IiWe/HLD7Uw9MeuR/rAQq8mgNVsBAyKLrY9p5rcrRk3OSIxX7zVSwINSuvlv0IkvA==", "user"=>{"email"=>"megathon@email.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "megathon@email.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering /Users/megmaciver/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/devise-4.3.0/app/views/devise/registrations/new.html.erb within layouts/application
+  Rendered /Users/megmaciver/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/devise-4.3.0/app/views/devise/shared/_links.html.erb (0.9ms)
+  Rendered /Users/megmaciver/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/devise-4.3.0/app/views/devise/registrations/new.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 245ms (Views: 95.3ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-01-24 14:01:45 -0500
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sKKXSxIJvWVMw624I15eazP3MkWoeX/dNWOykti1l6lHBSZQRBtyirD5h+hf8s2AgkN469+jge/M7vcwnTfxug==", "user"=>{"email"=>"megathon@email.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "megathon@email.com"], ["LIMIT", 1]]
+  [1m[35mSQL (9.7ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "megathon@email.com"], ["encrypted_password", "$2a$11$RSLiPjEj1/6A0znFVjuYzehTXwQX.L4nnBJ//GPUMusvQ0/CWHIri"], ["created_at", "2018-01-24 19:01:45.784649"], ["updated_at", "2018-01-24 19:01:45.784649"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (27.1ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = $1, "current_sign_in_at" = $2, "last_sign_in_at" = $3, "current_sign_in_ip" = $4, "last_sign_in_ip" = $5, "updated_at" = $6 WHERE "users"."id" = $7[0m  [["sign_in_count", 1], ["current_sign_in_at", "2018-01-24 19:01:45.797935"], ["last_sign_in_at", "2018-01-24 19:01:45.797935"], ["current_sign_in_ip", "127.0.0.1/32"], ["last_sign_in_ip", "127.0.0.1/32"], ["updated_at", "2018-01-24 19:01:45.798830"], ["id", 5]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 197ms (ActiveRecord: 40.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-24 14:01:45 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 63ms (Views: 60.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/neighborhoods" for 127.0.0.1 at 2018-01-24 14:01:51 -0500
+Processing by NeighborhoodsController#index as HTML
+  Rendering neighborhoods/index.html.erb within layouts/application
+  [1m[36mNeighborhood Load (0.7ms)[0m  [1m[34mSELECT "neighborhoods".* FROM "neighborhoods"[0m
+  Rendered neighborhoods/index.html.erb within layouts/application (108.3ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 189ms (Views: 183.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/neighborhoods/1" for 127.0.0.1 at 2018-01-24 14:01:53 -0500
+Processing by NeighborhoodsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mNeighborhood Load (4.4ms)[0m  [1m[34mSELECT  "neighborhoods".* FROM "neighborhoods" WHERE "neighborhoods"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering neighborhoods/show.html.erb within layouts/application
+  [1m[36mUser Load (77.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."neighborhood_id" = $1[0m  [["neighborhood_id", 1]]
+  Rendered neighborhoods/show.html.erb within layouts/application (100.9ms)
+Completed 200 OK in 214ms (Views: 124.3ms | ActiveRecord: 82.4ms)
+
+
+Started GET "/neighborhoods/5" for 127.0.0.1 at 2018-01-24 14:01:56 -0500
+Processing by NeighborhoodsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mNeighborhood Load (0.7ms)[0m  [1m[34mSELECT  "neighborhoods".* FROM "neighborhoods" WHERE "neighborhoods"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering neighborhoods/show.html.erb within layouts/application
+  [1m[36mUser Load (73.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."neighborhood_id" = $1[0m  [["neighborhood_id", 5]]
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."neighborhood_id" = $1[0m  [["neighborhood_id", 5]]
+  Rendered neighborhoods/show.html.erb within layouts/application (84.3ms)
+Completed 200 OK in 195ms (Views: 109.0ms | ActiveRecord: 75.9ms)
+
+
+Started GET "/neighborhoods/5/posts/1" for 127.0.0.1 at 2018-01-24 14:01:59 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"neighborhood_id"=>"5", "id"=>"1"}
+  [1m[36mNeighborhood Load (0.4ms)[0m  [1m[34mSELECT  "neighborhoods".* FROM "neighborhoods" WHERE "neighborhoods"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."neighborhood_id" = $1 AND "posts"."id" = $2 LIMIT $3[0m  [["neighborhood_id", 5], ["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (79.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (15.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered posts/show.html.erb within layouts/application (101.2ms)
+Completed 200 OK in 220ms (Views: 111.3ms | ActiveRecord: 95.8ms)
+
+
+Started GET "/neighborhoods/5/posts/new" for 127.0.0.1 at 2018-01-24 14:02:12 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"neighborhood_id"=>"5"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mNeighborhood Load (0.4ms)[0m  [1m[34mSELECT  "neighborhoods".* FROM "neighborhoods" WHERE "neighborhoods"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (28.8ms)
+Completed 200 OK in 143ms (Views: 131.3ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/neighborhoods/5/posts" for 127.0.0.1 at 2018-01-24 14:04:06 -0500
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BzvL5CAVhrme6r0bWJ1DI4kmlnd98ZrSFInJCD7dQtDkCpBsb/MVWVYwxEwRlS7mrKZ79Otcq8MG5PH74SnnFQ==", "post"=>{"author"=>"Meg", "title"=>"Candy!!!", "location"=>"everywhere", "photo_url"=>"data:image/jpeg;base64,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", "content"=>"candy everywhere!!!", "inquiry_type"=>"aesthetics"}, "commit"=>"Create Post", "neighborhood_id"=>"5"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mNeighborhood Load (0.9ms)[0m  [1m[34mSELECT  "neighborhoods".* FROM "neighborhoods" WHERE "neighborhoods"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (1.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (32.6ms)[0m  [1m[32mINSERT INTO "posts" ("author", "title", "photo_url", "content", "inquiry_type", "location", "neighborhood_id", "created_at", "updated_at", "user_id", "latitude", "longitude") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["author", "Meg"], ["title", "Candy!!!"], ["photo_url", "data:image/jpeg;base64,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"], ["content", "candy everywhere!!!"], ["inquiry_type", "aesthetics"], ["location", "everywhere"], ["neighborhood_id", 5], ["created_at", "2018-01-24 19:04:07.414547"], ["updated_at", "2018-01-24 19:04:07.414547"], ["user_id", 5], ["latitude", 29.063309], ["longitude", -82.05077]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/neighborhoods/5
+Completed 302 Found in 754ms (ActiveRecord: 35.6ms)
+
+
+Started GET "/neighborhoods/5" for 127.0.0.1 at 2018-01-24 14:04:07 -0500
+Processing by NeighborhoodsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mNeighborhood Load (0.2ms)[0m  [1m[34mSELECT  "neighborhoods".* FROM "neighborhoods" WHERE "neighborhoods"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering neighborhoods/show.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."neighborhood_id" = $1[0m  [["neighborhood_id", 5]]
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."neighborhood_id" = $1[0m  [["neighborhood_id", 5]]
+  Rendered neighborhoods/show.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 78ms (Views: 72.0ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/neighborhoods/5/posts/6" for 127.0.0.1 at 2018-01-24 14:04:10 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"neighborhood_id"=>"5", "id"=>"6"}
+  [1m[36mNeighborhood Load (0.4ms)[0m  [1m[34mSELECT  "neighborhoods".* FROM "neighborhoods" WHERE "neighborhoods"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."neighborhood_id" = $1 AND "posts"."id" = $2 LIMIT $3[0m  [["neighborhood_id", 5], ["id", 6], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (94.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendered posts/show.html.erb within layouts/application (102.3ms)
+Completed 200 OK in 221ms (Views: 118.2ms | ActiveRecord: 95.5ms)
+
+
+Started GET "/neighborhoods/5/posts/6" for 127.0.0.1 at 2018-01-24 14:05:43 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"neighborhood_id"=>"5", "id"=>"6"}
+  [1m[36mNeighborhood Load (0.6ms)[0m  [1m[34mSELECT  "neighborhoods".* FROM "neighborhoods" WHERE "neighborhoods"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mPost Load (1.5ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."neighborhood_id" = $1 AND "posts"."id" = $2 LIMIT $3[0m  [["neighborhood_id", 5], ["id", 6], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendered posts/show.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 128ms (Views: 115.6ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/neighborhoods/5/posts/6" for 127.0.0.1 at 2018-01-24 14:05:59 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"neighborhood_id"=>"5", "id"=>"6"}
+  [1m[36mNeighborhood Load (0.2ms)[0m  [1m[34mSELECT  "neighborhoods".* FROM "neighborhoods" WHERE "neighborhoods"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."neighborhood_id" = $1 AND "posts"."id" = $2 LIMIT $3[0m  [["neighborhood_id", 5], ["id", 6], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendered posts/show.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 92ms (Views: 84.9ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/neighborhoods/5/posts/6" for 127.0.0.1 at 2018-01-24 14:06:06 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"neighborhood_id"=>"5", "id"=>"6"}
+  [1m[36mNeighborhood Load (0.5ms)[0m  [1m[34mSELECT  "neighborhoods".* FROM "neighborhoods" WHERE "neighborhoods"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."neighborhood_id" = $1 AND "posts"."id" = $2 LIMIT $3[0m  [["neighborhood_id", 5], ["id", 6], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendered posts/show.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 115ms (Views: 90.0ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/neighborhoods/5/posts/6" for 127.0.0.1 at 2018-01-24 14:06:13 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"neighborhood_id"=>"5", "id"=>"6"}
+  [1m[36mNeighborhood Load (2.4ms)[0m  [1m[34mSELECT  "neighborhoods".* FROM "neighborhoods" WHERE "neighborhoods"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mPost Load (2.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."neighborhood_id" = $1 AND "posts"."id" = $2 LIMIT $3[0m  [["neighborhood_id", 5], ["id", 6], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendered posts/show.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 135ms (Views: 113.8ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/neighborhoods/5/posts/6" for 127.0.0.1 at 2018-01-24 14:06:15 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"neighborhood_id"=>"5", "id"=>"6"}
+  [1m[36mNeighborhood Load (1.0ms)[0m  [1m[34mSELECT  "neighborhoods".* FROM "neighborhoods" WHERE "neighborhoods"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mPost Load (0.9ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."neighborhood_id" = $1 AND "posts"."id" = $2 LIMIT $3[0m  [["neighborhood_id", 5], ["id", 6], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendered posts/show.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 94ms (Views: 81.6ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/neighborhoods/5/posts/6" for 127.0.0.1 at 2018-01-24 14:06:34 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"neighborhood_id"=>"5", "id"=>"6"}
+  [1m[36mNeighborhood Load (0.3ms)[0m  [1m[34mSELECT  "neighborhoods".* FROM "neighborhoods" WHERE "neighborhoods"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."neighborhood_id" = $1 AND "posts"."id" = $2 LIMIT $3[0m  [["neighborhood_id", 5], ["id", 6], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendered posts/show.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 108ms (Views: 100.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/neighborhoods/5/posts/6" for 127.0.0.1 at 2018-01-24 14:06:47 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"neighborhood_id"=>"5", "id"=>"6"}
+  [1m[36mNeighborhood Load (1.6ms)[0m  [1m[34mSELECT  "neighborhoods".* FROM "neighborhoods" WHERE "neighborhoods"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mPost Load (1.7ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."neighborhood_id" = $1 AND "posts"."id" = $2 LIMIT $3[0m  [["neighborhood_id", 5], ["id", 6], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendered posts/show.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 116ms (Views: 101.2ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/neighborhoods/5/posts/6/edit" for 127.0.0.1 at 2018-01-24 14:06:56 -0500
+Processing by PostsController#edit as HTML
+  Parameters: {"neighborhood_id"=>"5", "id"=>"6"}
+  [1m[36mUser Load (4.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mNeighborhood Load (0.3ms)[0m  [1m[34mSELECT  "neighborhoods".* FROM "neighborhoods" WHERE "neighborhoods"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mPost Load (11.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."neighborhood_id" = $1 AND "posts"."id" = $2 LIMIT $3[0m  [["neighborhood_id", 5], ["id", 6], ["LIMIT", 1]]
+  [1m[36mUser Load (6.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/edit.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 201ms (Views: 76.6ms | ActiveRecord: 22.8ms)
+
+
+Started PATCH "/neighborhoods/5/posts/6" for 127.0.0.1 at 2018-01-24 14:07:01 -0500
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xm4tGQqyQBSTYLGp1FjAr6+gew0QXjAPgpg7JDd1AEOXojXnOp2f8yg3G3SG86+x2UvSdDYzq9vdGQb4mFjw5A==", "post"=>{"author"=>"Meg", "title"=>"Candy!!!", "location"=>"nowhere", "photo_url"=>"data:image/jpeg;base64,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", "content"=>"candy everywhere!!!", "inquiry_type"=>"accessibility"}, "commit"=>"Update Post", "neighborhood_id"=>"5", "id"=>"6"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mNeighborhood Load (0.3ms)[0m  [1m[34mSELECT  "neighborhoods".* FROM "neighborhoods" WHERE "neighborhoods"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."neighborhood_id" = $1 AND "posts"."id" = $2 LIMIT $3[0m  [["neighborhood_id", 5], ["id", 6], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "posts" SET "location" = $1, "inquiry_type" = $2, "latitude" = $3, "longitude" = $4, "updated_at" = $5 WHERE "posts"."id" = $6[0m  [["location", "nowhere"], ["inquiry_type", "accessibility"], ["latitude", 35.1592256], ["longitude", -98.4422802], ["updated_at", "2018-01-24 19:07:01.680875"], ["id", 6]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/neighborhoods/5/posts/6
+Completed 302 Found in 551ms (ActiveRecord: 4.7ms)
+
+
+Started GET "/neighborhoods/5/posts/6" for 127.0.0.1 at 2018-01-24 14:07:01 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"neighborhood_id"=>"5", "id"=>"6"}
+  [1m[36mNeighborhood Load (0.3ms)[0m  [1m[34mSELECT  "neighborhoods".* FROM "neighborhoods" WHERE "neighborhoods"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mPost Load (2.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."neighborhood_id" = $1 AND "posts"."id" = $2 LIMIT $3[0m  [["neighborhood_id", 5], ["id", 6], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendered posts/show.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 78ms (Views: 67.9ms | ActiveRecord: 3.5ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2018-01-24 14:07:16 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"97LneFKpwSWzXlZKNZYzGLQBzdjSPDWWMNgLB6LTzIwAFVZjBLsOyk9kfBpJOqDzBbWHdqXmy6TJVU6l51Gqnw=="}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (6.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 27ms (ActiveRecord: 7.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-24 14:07:16 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 130ms (Views: 123.9ms | ActiveRecord: 0.0ms)
+
+

@@ -18,6 +18,10 @@ body {
   font-family: 'PT Sans', sans-serif;
 }
 
+nav {
+  font-size: 14pt;
+}
+
 .inner-body {
   padding: 0% 10% 0 10%;
   margin: 2% 5% -2% 5%;
@@ -31,21 +35,41 @@ header {
 
 footer {
   text-align: center;
+  font-size: 14pt;
 }
 
 .dc-flag {
-  height: 40px;
+  height: 60px;
 }
 
 .citizen-driven {
   text-decoration: none;
-  font-size: 40pt;
+  font-size: 60pt;
 }
 
 .tagline {
   font-family: 'Indie Flower', cursive;
+  font-size: 24pt;
   font-style: italic;
-  margin-top: -20px;
+  margin-top: -30px;
+}
+
+.centered-title {
+  font-size: 20pt;
+  color: #5a5e63;
+  text-align: center;
+}
+
+.centered-intro {
+  font-size: 16pt;
+  padding: 2% 10% 2% 10%;
+}
+
+.dotted-outline {
+  padding: 0 2% 0 2%;;
+  margin: 0 38% 0 38%;
+  border: dotted 1px gray;
+  text-align: center;
 }
 
 .neighborhood-container {
@@ -59,6 +83,10 @@ footer {
 .individual-neighborhood {
   position: relative;
   text-align: center;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  background-color: black;
 }
 
 .neighborhood-photo {
@@ -66,6 +94,7 @@ footer {
   height: 200px;
   width: 200px;
   border-radius: 50%;
+  opacity: 0.7;
 }
 
 .neighborhood-name {
@@ -102,17 +131,43 @@ footer {
   font-style: italic;
 }
 
+.post-title {
+  margin-bottom: 2%;
+  font-size: 20pt;
+}
+
+.post-content {
+  margin: 10% 10% 0 10%;
+  font-size: 16pt;
+}
+
 .page-content-container {
+  font-size: 16pt;
   padding: 0% 20% 0% 20%;
-  margin: 2% 10% 2% 10%;
+  margin: 2% 5% 2% 5%;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.dotted-outline {
-  padding: 0 4% 0 4%;
+.page-content-container img {
+  display: block;
+  max-width:200px;
+  width: auto;
+  height: auto;
+  margin: auto;
+}
+
+.post-outline {
+  padding: 0 2% 4% 2%;;
+  margin-bottom: 10%;
   border: dotted 1px gray;
+  text-align: center;
+}
+
+.bottom-nav {
+  text-align: center;
+  font-size: 16pt;
 }
 
 .post-details {
@@ -126,11 +181,7 @@ footer {
 
 .timestamp {
   line-height: 8pt;
-}
 
-.centered-title {
-  color: #5a5e63;
-  text-align: center;
 }
 
 .post-here {
