@@ -18,19 +18,16 @@ body {
   font-family: 'PT Sans', sans-serif;
 }
 
+/* all static content (nav bar, header, footer) */
 nav {
   font-size: 14pt;
-}
-
-.inner-body {
-  padding: 0% 10% 0 10%;
-  margin: 2% 5% -2% 5%;
 }
 
 header {
   text-align: center;
   text-decoration: none;
   margin-top: 10px;
+  border-bottom: 2px solid gray;
 }
 
 footer {
@@ -38,13 +35,15 @@ footer {
   font-size: 14pt;
 }
 
-.dc-flag {
-  height: 60px;
-}
-
 .citizen-driven {
   text-decoration: none;
   font-size: 60pt;
+  color:#9b9ea1;
+  text-shadow: 2px 2px black;
+}
+
+.dc-flag {
+  height: 60px;
 }
 
 .tagline {
@@ -54,21 +53,45 @@ footer {
   margin-top: -30px;
 }
 
-.centered-title {
-  font-size: 20pt;
-  color: #5a5e63;
-  text-align: center;
+/* all non-static content */
+.inner-body {
+  padding: 0% 10% 0 10%;
+  margin: 2% 5% -2% 5%;
 }
 
+/* first landing page */
 .centered-intro {
   font-size: 16pt;
   padding: 2% 10% 2% 10%;
 }
 
-.dotted-outline {
+.begin-here {
+  padding: 0 1% 0 1%;;
+  margin: 0 38% 0 38%;
+  border: solid 2px gray;
+  text-align: center;
+  text-decoration: none;
+}
+
+.begin-here:hover {
   padding: 0 2% 0 2%;;
   margin: 0 38% 0 38%;
   border: dotted 1px gray;
+  background: gray;
+  text-align: center;
+}
+
+/* .dotted-outline {
+  padding: 0 2% 0 2%;;
+  margin: 0 38% 0 38%;
+  border: dotted 1px gray;
+  text-align: center;
+} */
+
+/* neighborhood index page */
+.centered-title {
+  font-size: 20pt;
+  color: #5a5e63;
   text-align: center;
 }
 
@@ -106,63 +129,80 @@ footer {
   width: 100%;
 }
 
+/* neighborhood show page */
 .title-banner {
-  color: black;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.showpage-title {
- font-size: 25pt;
-}
-
-#quadrant {
-  margin-top: -2%;
-  margin-bottom: -1%;
-}
-
-#map {
-  height: 250px;
+  position: relative;
+  text-align: center;
+  background: black;
+  height: 200px;
   width: 400px;
+  margin: 3% auto;
+}
+
+.citizen-voices-title {
+  font-size: 25pt;
+  color: white;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.neighborhood-post-photo {
+  object-fit: cover;
+  height: 200px;
+  width: 400px;
+  opacity: 0.7;
 }
 
 .no-posts {
   font-style: italic;
+  text-align: center;
+}
+
+.page-content-container {
+  font-size: 16pt;
+  padding: 0% 20% 0% 20%;
+  margin: 2% 10% 2% 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hood-post {
+  border: dotted 1px gray;
+  text-align: center;
+}
+
+.post-here {
+  padding: 4% 0% 4% 0%;
+  border: dotted 1px gray;
+  text-align: center;
+}
+
+#name {
+  margin-top: -10%;
+}
+
+#quadrant {
+  font-size: 16pt;
+  margin-top: -1%;
+  margin-bottom: -1%;
+}
+
+/* post show page */
+.post-title-banner {
+  text-align: center;
 }
 
 .post-title {
-  margin-bottom: 2%;
+  margin-bottom: 7%;
   font-size: 20pt;
 }
 
 .post-content {
   margin: 10% 10% 0 10%;
   font-size: 16pt;
-}
-
-.page-content-container {
-  font-size: 16pt;
-  padding: 0% 20% 0% 20%;
-  margin: 2% 5% 2% 5%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.page-content-container img {
-  display: block;
-  max-width:200px;
-  width: auto;
-  height: auto;
-  margin: auto;
-}
-
-.post-outline {
-  padding: 0 2% 4% 2%;;
-  margin-bottom: 10%;
-  border: dotted 1px gray;
-  text-align: center;
+  color: gray;
 }
 
 .bottom-nav {
@@ -182,8 +222,4 @@ footer {
 .timestamp {
   line-height: 8pt;
 
-}
-
-.post-here {
-  text-decoration: none;
 }

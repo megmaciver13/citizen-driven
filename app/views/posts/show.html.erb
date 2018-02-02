@@ -1,9 +1,9 @@
-<div class="title-banner">
+<div class="post-title-banner">
   <div class="post-title">
     <h3><%= @post.title %></h3>
   </div>
   <div class="post-content">
-    <h3><%= @post.content %></h3>
+    <p>"<%= @post.content %>"<p>
   </div>
 
   <div class="page-content-container">
@@ -20,8 +20,8 @@
     <hr>
 
     <div class="timestamp">
-      <p>created on <%= @post.created_at %></p>
-      <p>updated on <%= @post.updated_at %></p>
+      <p>created on <%= @post.created_at.month %>/<%= @post.created_at.day %>/<%= @post.created_at.year %></p>
+      <p>updated on <%= @post.updated_at.month %>/<%= @post.updated_at.day %>/<%= @post.updated_at.year %></p>
     </div>
 
     <div class="bottom-nav">
